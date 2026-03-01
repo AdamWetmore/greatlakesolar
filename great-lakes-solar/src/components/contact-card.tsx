@@ -1,15 +1,15 @@
 import Link from 'next/link'
 import Image from 'next/image'
 import { Phone, Mail } from 'lucide-react'
+import { Card, CardContent, CardHeader, CardTitle } from './ui/card'
 
 export default function ContactCard() {
     return (
-        <div className="flex flex-col items-center px-6 py-16">
-            <h3 className="font-semibold tracking-wide text-gray-500">
-                Header
-            </h3>
-            <p className="my-4 text-center text-gray-600">Sub Header</p>
-            <div className="flex w-full max-w-md flex-col gap-2">
+        <Card className="mx-auto max-w-sm gap-0">
+            <CardHeader>
+                <CardTitle className="text-center">Get in touch!</CardTitle>
+            </CardHeader>
+            <CardContent>
                 {/* Phone */}
                 <Link
                     href="tel:YOUR_NUMBER"
@@ -121,7 +121,7 @@ export default function ContactCard() {
                         </div>
                     </div>
                 </Link>
-            </div>
-        </div>
+            </CardContent>
+        </Card>
     )
 }
