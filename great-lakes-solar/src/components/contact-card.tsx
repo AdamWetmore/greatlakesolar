@@ -1,6 +1,6 @@
 import Link from 'next/link'
 import Image from 'next/image'
-import { Phone, Mail } from 'lucide-react'
+import { Phone, Mail, ChevronRight } from 'lucide-react'
 import { Card, CardContent, CardHeader, CardTitle } from './ui/card'
 
 export default function ContactCard() {
@@ -25,6 +25,7 @@ export default function ContactCard() {
                             </span>
                             <span className="text-gray-600">Your Number</span>
                         </div>
+                        <ChevronRight className="ml-auto opacity-0 group-hover:opacity-100" />
                     </div>
                 </Link>
 
@@ -45,6 +46,7 @@ export default function ContactCard() {
                                 info@greatlakesolar.com
                             </span>
                         </div>
+                        <ChevronRight className="ml-auto opacity-0 group-hover:opacity-100" />
                     </div>
                 </Link>
 
@@ -82,6 +84,7 @@ export default function ContactCard() {
                                 @jacobbechtold
                             </span>
                         </div>
+                        <ChevronRight className="ml-auto opacity-0 group-hover:opacity-100" />
                     </div>
                 </Link>
 
@@ -119,6 +122,7 @@ export default function ContactCard() {
                                 your-page-name
                             </span>
                         </div>
+                        <ChevronRight className="ml-auto opacity-0 group-hover:opacity-100" />
                     </div>
                 </Link>
             </CardContent>

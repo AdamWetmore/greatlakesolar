@@ -5,8 +5,7 @@ export default function Home() {
     return (
         <div>
             <h1>Great Lakes Solar</h1>
-            <div>Mission</div>
-            <div>Motto: The Lakes are Great, the Solar is Better!</div>
+            <h2>Motto: The Lakes are Great, the Solar is Better!</h2>
             <HeroCard />
             <ContactCard />
         </div>
