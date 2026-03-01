@@ -13,7 +13,7 @@ export default function ContactCard() {
                 {/* Phone */}
                 <Link
                     href="tel:YOUR_NUMBER"
-                    className="group w-full rounded-xl p-2 transition hover:bg-gray-50"
+                    className="group block w-full rounded-xl p-2 transition hover:bg-gray-100"
                 >
                     <div className="flex items-center gap-5">
                         <div className="flex h-16 w-16 shrink-0 items-center justify-center rounded-xl bg-gray-100 shadow-sm transition-all duration-300 group-hover:bg-blue-600 group-hover:shadow-md">
@@ -31,7 +31,7 @@ export default function ContactCard() {
                 {/* Email */}
                 <Link
                     href="mailto:info@greatlakesolar.com"
-                    className="group w-full rounded-xl p-2 transition hover:bg-gray-50"
+                    className="group block w-full rounded-xl p-2 transition hover:bg-gray-100"
                 >
                     <div className="flex items-center gap-5">
                         <div className="flex h-16 w-16 shrink-0 items-center justify-center rounded-xl bg-gray-100 shadow-sm transition-all duration-300 group-hover:bg-blue-600 group-hover:shadow-md">
@@ -52,7 +52,7 @@ export default function ContactCard() {
                 <Link
                     href="https://www.linkedin.com/in/jacobbechtold/"
                     target="_blank"
-                    className="group w-full rounded-xl p-2 transition hover:bg-gray-50"
+                    className="group block w-full rounded-xl p-2 transition hover:bg-gray-100"
                 >
                     <div className="flex items-center gap-5">
                         <div className="relative flex h-16 w-16 shrink-0 items-center justify-center rounded-xl bg-gray-100 shadow-sm transition-all duration-300 group-hover:bg-blue-600 group-hover:shadow-md">
@@ -89,7 +89,7 @@ export default function ContactCard() {
                 <Link
                     href="https://facebook.com/YOUR_PAGE"
                     target="_blank"
-                    className="group w-full rounded-xl p-2 transition hover:bg-gray-50"
+                    className="group block w-full rounded-xl p-2 transition hover:bg-gray-100"
                 >
                     <div className="flex items-center gap-5">
                         <div className="relative flex h-16 w-16 shrink-0 items-center justify-center rounded-xl bg-gray-100 shadow-sm transition-all duration-300 group-hover:bg-blue-600 group-hover:shadow-md">
@@ -110,7 +110,7 @@ export default function ContactCard() {
                                 width={40}
                                 className="absolute opacity-0 transition-opacity duration-300 group-hover:opacity-100"
                             />
-                        </div>{' '}
+                        </div>
                         <div className="flex flex-col text-left">
                             <span className="font-semibold text-gray-900">
                                 Facebook
