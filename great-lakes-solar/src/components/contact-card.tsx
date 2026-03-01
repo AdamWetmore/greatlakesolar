@@ -1,25 +1,127 @@
+import Link from 'next/link'
+import Image from 'next/image'
+import { Phone, Mail } from 'lucide-react'
+
 export default function ContactCard() {
     return (
-        <div>
-            <div>
-                email:
-                <a href="mailto:info@greatlakesolar.com">
-                    info@greatlakesolar.com
-                </a>
-            </div>
-            <div>
-                phone:
-                <a>google voice number</a>
-            </div>
-            <div>
-                <a
+        <div className="flex flex-col items-center px-6 py-16">
+            <h3 className="font-semibold tracking-wide text-gray-500">
+                Header
+            </h3>
+            <p className="my-4 text-center text-gray-600">Sub Header</p>
+            <div className="flex w-full max-w-md flex-col gap-2">
+                {/* Phone */}
+                <Link
+                    href="tel:YOUR_NUMBER"
+                    className="group w-full rounded-xl p-2 transition hover:bg-gray-50"
+                >
+                    <div className="flex items-center gap-5">
+                        <div className="flex h-16 w-16 shrink-0 items-center justify-center rounded-xl bg-gray-100 shadow-sm transition-all duration-300 group-hover:bg-blue-600 group-hover:shadow-md">
+                            <Phone className="h-10 w-10 text-gray-700 transition-colors duration-300 group-hover:text-white" />
+                        </div>
+                        <div className="flex flex-col text-left">
+                            <span className="font-semibold text-gray-900">
+                                Phone
+                            </span>
+                            <span className="text-gray-600">Your Number</span>
+                        </div>
+                    </div>
+                </Link>
+
+                {/* Email */}
+                <Link
+                    href="mailto:info@greatlakesolar.com"
+                    className="group w-full rounded-xl p-2 transition hover:bg-gray-50"
+                >
+                    <div className="flex items-center gap-5">
+                        <div className="flex h-16 w-16 shrink-0 items-center justify-center rounded-xl bg-gray-100 shadow-sm transition-all duration-300 group-hover:bg-blue-600 group-hover:shadow-md">
+                            <Mail className="h-10 w-10 text-gray-700 transition-colors duration-300 group-hover:text-white" />
+                        </div>
+                        <div className="flex flex-col text-left">
+                            <span className="font-semibold text-gray-900">
+                                Email
+                            </span>
+                            <span className="text-gray-600">
+                                info@greatlakesolar.com
+                            </span>
+                        </div>
+                    </div>
+                </Link>
+
+                {/* LinkedIn */}
+                <Link
                     href="https://www.linkedin.com/in/jacobbechtold/"
                     target="_blank"
+                    className="group w-full rounded-xl p-2 transition hover:bg-gray-50"
                 >
-                    LinkedIn
-                </a>
+                    <div className="flex items-center gap-5">
+                        <div className="relative flex h-16 w-16 shrink-0 items-center justify-center rounded-xl bg-gray-100 shadow-sm transition-all duration-300 group-hover:bg-blue-600 group-hover:shadow-md">
+                            {/* Default logo */}
+                            <Image
+                                src="/LI-In-Bug.png"
+                                alt="LinkedIn logo"
+                                height={40}
+                                width={40}
+                                className="absolute transition-opacity duration-300 group-hover:opacity-0"
+                            />
+
+                            {/* White logo for hover state*/}
+                            <Image
+                                src="/InBug-White.png"
+                                alt="LinkedIn logo white"
+                                height={40}
+                                width={40}
+                                className="absolute opacity-0 transition-opacity duration-300 group-hover:opacity-100"
+                            />
+                        </div>
+                        <div className="flex flex-col text-left">
+                            <span className="font-semibold text-gray-900">
+                                LinkedIn
+                            </span>
+                            <span className="text-gray-600">
+                                @jacobbechtold
+                            </span>
+                        </div>
+                    </div>
+                </Link>
+
+                {/* Facebook */}
+                <Link
+                    href="https://facebook.com/YOUR_PAGE"
+                    target="_blank"
+                    className="group w-full rounded-xl p-2 transition hover:bg-gray-50"
+                >
+                    <div className="flex items-center gap-5">
+                        <div className="relative flex h-16 w-16 shrink-0 items-center justify-center rounded-xl bg-gray-100 shadow-sm transition-all duration-300 group-hover:bg-blue-600 group-hover:shadow-md">
+                            {/* Default logo */}
+                            <Image
+                                src="/Facebook_Logo_Primary.png"
+                                alt="Facebook logo"
+                                height={40}
+                                width={40}
+                                className="absolute transition-opacity duration-300 group-hover:opacity-0"
+                            />
+
+                            {/* White logo for hover state*/}
+                            <Image
+                                src="/Facebook_Logo_Secondary.png"
+                                alt="Facebook logo white"
+                                height={40}
+                                width={40}
+                                className="absolute opacity-0 transition-opacity duration-300 group-hover:opacity-100"
+                            />
+                        </div>{' '}
+                        <div className="flex flex-col text-left">
+                            <span className="font-semibold text-gray-900">
+                                Facebook
+                            </span>
+                            <span className="text-gray-600">
+                                your-page-name
+                            </span>
+                        </div>
+                    </div>
+                </Link>
             </div>
-            <div>Facebook</div>
         </div>
     )
 }
