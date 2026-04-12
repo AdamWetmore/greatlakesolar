@@ -1,17 +1,17 @@
 export default function About() {
     return (
-        <div>
-            <section id="mission">
+        <div className="space-y-5">
+            <section id="mission" className="space-y-3">
                 <h2>Mission</h2>
-                <p>
+                <p className="mx-auto max-w-xl text-center">
                     To bring affordable, sustainable, and resilient solar energy
                     to businesses, non-profits, and religious and public
                     institutions across the midwest.
                 </p>
             </section>
-            <section id="jacob-bechtold">
+            <section id="jacob-bechtold" className="space-y-3">
                 <h2>Headshot</h2>
-                <p>
+                <p className="mx-auto max-w-4xl text-center">
                     <strong>Jacob Bechtold | Founder</strong> With a B.S in
                     Industrial and Systems Engineering from the University of
                     Minnesota and a track record of executing an over 10 million
@@ -21,7 +21,7 @@ export default function About() {
                     religious and state institutions have access to solar and
                     BESS to improve their organization's operations.
                 </p>
-                <p>
+                <p className="mx-auto max-w-4xl text-center">
                     Jacob has successfully delivered dozens of solar and battery
                     storage projects totaling over 6 megawatts across the Twin
                     Cities, including high-profile installations for Target
@@ -31,7 +31,7 @@ export default function About() {
                     navigate the technical and bureaucratic hurdles that often
                     stall C&I projects.
                 </p>
-                <p>
+                <p className="mx-auto max-w-4xl text-center">
                     Jacob will personally work with each client from sale to
                     design to construction of the solar system providing project
                     management supervision the entire way.
@@ -44,9 +44,9 @@ export default function About() {
                     project management.
                 </p>
             </section>
-            <section id="great-lakes-solar">
+            <section id="great-lakes-solar" className="space-y-3">
                 <h2>Great Lakes Solar</h2>
-                <p>
+                <p className="mx-auto max-w-4xl text-center">
                     <i>Great Lakes Solar </i> (GLS) helps businesses, nonprofits
                     and religious and state institutions save money on their
                     energy costs by installing solar energy and battery energy
@@ -60,7 +60,7 @@ export default function About() {
                     energy security, resiliency, climate change, and electrical
                     load growth.
                 </p>
-                <p>
+                <p className="mx-auto max-w-4xl text-center">
                     GLS is a Limited Liability Company led and owned by Jacob
                     Bechtold, who has years of experience managing commerical
                     and industrial (C&I) solar and BESS projects. GLS is based

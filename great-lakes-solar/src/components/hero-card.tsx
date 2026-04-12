@@ -20,6 +20,9 @@ export default function HeroCard() {
                     battery systems that cut energy costs, add resiliency, and
                     make a lasting difference. You'll work directly with founder
                     Jacob Bechtold from day one.
+                    <p className="text-red-500">
+                        How should someone claim the free assessment?
+                    </p>
                 </CardDescription>
             </CardHeader>
             <CardContent className="flex space-x-3">

@@ -31,20 +31,14 @@ export const getStaticProps = async () => {
 }
 export default function Resources({ faqs }: { faqs: FAQ[] }) {
     return (
-        <div>
+        <div className="space-y-5">
             <FAQSection faqs={faqs} />
-            <section id="our-process">
-                <h1>Great Lakes Solar's Process</h1>
+            <section id="our-process" className="space-y-3">
+                <h2>Great Lakes Solar's Process</h2>
+                <p className="text-center text-red-500">
+                    let's get this into a nice easy-to-scan roadmap graphic
+                </p>
             </section>
-            <div>
-                <h1>Services</h1>
-                <div>Residential</div>
-                <div>Non-Profit</div>
-                <div>Commercial</div>
-            </div>
-            <div>
-                <h1>Blog</h1>
-            </div>
         </div>
     )
 }
