@@ -11,7 +11,6 @@ export default function About() {
             </section>
             <section id="jacob-bechtold">
                 <h2>Headshot</h2>
-                <h2>Bio</h2>
                 <p>
                     <strong>Jacob Bechtold | Founder</strong> With a B.S in
                     Industrial and Systems Engineering from the University of
@@ -46,6 +45,7 @@ export default function About() {
                 </p>
             </section>
             <section id="great-lakes-solar">
+                <h2>Great Lakes Solar</h2>
                 <p>
                     <i>Great Lakes Solar </i> (GLS) helps businesses, nonprofits
                     and religious and state institutions save money on their
