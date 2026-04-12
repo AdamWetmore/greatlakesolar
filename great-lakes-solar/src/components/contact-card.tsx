@@ -12,7 +12,7 @@ export default function ContactCard() {
             <CardContent>
                 {/* Phone */}
                 <Link
-                    href="tel:YOUR_NUMBER"
+                    href="tel:+19522227912"
                     className="group block w-full rounded-xl p-2 transition hover:bg-gray-100"
                 >
                     <div className="flex items-center gap-5">
@@ -23,7 +23,7 @@ export default function ContactCard() {
                             <span className="font-semibold text-gray-900">
                                 Phone
                             </span>
-                            <span className="text-gray-600">Your Number</span>
+                            <span className="text-gray-600">952-222-7912</span>
                         </div>
                         <ChevronRight className="ml-auto opacity-0 group-hover:opacity-100" />
                     </div>
@@ -52,7 +52,7 @@ export default function ContactCard() {
 
                 {/* LinkedIn */}
                 <Link
-                    href="https://www.linkedin.com/in/jacobbechtold/"
+                    href="https://www.linkedin.com/companygreat-lakes-solar"
                     target="_blank"
                     className="group block w-full rounded-xl p-2 transition hover:bg-gray-100"
                 >
@@ -81,7 +81,7 @@ export default function ContactCard() {
                                 LinkedIn
                             </span>
                             <span className="text-gray-600">
-                                @jacobbechtold
+                                @greatlakesolar
                             </span>
                         </div>
                         <ChevronRight className="ml-auto opacity-0 group-hover:opacity-100" />
@@ -90,7 +90,7 @@ export default function ContactCard() {
 
                 {/* Facebook */}
                 <Link
-                    href="https://facebook.com/YOUR_PAGE"
+                    href="https://facebook.com/people/Great-Lake-Solar/61574343611604"
                     target="_blank"
                     className="group block w-full rounded-xl p-2 transition hover:bg-gray-100"
                 >
@@ -119,7 +119,7 @@ export default function ContactCard() {
                                 Facebook
                             </span>
                             <span className="text-gray-600">
-                                your-page-name
+                                Great Lake Solar
                             </span>
                         </div>
                         <ChevronRight className="ml-auto opacity-0 group-hover:opacity-100" />
