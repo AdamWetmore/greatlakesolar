@@ -28,9 +28,6 @@ export default function Header() {
                 <Link href="/" className={navLinkStyle('/')}>
                     Home
                 </Link>
-                <Link href="/why-solar" className={navLinkStyle('/why-solar')}>
-                    Why Solar
-                </Link>
                 <Link href="/about" className={navLinkStyle('/about')}>
                     About
                 </Link>
