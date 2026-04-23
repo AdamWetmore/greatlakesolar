@@ -11,7 +11,7 @@ import { Button } from './ui/button'
 
 export default function HeroCard() {
     return (
-        <Card className="mx-auto max-w-xl">
+        <Card className="mx-auto md:w-lg">
             <CardHeader>
                 <CardTitle>Minnesota's Local Commercial Solar Expert</CardTitle>
                 <CardDescription>
@@ -25,15 +25,12 @@ export default function HeroCard() {
                     </p>
                 </CardDescription>
             </CardHeader>
-            <CardContent className="flex space-x-3">
+            <CardContent>
                 <Link href="">
                     <Button>
                         Schedule your<strong>FREE</strong>Assessment
                         <ChevronRight />
                     </Button>
-                </Link>
-                <Link href="/resources#our-process">
-                    <Button variant="secondary">Our Process</Button>
                 </Link>
             </CardContent>
         </Card>
