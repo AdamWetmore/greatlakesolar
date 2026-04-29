@@ -1,7 +1,7 @@
 import '@/styles/globals.css'
 import type { AppProps } from 'next/app'
-import Header from '@/components/layout/header'
 import Head from 'next/head'
+import Layout from '@/components/layout/layout'
 
 export default function App({ Component, pageProps }: AppProps) {
     return (
@@ -9,8 +9,9 @@ export default function App({ Component, pageProps }: AppProps) {
             <Head>
                 <title>Great Lakes Solar</title>
             </Head>
-            <Header />
-            <Component {...pageProps} />
+            <Layout>
+                <Component {...pageProps} />
+            </Layout>
         </>
     )
 }

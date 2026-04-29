@@ -11,14 +11,14 @@ export default function Header() {
         }`
 
     return (
-        <div className="bg-background sticky top-0 z-60 px-3 py-2 text-lg">
+        <div className="bg-background border-border sticky top-0 z-60 border-b px-3 py-2 text-lg">
             <div className="mx-auto flex max-w-7xl items-center justify-between">
                 <Link href="/" className="flex items-center space-x-2">
                     <Image
-                        src="/vercel.svg"
-                        alt="Company logo placeholder"
-                        width={50}
-                        height={50}
+                        src="/Bug.svg"
+                        alt="Great Lakes Solar Logo"
+                        width={100}
+                        height={100}
                         priority
                     />
                     <div>Great Lakes Solar</div>

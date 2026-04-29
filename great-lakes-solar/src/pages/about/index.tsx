@@ -15,7 +15,7 @@ export default function About() {
                     className="absolute inset-0 z-40 object-cover brightness-75"
                 />
                 <div className="relative flex h-full flex-col px-4 py-10">
-                    <div className="text-background grid h-full place-content-center space-y-3">
+                    <div className="text-accent grid h-full place-content-center space-y-3">
                         <h1>Our Mission</h1>
                         <p className="mx-auto max-w-4xl text-center text-2xl">
                             To bring affordable, sustainable, and resilient
@@ -94,9 +94,9 @@ export default function About() {
                     </div>
                 </div>
             </section>
-            <section id="great-lakes-solar" className="space-y-3">
+            <section id="great-lakes-solar" className="space-y-3 py-6">
                 <h2>Great Lakes Solar</h2>
-                <p className="mx-auto max-w-7xl">
+                <p className="mx-auto max-w-7xl text-center">
                     <i>Great Lakes Solar </i> (GLS) helps businesses, nonprofits
                     and religious and state institutions save money on their
                     energy costs by installing solar energy and battery energy
@@ -110,7 +110,7 @@ export default function About() {
                     energy security, resiliency, climate change, and electrical
                     load growth.
                 </p>
-                <p className="mx-auto max-w-7xl">
+                <p className="mx-auto max-w-7xl text-center">
                     GLS is a Limited Liability Company led and owned by Jacob
                     Bechtold, who has years of experience managing commerical
                     and industrial (C&I) solar and BESS projects. GLS is based
