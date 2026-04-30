@@ -5,7 +5,7 @@ import Image from 'next/image'
 export default function Home() {
     return (
         <div className="space-y-5">
-            <section className="relative h-screen md:h-[70vh] lg:h-[80vh]">
+            <section className="relative min-h-screen md:h-[70vh] lg:h-[80vh]">
                 <Image
                     src="/chuttersnap-s_7BE4D2va0-unsplash.jpg"
                     alt="Aerial view of solar panels on a roof"
