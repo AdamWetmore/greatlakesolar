@@ -11,7 +11,7 @@ export default function FAQSection({ faqs }: { faqs: FAQ[] }) {
         <section
             id="faq"
             aria-label="frequently asked questions"
-            className="mx-auto max-w-2xl space-y-4 px-3 md:px-0"
+            className="mx-auto max-w-2xl space-y-4"
         >
             <h2 className="text-center text-2xl font-bold">
                 Frequently Asked Questions
