@@ -2,7 +2,7 @@ import ContactCard from '@/components/contact-card'
 
 export default function Contact() {
     return (
-        <div className="space-y-5">
+        <div className="md:py-10">
             <ContactCard />
         </div>
     )
