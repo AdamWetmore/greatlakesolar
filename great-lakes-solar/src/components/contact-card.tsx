@@ -5,7 +5,7 @@ import { Card, CardContent, CardHeader, CardTitle } from './ui/card'
 
 export default function ContactCard() {
     return (
-        <Card className="mx-auto max-w-sm gap-0">
+        <Card className="mx-auto w-full gap-0 md:max-w-xl">
             <CardHeader>
                 <CardTitle className="text-center">Get in touch!</CardTitle>
             </CardHeader>

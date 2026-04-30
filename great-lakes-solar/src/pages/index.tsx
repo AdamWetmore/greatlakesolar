@@ -4,7 +4,7 @@ import Image from 'next/image'
 
 export default function Home() {
     return (
-        <div className="space-y-5">
+        <div>
             <section className="relative min-h-screen md:h-[70vh] lg:h-[80vh]">
                 <Image
                     src="/chuttersnap-s_7BE4D2va0-unsplash.jpg"
@@ -33,7 +33,9 @@ export default function Home() {
                     </div>
                 </div>
             </section>
-            <ContactCard />
+            <div className="py-0 md:px-2 md:py-10">
+                <ContactCard />
+            </div>
         </div>
     )
 }

@@ -12,7 +12,7 @@ import { Button } from './ui/button'
 
 export default function HeroCard() {
     return (
-        <Card className="mx-auto sm:w-full md:w-lg lg:w-xl xl:w-4xl">
+        <Card className="mx-auto sm:w-full md:w-xl lg:w-2xl xl:w-3xl">
             <Image
                 src="/PrimaryLogo.svg"
                 alt="placeholder for GLS logo"
