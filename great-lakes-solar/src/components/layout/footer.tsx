@@ -1,12 +1,13 @@
 import Link from 'next/link'
 import Image from 'next/image'
+import { Container } from './container'
 import { Mail, Phone } from 'lucide-react'
 
 export default function Footer() {
     return (
         <footer className="bg-background border-border border-t py-6">
-            <div className="mx-auto max-w-7xl px-3">
-                <div className="flex flex-col items-center justify-between gap-3 md:flex-row md:gap-0">
+            <Container>
+                <div className="flex flex-col items-center gap-6 md:flex-row md:items-center md:justify-between">
                     <Link href="/" className="flex items-center space-x-2">
                         <Image
                             src="/SecondaryLogo.svg"
@@ -82,7 +83,7 @@ export default function Footer() {
                     &copy; {new Date().getFullYear()} Great Lakes Solar. All
                     rights reserved.
                 </div>
-            </div>
+            </Container>
         </footer>
     )
 }

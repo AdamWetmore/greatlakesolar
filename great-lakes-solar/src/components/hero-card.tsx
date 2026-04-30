@@ -12,13 +12,13 @@ import { Button } from './ui/button'
 
 export default function HeroCard() {
     return (
-        <Card className="mx-auto sm:w-full md:w-xl lg:w-2xl xl:w-3xl">
+        <Card className="mx-auto w-full max-w-md md:max-w-xl lg:max-w-2xl">
             <Image
                 src="/PrimaryLogo.svg"
                 alt="placeholder for GLS logo"
                 width={1000}
                 height={1000}
-                className="mx-auto"
+                className="mx-auto w-40 md:w-56 lg:w-64"
             />
             <CardHeader className="text-center">
                 <CardTitle className="text-xl">

@@ -3,19 +3,20 @@ import Image from 'next/image'
 import { usePathname } from 'next/navigation'
 import { useState } from 'react'
 import { Menu, X } from 'lucide-react'
+import { Container } from './container'
 
 export default function Header() {
     const pathname = usePathname()
     const [isMenuOpen, setIsMenuOpen] = useState(false)
 
     const navLinkStyle = (path: string) =>
-        `px-3 py-2 transition-colors ${
+        `px-3 py-2 text-sm md:text-base transition-colors ${
             pathname === path ? 'text-blue-600' : 'hover:text-blue-600'
         }`
 
     return (
-        <div className="bg-background border-border sticky top-0 z-60 border-b px-3 py-2 text-lg">
-            <div className="mx-auto flex max-w-7xl items-center justify-between">
+        <div className="bg-background border-border sticky top-0 z-50 border-b">
+            <Container className="flex items-center justify-between py-3">
                 <Link href="/" className="flex items-center space-x-2">
                     <Image
                         src="/Bug.svg"
@@ -23,7 +24,7 @@ export default function Header() {
                         width={100}
                         height={100}
                         priority
-                        className="hidden sm:block"
+                        className="hidden md:block"
                     />
                     <div>Great Lakes Solar</div>
                 </Link>
@@ -56,10 +57,10 @@ export default function Header() {
                 >
                     {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
                 </button>
-            </div>
+            </Container>
             {isMenuOpen && (
-                <div className="mt-2 space-y-2 md:hidden">
-                    <nav className="flex flex-col items-start">
+                <div className="border-border mt-3 border-t pt-3 md:hidden">
+                    <nav className="flex flex-col gap-2">
                         <Link
                             href="/"
                             className={navLinkStyle('/')}

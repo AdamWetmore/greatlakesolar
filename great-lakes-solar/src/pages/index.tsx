@@ -5,7 +5,7 @@ import Image from 'next/image'
 export default function Home() {
     return (
         <div>
-            <section className="relative min-h-screen md:h-[70vh] lg:h-[80vh]">
+            <section className="relative min-h-[70vh] md:min-h-[80vh]">
                 <Image
                     src="/chuttersnap-s_7BE4D2va0-unsplash.jpg"
                     alt="Aerial view of solar panels on a roof"
@@ -13,7 +13,7 @@ export default function Home() {
                     objectFit="cover"
                     className="absolute inset-0 z-40 object-cover brightness-75"
                 />
-                <div className="relative flex h-full flex-col gap-5 px-4 py-10">
+                <div className="relative flex h-full flex-col gap-6 px-4 py-12 md:px-6 md:py-16">
                     <HeroCard />
                     <div className="text-accent mt-auto text-center text-sm">
                         Photo by{' '}

@@ -5,11 +5,11 @@ import { Card, CardContent, CardHeader, CardTitle } from './ui/card'
 
 export default function ContactCard() {
     return (
-        <Card className="mx-auto w-full gap-0 md:max-w-xl">
+        <Card className="mx-auto w-full max-w-md md:max-w-xl">
             <CardHeader>
                 <CardTitle className="text-center">Get in touch!</CardTitle>
             </CardHeader>
-            <CardContent>
+            <CardContent className="space-y-3">
                 {/* Phone */}
                 <Link
                     href="tel:+19522227912"
@@ -28,7 +28,6 @@ export default function ContactCard() {
                         <ChevronRight className="ml-auto opacity-0 group-hover:opacity-100" />
                     </div>
                 </Link>
-
                 {/* Email */}
                 <Link
                     href="mailto:info@greatlakesolar.com"
@@ -49,7 +48,6 @@ export default function ContactCard() {
                         <ChevronRight className="ml-auto opacity-0 group-hover:opacity-100" />
                     </div>
                 </Link>
-
                 {/* LinkedIn */}
                 <Link
                     href="https://www.linkedin.com/companygreat-lakes-solar"
@@ -87,7 +85,6 @@ export default function ContactCard() {
                         <ChevronRight className="ml-auto opacity-0 group-hover:opacity-100" />
                     </div>
                 </Link>
-
                 {/* Facebook */}
                 <Link
                     href="https://facebook.com/people/Great-Lake-Solar/61574343611604"
