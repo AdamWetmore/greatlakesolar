@@ -1,3 +1,4 @@
+import { Container } from '@/components/layout/container'
 import Image from 'next/image'
 
 export default function About() {
@@ -42,8 +43,8 @@ export default function About() {
                     </div>
                 </div>
             </section>
-            <section id="jacob-bechtold" className="space-y-3 py-6">
-                <div className="mx-auto grid max-w-7xl grid-cols-1 lg:grid-cols-2">
+            <section id="jacob-bechtold" className="py-6">
+                <Container className="grid grid-cols-1 space-y-3 lg:grid-cols-2">
                     <div>
                         <Image
                             src="/jacob-bechtold-headshot.jpg"
@@ -92,41 +93,45 @@ export default function About() {
                             marketing or solar project management.
                         </p>
                     </div>
-                </div>
+                </Container>
             </section>
-            <section id="great-lakes-solar" className="space-y-3 px-3 py-6">
-                <h2>Great Lakes Solar</h2>
-                <p className="mx-auto max-w-7xl text-center">
-                    <i>Great Lakes Solar </i> (GLS) helps businesses, nonprofits
-                    and religious and state institutions save money on their
-                    energy costs by installing solar energy and battery energy
-                    storage systems (BESS). Solar and BESS are teh most
-                    affordable sources of energy, allowing businesses to combat
-                    rising energy prices and finflation, while providing backup
-                    power for key loads. GLS' goal is to use solar and BESS
-                    systems as a foundational tool to empower its clients to
-                    succeed in their mission and grow their impact. Commercial
-                    solar and BESS helps combat larger societal issues like
-                    energy security, resiliency, climate change, and electrical
-                    load growth.
-                </p>
-                <p className="mx-auto max-w-7xl text-center">
-                    GLS is a Limited Liability Company led and owned by Jacob
-                    Bechtold, who has years of experience managing commerical
-                    and industrial (C&I) solar and BESS projects. GLS is based
-                    in Minneapolis, Minnesota and serves the Great Lakes region
-                    of the Midwest. GLS manages a project from start to finish
-                    and leverages strong relationships with engineering firms,
-                    installation contractors, and solar equipment providers to
-                    execute high quality C&I solar projects on the fastest
-                    timeline. With a small, local team, GLS is able to build
-                    relationships with each individual client and find a
-                    personalized renewable energy solution for their
-                    organization. GLS' top priority is customer success and
-                    experience. With a small team, and strong relationships
-                    across the market, GLS can provide ccustomized solar
-                    solutions at the best price.
-                </p>
+            <section id="great-lakes-solar" className="py-6">
+                <Container className="space-y-3">
+                    <h2>Great Lakes Solar</h2>
+                    <p className="mx-auto max-w-7xl text-center">
+                        <i>Great Lakes Solar </i> (GLS) helps businesses,
+                        nonprofits and religious and state institutions save
+                        money on their energy costs by installing solar energy
+                        and battery energy storage systems (BESS). Solar and
+                        BESS are teh most affordable sources of energy, allowing
+                        businesses to combat rising energy prices and
+                        finflation, while providing backup power for key loads.
+                        GLS' goal is to use solar and BESS systems as a
+                        foundational tool to empower its clients to succeed in
+                        their mission and grow their impact. Commercial solar
+                        and BESS helps combat larger societal issues like energy
+                        security, resiliency, climate change, and electrical
+                        load growth.
+                    </p>
+                    <p className="mx-auto max-w-7xl text-center">
+                        GLS is a Limited Liability Company led and owned by
+                        Jacob Bechtold, who has years of experience managing
+                        commerical and industrial (C&I) solar and BESS projects.
+                        GLS is based in Minneapolis, Minnesota and serves the
+                        Great Lakes region of the Midwest. GLS manages a project
+                        from start to finish and leverages strong relationships
+                        with engineering firms, installation contractors, and
+                        solar equipment providers to execute high quality C&I
+                        solar projects on the fastest timeline. With a small,
+                        local team, GLS is able to build relationships with each
+                        individual client and find a personalized renewable
+                        energy solution for their organization. GLS' top
+                        priority is customer success and experience. With a
+                        small team, and strong relationships across the market,
+                        GLS can provide ccustomized solar solutions at the best
+                        price.
+                    </p>
+                </Container>
             </section>
         </div>
     )

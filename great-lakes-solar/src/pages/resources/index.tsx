@@ -1,4 +1,5 @@
 import FAQSection from '@/components/faq/faq-section'
+import { Container } from '@/components/layout/container'
 import FAQ from '@/models/faq'
 
 export const getStaticProps = async () => {
@@ -31,13 +32,17 @@ export const getStaticProps = async () => {
 }
 export default function Resources({ faqs }: { faqs: FAQ[] }) {
     return (
-        <div className="space-y-5 py-3 md:py-10">
-            <FAQSection faqs={faqs} />
-            <section id="our-process" className="space-y-3">
-                <h2>Great Lakes Solar's Process</h2>
-                <p className="text-center text-red-500">
-                    let's get this into a nice easy-to-scan roadmap graphic
-                </p>
+        <div className="space-y-3 py-3 md:py-10">
+            <Container>
+                <FAQSection faqs={faqs} />
+            </Container>
+            <section id="our-process">
+                <Container className="space-y-3">
+                    <h2>Great Lakes Solar's Process</h2>
+                    <p className="text-center text-red-500">
+                        let's get this into a nice easy-to-scan roadmap graphic
+                    </p>
+                </Container>
             </section>
         </div>
     )

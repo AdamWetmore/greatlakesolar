@@ -1,5 +1,6 @@
 import ContactCard from '@/components/contact-card'
 import HeroCard from '@/components/hero-card'
+import { Container } from '@/components/layout/container'
 import Image from 'next/image'
 
 export default function Home() {
@@ -33,9 +34,11 @@ export default function Home() {
                     </div>
                 </div>
             </section>
-            <div className="py-0 md:px-2 md:py-10">
-                <ContactCard />
-            </div>
+            <section className="md:py-10">
+                <Container>
+                    <ContactCard />
+                </Container>
+            </section>
         </div>
     )
 }
