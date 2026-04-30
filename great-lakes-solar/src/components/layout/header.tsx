@@ -23,6 +23,7 @@ export default function Header() {
                         width={100}
                         height={100}
                         priority
+                        className="hidden sm:block"
                     />
                     <div>Great Lakes Solar</div>
                 </Link>
