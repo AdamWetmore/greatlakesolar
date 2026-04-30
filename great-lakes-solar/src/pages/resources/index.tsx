@@ -31,7 +31,7 @@ export const getStaticProps = async () => {
 }
 export default function Resources({ faqs }: { faqs: FAQ[] }) {
     return (
-        <div className="space-y-5">
+        <div className="space-y-5 py-3 md:py-10">
             <FAQSection faqs={faqs} />
             <section id="our-process" className="space-y-3">
                 <h2>Great Lakes Solar's Process</h2>
