@@ -15,7 +15,7 @@ export default function Header() {
         }`
 
     return (
-        <div className="bg-background border-border sticky top-0 z-50 border-b">
+        <div className="bg-background border-border sticky top-0 z-60 border-b">
             <Container className="flex items-center justify-between py-3">
                 <Link href="/" className="flex items-center space-x-2">
                     <Image
