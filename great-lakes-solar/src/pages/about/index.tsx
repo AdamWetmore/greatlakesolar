@@ -14,7 +14,7 @@ export default function About() {
                     objectFit="cover"
                     className="absolute inset-0 z-40 object-cover brightness-75"
                 />
-                <div className="relative flex h-full flex-col px-4 py-10">
+                <div className="relative flex h-full flex-col gap-5 px-4 py-10">
                     <div className="text-accent grid h-full place-content-center space-y-3">
                         <h1>Our Mission</h1>
                         <p className="mx-auto max-w-4xl text-center text-2xl">
@@ -54,7 +54,7 @@ export default function About() {
                         />
                         <h2 className="mt-3">Jacob Bechtold | Founder</h2>
                     </div>
-                    <div className="my-auto mr-3 space-y-12">
+                    <div className="m-auto space-y-12 px-3 text-center lg:text-left">
                         <p>
                             With a B.S in Industrial and Systems Engineering
                             from the University of Minnesota and a track record
@@ -94,7 +94,7 @@ export default function About() {
                     </div>
                 </div>
             </section>
-            <section id="great-lakes-solar" className="space-y-3 py-6">
+            <section id="great-lakes-solar" className="space-y-3 px-3 py-6">
                 <h2>Great Lakes Solar</h2>
                 <p className="mx-auto max-w-7xl text-center">
                     <i>Great Lakes Solar </i> (GLS) helps businesses, nonprofits

@@ -13,7 +13,7 @@ export default function Home() {
                     objectFit="cover"
                     className="absolute inset-0 z-40 object-cover brightness-75"
                 />
-                <div className="relative flex h-full flex-col px-4 py-10">
+                <div className="relative flex h-full flex-col gap-5 px-4 py-10">
                     <HeroCard />
                     <div className="text-accent mt-auto text-center text-sm">
                         Photo by{' '}
