@@ -60,9 +60,9 @@ export default function Home() {
                             <h2 className="text-left">Proven. End-to-End.</h2>
                             <p className="pt-1">
                                 Jacob has managed over $10 million in C&I solar
-                                projects. Including installations for Target,
-                                Minneapolis Public Schools, and the City of
-                                Saint Paul. We deliver.
+                                projects. Including installations for fortune
+                                500 companies, public schools, and cities. We
+                                deliver.
                             </p>
                         </div>
                     </div>

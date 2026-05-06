@@ -71,12 +71,12 @@ export default function About() {
                             Jacob has successfully delivered dozens of solar and
                             battery storage projects totaling over 6 megawatts
                             across the Twin Cities, including high-profile
-                            installations for Target Corporation, Minneapolis
-                            Public Schools, and the City of Saint Paul. Jacob's
-                            deep-rooted understanding of the local landscape and
-                            industry and strong partnerships allow him to
-                            navigate the technical and bureaucratic hurdles that
-                            often stall C&I projects.
+                            installations for fortune 500 companies,public
+                            schools, and cities. Jacob's deep-rooted
+                            understanding of the local landscape and industry
+                            and strong partnerships allow him to navigate the
+                            technical and bureaucratic hurdles that often stall
+                            C&I projects.
                         </p>
                         <p>
                             Jacob will personally work with each client from
