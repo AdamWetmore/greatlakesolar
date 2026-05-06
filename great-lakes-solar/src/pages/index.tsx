@@ -74,7 +74,7 @@ export default function Home() {
                         <h2>Who We Serve</h2>
                         <p>
                             Great Lakes Solar works with commercial building
-                            owners accross the Midwest, indluding:
+                            owners accross the Midwest, including:
                         </p>
                         <ul className="list-disc pl-5">
                             <li>Businesses &amp; corporate offices</li>
@@ -85,7 +85,7 @@ export default function Home() {
                             <li>Industrial &amp; warehouse facilities</li>
                         </ul>
                         <p>
-                            If your buidling has a commercial roof and an energy
+                            If your building has a commercial roof and an energy
                             bill, let's talk!
                         </p>
                     </div>
