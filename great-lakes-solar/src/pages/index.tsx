@@ -48,10 +48,10 @@ export default function Home() {
                             </p>
                         </div>
                         <div className="bg-primary text-accent border-t-2 border-b-2 p-3">
-                            <h2 className="text-left">Local. Connected</h2>
+                            <h2 className="text-left">Local. Connected.</h2>
                             <p className="pt-1">
-                                We know Minnesota’s utilities, building
-                                departments, and engineering firms. That local
+                                We know Minnesota’s utilities, permitting
+                                agencies, and engineering firms. That local
                                 knowledge means faster timelines and fewer
                                 surprises on your project.
                             </p>
