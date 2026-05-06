@@ -9,6 +9,7 @@ import {
     CardTitle,
 } from './ui/card'
 import { Button } from './ui/button'
+import IntakeForm from './forms/intake'
 
 export default function HeroCard() {
     return (
@@ -30,16 +31,13 @@ export default function HeroCard() {
                     battery systems that cut energy costs, add resiliency, and
                     make a lasting difference. You'll work directly with founder
                     Jacob Bechtold from day one.
-                    <p className="text-red-500">
-                        How should someone claim the free assessment?
-                    </p>
                 </CardDescription>
             </CardHeader>
-            <CardContent className="text-center">
-                <Link href="">
-                    <Button>
-                        Schedule your<strong>FREE</strong>Assessment
-                        <ChevronRight />
+            <CardContent className="flex items-center justify-evenly">
+                <IntakeForm />
+                <Link href="/resources#process">
+                    <Button size="lg" variant="outline">
+                        See how it works
                     </Button>
                 </Link>
             </CardContent>

@@ -2,9 +2,11 @@
 export default class FAQ {
     question: string
     answer: string
+    category: string
 
-    constructor(question: string, answer: string) {
+    constructor(question: string, answer: string, category: string) {
         this.question = question
         this.answer = answer
+        this.category = category
     }
 }

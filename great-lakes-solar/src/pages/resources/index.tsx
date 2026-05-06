@@ -10,11 +10,98 @@ export const getStaticProps = async () => {
     const faqs: FAQ[] = [
         new FAQ(
             'How long do solar panels last?',
-            'Most quality solar panels are designed to last 35-40 years, Manufacturers typically offer a 25-year performance warranty, guaranteeing that the panels will produce at least 80% of their original output after 25 years. In practice, most systems continue procuding well beyond that.'
+            'Most quality solar panels are designed to last 35-40 years, Manufacturers typically offer a 25-year performance warranty, guaranteeing that the panels will produce at least 80% of their original output after 25 years. In practice, most systems continue procuding well beyond that.',
+            'Basics'
         ),
         new FAQ(
             'What is net metering?',
-            'Net metering is a billing arrangement with your utility company that credits you for the excess electricity your solar system sends back to the grid. When your panels produce more than you need (during sunny hours), the surplus flows to the grid and you earn credits. Wehn you need more power than your panels produce (at night or on cloudy days), you draw from the grid and use those credits. Essentially, this equates to the grid acting as a giant battery. All utilities in Minnesota are required to offer net metering.'
+            'Net metering is a billing arrangement with your utility company that credits you for the excess electricity your solar system sends back to the grid. When your panels produce more than you need (during sunny hours), the surplus flows to the grid and you earn credits. Wehn you need more power than your panels produce (at night or on cloudy days), you draw from the grid and use those credits. Essentially, this equates to the grid acting as a giant battery. All utilities in Minnesota are required to offer net metering.',
+            'Basics'
+        ),
+        new FAQ(
+            'What happens to my solar system during a power outage?',
+            'A standard grid-tied solar system will automatically shut off during a grid outage, this is a safety requirement to protect utility workers. However, if you add a battery storage system, your home or business can continue running on stored solar energy even when the grid is down. This is one of the most popular reasons our commercial clients add batteries.',
+            'Basics'
+        ),
+        new FAQ(
+            'Do I need to clean or maintain my solar panels?',
+            "Solar panels require very little maintenance. Rain does most of the cleaning work naturally. Occasionally, panels may benefit from a rinse with a garden hose if they accumulate significant dust or debris. We recommend an annual or bi-annual visual inspection and weekly monitoring of your system's performance data (which we can help you set up) to catch any unusual drops in output early.",
+            'Basics'
+        ),
+        new FAQ(
+            'Is commercial solar a good investment for my business?',
+            'For most businesses, yes, especially those with high daytime energy consumption. Commercial solar typically reduces electricity costs by 20-30% or more, and most systems pay for themselves within 5-8 years. After that, you\-re generating essentially free electricity for 20+ years. Combined with federal tax credits and accelerated depreciation, the real out-of-pocket cost is often far lower than the sticker price.',
+            'Commercial Solar'
+        ),
+        new FAQ(
+            'How big of a solar system does my business need?',
+            "System size depends on your energy consumption, available roof or ground space, and your goals. Commercial systems in the Great Lakes region typically range from 30 kilowatts (kW) to over 1 megawatt (MW). We start every project with a free energy assessment — we'll review your utility bills and propose a system sized specifically for your operation.",
+            'Commercial Solar'
+        ),
+        new FAQ(
+            'What if I lease my building instead of own it?',
+            "You may still be able to go solar with the property owner's consent. We can help you navigate that conversation and structure a project that works for both parties. In some cases, the landlord benefits directly from the improved property value, which can make approval easier than you'd expect.",
+            'Commercial Solar'
+        ),
+        new FAQ(
+            'Will solar disrupt my business operations during installation?',
+            'We design our installation process to minimize disruption. Most commercial installations are completed within a few weeks depending on system size. We coordinate timing with you and work efficiently to get your system up and running as quickly as possible.',
+            'Commercial Solar'
+        ),
+        new FAQ(
+            ' Can solar help reduce my demand charges?',
+            "Yes, especially when paired with battery storage. Demand charges are fees utilities impose based on your peak power draw during a billing period. By generating your own solar power during high-use hours and drawing from batteries during demand spikes, many businesses significantly reduce or even eliminate these charges. We'll analyze your utility bills to show you exactly how much you could save.",
+            'Commercial Solar'
+        ),
+        new FAQ(
+            'How does battery storage work with solar?',
+            "Battery storage systems store excess electricity generated by your solar panels during the day. That stored energy can then be used at night, during peak-rate hours, or when the grid goes down. Think of it as your own personal power reserve — you're generating energy when it's available and using it when you need it most.",
+            'Battery Storage'
+        ),
+        new FAQ(
+            'Do I need batteries to go solar?',
+            "No, most solar installations are grid-tied systems that work without batteries. However, batteries add significant value if you want backup power during outages, want to reduce peak demand charges, or want to maximize your use of self-generated solar energy. We'll help you decide whether batteries make financial and practical sense for your situation.",
+            'Battery Storage'
+        ),
+        new FAQ(
+            'How long can a battery system power my business during an outage?',
+            'It depends on the size of your battery system and your energy consumption. A well-sized battery can keep critical loads running - lighting, refrigeration, computers, security systems - for many hours or even through the night. For businesses where uptime is critical, we can design a system to cover your specific needs.',
+            'Battery Storage'
+        ),
+        new FAQ(
+            'What brands of batteries do you install?',
+            "We work with leading commercial battery manufacturers and select products based on performance, warranty, and suitability for your application. We'll walk you through the options and make a recommendation based on your energy goals and budget.",
+            'Battery Storage'
+        ),
+        new FAQ(
+            'What is "peak shaving" and how does battery storage help?',
+            'Peak shaving is the practice of reducing your highest power draw during a billing period to lower demand charges on your utility bill. Batteries enable peak shaving by supplying stored energy during high-demand moments — so your business never pulls a large spike from the grid. For businesses with significant demand charges, this alone can justify the cost of a battery system.',
+            'Battery Storage'
+        ),
+        new FAQ(
+            'What federal incentives are available for commercial solar?',
+            "The federal Investment Tax Credit (ITC) currently allows businesses to deduct 30% of the total cost of a solar installation directly from their federal tax liability. This is a dollar-for-dollar reduction in taxes owed - not just a deduction from income. In addition, commercial solar systems qualify for accelerated depreciation under the Modified Accelerated Cost Recovery System (MACRS), which allows you to depreciate most of the system's value in the first year, generating additional tax savings.",
+            'Financing & Incentives'
+        ),
+        new FAQ(
+            'Are there state or local incentives in Minnesota?',
+            "Minnesota and other states in the midwest offer additional incentives including net metering programs, grants, low interest loans, utility rebates, and property tax exemptions for solar installations. The available incentives change over time, so we always do a full incentive review for every client to make sure you're capturing every dollar available.",
+            'Financing & Incentives'
+        ),
+        new FAQ(
+            'How quickly will my solar system pay for itself?',
+            'Most commercial solar systems have a payback period of 5-8 years, depending on system size, energy rates, financing structure, and available incentives. After payback, you continue to benefit from free or near-free electricity for the remaining life of the system — typically 25+ more years.',
+            'Financing & Incentives'
+        ),
+        new FAQ(
+            'Does going solar affect my property taxes?',
+            "In Minnesota and other midwest states, solar energy systems are exempt from property tax assessment increases, meaning your property taxes won't go up as a result of adding solar, even though the system adds value to your property. This is a significant advantage compared to other capital improvements.",
+            'Financing & Incentives'
+        ),
+        new FAQ(
+            'Can nonprofits or tax-exempt organizations benefit from solar?',
+            "Yes, even if your organization doesn't pay federal income tax, there are pathways to capture solar incentives. Direct pay provisions under recent federal legislation allow certain tax-exempt entities to receive the value of the ITC as a direct payment. We'll work with you to find the best financial structure for your situation.",
+            'Financing & Incentives'
         ),
     ]
 
@@ -33,10 +120,12 @@ export const getStaticProps = async () => {
 export default function Resources({ faqs }: { faqs: FAQ[] }) {
     return (
         <div className="space-y-3 py-3 md:py-10">
-            <Container>
-                <FAQSection faqs={faqs} />
-            </Container>
-            <section id="our-process">
+            <section id="faq" aria-label="frequently asked questions">
+                <Container>
+                    <FAQSection faqs={faqs} />
+                </Container>
+            </section>
+            <section id="process">
                 <Container className="space-y-3">
                     <h2>Great Lakes Solar's Process</h2>
                     <p className="text-center text-red-500">

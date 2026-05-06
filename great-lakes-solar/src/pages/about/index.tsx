@@ -103,15 +103,14 @@ export default function About() {
                         nonprofits and religious and state institutions save
                         money on their energy costs by installing solar energy
                         and battery energy storage systems (BESS). Solar and
-                        BESS are teh most affordable sources of energy, allowing
-                        businesses to combat rising energy prices and
-                        finflation, while providing backup power for key loads.
-                        GLS' goal is to use solar and BESS systems as a
-                        foundational tool to empower its clients to succeed in
-                        their mission and grow their impact. Commercial solar
-                        and BESS helps combat larger societal issues like energy
-                        security, resiliency, climate change, and electrical
-                        load growth.
+                        BESS are the most affordable sources of energy, allowing
+                        businesses to combat rising energy prices and inflation,
+                        while providing backup power for key loads. GLS' goal is
+                        to use solar and BESS systems as a foundational tool to
+                        empower its clients to succeed in their mission and grow
+                        their impact. Commercial solar and BESS helps combat
+                        larger societal issues like energy security, resiliency,
+                        climate change, and electrical load growth.
                     </p>
                     <p className="mx-auto max-w-7xl text-center">
                         GLS is a Limited Liability Company led and owned by

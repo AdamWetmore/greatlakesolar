@@ -8,11 +8,7 @@ import {
 
 export default function FAQSection({ faqs }: { faqs: FAQ[] }) {
     return (
-        <section
-            id="faq"
-            aria-label="frequently asked questions"
-            className="mx-auto max-w-2xl space-y-4"
-        >
+        <>
             <h2 className="text-center text-2xl font-bold">
                 Frequently Asked Questions
             </h2>
@@ -24,6 +20,6 @@ export default function FAQSection({ faqs }: { faqs: FAQ[] }) {
                     </AccordionItem>
                 ))}
             </Accordion>
-        </section>
+        </>
     )
 }
