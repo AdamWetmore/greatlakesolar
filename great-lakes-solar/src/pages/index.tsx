@@ -2,6 +2,15 @@ import ContactCard from '@/components/contact-card'
 import HeroCard from '@/components/hero-card'
 import { Container } from '@/components/layout/container'
 import Image from 'next/image'
+import {
+    Building,
+    Heart,
+    Church,
+    GraduationCap,
+    Landmark,
+    Factory,
+    Building2,
+} from 'lucide-react'
 
 export default function Home() {
     return (
@@ -34,7 +43,7 @@ export default function Home() {
                     </div>
                 </div>
             </section>
-            <section className="md:py-10">
+            <section className="py-10">
                 <Container>
                     <h2>The GLS Difference</h2>
                     <div className="pt-3 md:flex">
@@ -68,22 +77,52 @@ export default function Home() {
                     </div>
                 </Container>
             </section>
-            <section className="md:py-10">
+            <section>
                 <Container>
-                    <div className="space-y-3">
+                    <div className="space-y-3 text-center">
                         <h2>Who We Serve</h2>
                         <p>
                             Great Lakes Solar works with commercial building
                             owners accross the Midwest, including:
                         </p>
-                        <ul className="list-disc pl-5">
-                            <li>Businesses &amp; corporate offices</li>
-                            <li>Non-profits &amp; foundations</li>
-                            <li>Churches &amp; religious institutions</li>
-                            <li>Schools &amp; universities</li>
-                            <li>Cities, counties, &amp; public agencies</li>
-                            <li>Industrial &amp; warehouse facilities</li>
-                        </ul>
+                        <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
+                            <div className="flex items-start gap-3 rounded-lg border p-4 shadow-sm">
+                                <Building2 />
+                                <h3 className="font-semibold">
+                                    Businesses &amp; corporate offices
+                                </h3>
+                            </div>
+                            <div className="flex items-start gap-3 rounded-lg border p-4 shadow-sm">
+                                <Heart className="text-primary h-6 w-6" />
+                                <h3 className="font-semibold">
+                                    Non-profits &amp; foundations
+                                </h3>
+                            </div>
+                            <div className="flex items-start gap-3 rounded-lg border p-4 shadow-sm">
+                                <Church className="text-primary h-6 w-6" />
+                                <h3 className="font-semibold">
+                                    Churches &amp; religious institutions
+                                </h3>
+                            </div>
+                            <div className="flex items-start gap-3 rounded-lg border p-4 shadow-sm">
+                                <GraduationCap className="text-primary h-6 w-6" />
+                                <h3 className="font-semibold">
+                                    Schools &amp; universities
+                                </h3>
+                            </div>
+                            <div className="flex items-start gap-3 rounded-lg border p-4 shadow-sm">
+                                <Landmark className="text-primary h-6 w-6" />
+                                <h3 className="font-semibold">
+                                    Cities, counties, &amp; public agencies
+                                </h3>
+                            </div>
+                            <div className="flex items-start gap-3 rounded-lg border p-4 shadow-sm">
+                                <Factory className="text-primary h-6 w-6" />
+                                <h3 className="font-semibold">
+                                    Industrial &amp; warehouse facilities
+                                </h3>
+                            </div>
+                        </div>
                         <p>
                             If your building has a commercial roof and an energy
                             bill, let's talk!
@@ -91,7 +130,7 @@ export default function Home() {
                     </div>
                 </Container>
             </section>
-            <section className="md:py-10">
+            <section className="py-10">
                 <Container>
                     <ContactCard />
                 </Container>

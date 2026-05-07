@@ -1,6 +1,5 @@
 import Link from 'next/link'
 import Image from 'next/image'
-import { Home, Users, Building, Ellipsis, ChevronRight } from 'lucide-react'
 import {
     Card,
     CardContent,
@@ -33,9 +32,9 @@ export default function HeroCard() {
                     Jacob Bechtold from day one.
                 </CardDescription>
             </CardHeader>
-            <CardContent className="flex items-center justify-evenly">
+            <CardContent className="flex flex-col items-center justify-center gap-3 md:flex-row">
                 <IntakeForm />
-                <Link href="/resources#process">
+                <Link href="/resources">
                     <Button size="lg" variant="outline">
                         See how it works
                     </Button>

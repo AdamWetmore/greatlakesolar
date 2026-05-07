@@ -1,6 +1,22 @@
 import FAQSection from '@/components/faq/faq-section'
 import { Container } from '@/components/layout/container'
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 import FAQ from '@/models/faq'
+import {
+    BatteryPlus,
+    Car,
+    ChartNoAxesCombined,
+    CircleDollarSign,
+    Clock,
+    Earth,
+    HandCoins,
+    HousePlug,
+    HousePlus,
+    SolarPanel,
+    TrendingUp,
+    UtilityPole,
+    Zap,
+} from 'lucide-react'
 
 export const getStaticProps = async () => {
     // simulate a half second load time for now
@@ -109,6 +125,7 @@ export const getStaticProps = async () => {
     const faqsAsObjects = faqs.map((faq) => ({
         question: faq.question,
         answer: faq.answer,
+        category: faq.category,
     }))
 
     return {
@@ -119,18 +136,279 @@ export const getStaticProps = async () => {
 }
 export default function Resources({ faqs }: { faqs: FAQ[] }) {
     return (
-        <div className="space-y-3 py-3 md:py-10">
+        <div className="py-10">
+            <section id="how-it-works">
+                <Container className="space-y-3">
+                    <Card>
+                        <CardHeader>
+                            <CardTitle className="text-center">
+                                Great Lakes Solar's Process: From First Call to
+                                First Kilowatt
+                            </CardTitle>
+                        </CardHeader>
+                        <CardContent>
+                            <p className="pb-3 text-center">
+                                Going solar with Great Lakes Solar is
+                                straightforward. Here's what to expect:
+                            </p>
+                            <ol className="list-decimal space-y-4 pl-3">
+                                <li>
+                                    <h4 className="font-bold">
+                                        Free Energy Assessment
+                                    </h4>
+                                    <p>
+                                        We review your utility bills, your roof
+                                        or property, and your energy goals. No
+                                        pressure, no commitment.
+                                    </p>
+                                </li>
+                                <li>
+                                    <h4 className="font-bold">
+                                        Custom System Design
+                                    </h4>
+                                    <p>
+                                        We engineer a solar system sized
+                                        specifically for your business —
+                                        maximizing your savings without
+                                        overbuilding.
+                                    </p>
+                                </li>
+                                <li>
+                                    <h4 className="font-bold">
+                                        Incentive Review
+                                    </h4>
+                                    <p>
+                                        We walk you through available federal
+                                        tax credits, state programs, and utility
+                                        rebates so you know exactly what your
+                                        true cost will be.
+                                    </p>
+                                </li>
+                                <li>
+                                    <h4 className="font-bold">
+                                        Permitting & Installation
+                                    </h4>
+                                    <p>
+                                        We handle the paperwork and coordinate
+                                        with your utility. Our certified
+                                        installers complete most commercial jobs
+                                        with minimal disruption to your
+                                        operations.
+                                    </p>
+                                </li>
+                                <li>
+                                    <h4 className="font-bold">
+                                        Monitoring & Support
+                                    </h4>
+                                    <p>
+                                        After your system is live, we monitor
+                                        its performance and are here when you
+                                        need us. We stand behind every system we
+                                        install.
+                                    </p>
+                                </li>
+                            </ol>
+                        </CardContent>
+                    </Card>
+                </Container>
+            </section>
+            <section id="why-solar" className="py-10">
+                <Container className="space-y-3 text-center">
+                    <h2>Why Solar?</h2>
+                    <h3 className="text-xl">
+                        Six Reasons Commercial Businesses Are Switching to Solar
+                    </h3>
+                    <p className="mx-auto max-w-4xl">
+                        Whether you own a small retail shop or manage a large
+                        industrial facility, solar and battery systems deliver
+                        real, measurable value. Here's what our commercial
+                        clients tell us matters most:
+                    </p>
+                    <div className="grid grid-cols-1 gap-2 text-left md:grid-cols-2">
+                        <Card>
+                            <CardHeader>
+                                <CardTitle className="flex items-center justify-between">
+                                    Cut Your Energy Bills
+                                    <HousePlug />
+                                </CardTitle>
+                            </CardHeader>
+                            <CardContent>
+                                Solar dramatically reduces what you pay for
+                                electricity — often by 20-30% or more. For
+                                businesses running equipment, lighting, HVAC, or
+                                refrigeration, those savings add up fast. Most
+                                commercial systems pay for themselves within 5-8
+                                years and continue generating free power for 25+
+                                years after that.
+                            </CardContent>
+                        </Card>
+                        <Card>
+                            <CardHeader>
+                                <CardTitle className="flex items-center justify-between">
+                                    Protect Against Rising Rates
+                                    <TrendingUp />
+                                </CardTitle>
+                            </CardHeader>
+                            <CardContent>
+                                Utility rates have increased an average of 2-5%
+                                per year. Once your solar system is installed,
+                                your cost of generation stays flat. You're no
+                                longer at the mercy of your utility company, and
+                                you can plan your energy budget with confidence.
+                            </CardContent>
+                        </Card>
+                        <Card>
+                            <CardHeader>
+                                <CardTitle className="flex items-center justify-between">
+                                    Keep the Lights On with Battery Storage
+                                    <BatteryPlus />
+                                </CardTitle>
+                            </CardHeader>
+                            <CardContent>
+                                Add battery storage and your business stays
+                                operational during outages - no lost revenue, no
+                                spoiled inventory, no production downtime.
+                                Batteries also let you store cheap solar energy
+                                and use it during peak-rate hours, which can
+                                mean even bigger savings.
+                            </CardContent>
+                        </Card>
+                        <Card>
+                            <CardHeader>
+                                <CardTitle className="flex items-center justify-between">
+                                    Take Advantage of Tax Incentives
+                                    <CircleDollarSign />
+                                </CardTitle>
+                            </CardHeader>
+                            <CardContent>
+                                The federal Investment Tax Credit (ITC)
+                                currently allows businesses to deduct 30% of
+                                their solar system cost directly from their
+                                federal taxes. Combined with accelerated
+                                depreciation (MACRS), the real out-of-pocket
+                                cost is often far less than the sticker price.
+                            </CardContent>
+                        </Card>
+                        <Card>
+                            <CardHeader>
+                                <CardTitle className="flex items-center justify-between">
+                                    Meet Your Sustainability Goals
+                                    <Earth />
+                                </CardTitle>
+                            </CardHeader>
+                            <CardContent>
+                                More customers, employees, and partners care
+                                about environmental responsibility than ever
+                                before. Going solar is a visible, measurable
+                                commitment to reducing your carbon footprint -
+                                and a great story to tell.
+                            </CardContent>
+                        </Card>
+                        <Card>
+                            <CardHeader>
+                                <CardTitle className="flex items-center justify-between">
+                                    Increase Property Value
+                                    <HousePlus />
+                                </CardTitle>
+                            </CardHeader>
+                            <CardContent>
+                                Commercial properties with solar systems
+                                consistently appraise higher and attract more
+                                buyers and tenants. It's an upgrade that pays
+                                you back in more ways than one.
+                            </CardContent>
+                        </Card>
+                    </div>
+                </Container>
+            </section>
+            <section id="why-battery" className="py-10">
+                <Container className="space-y-3">
+                    <h2>Why Add Battery Storage?</h2>
+                    <div className="grid grid-cols-1 justify-center gap-2 md:grid-cols-2">
+                        <Card>
+                            <CardHeader>
+                                <CardTitle className="flex items-center justify-between">
+                                    Backup power during outages
+                                    <Zap />
+                                </CardTitle>
+                            </CardHeader>
+                            <CardContent>
+                                Keep critical operations running without a
+                                noisy, fuel-hungry generator
+                            </CardContent>
+                        </Card>
+                        <Card>
+                            <CardHeader>
+                                <CardTitle className="flex items-center justify-between">
+                                    Peak demand shaving
+                                    <ChartNoAxesCombined />
+                                </CardTitle>
+                            </CardHeader>
+                            <CardContent>
+                                Reduce or eliminate expensive demand charges
+                                from your utility
+                            </CardContent>
+                        </Card>
+                        <Card>
+                            <CardHeader>
+                                <CardTitle className="flex items-center justify-between">
+                                    Time-of-use savings
+                                    <Clock />
+                                </CardTitle>
+                            </CardHeader>
+                            <CardContent>
+                                Store solar energy and use it when utility rates
+                                are highest
+                            </CardContent>
+                        </Card>
+                        <Card>
+                            <CardHeader>
+                                <CardTitle className="flex items-center justify-between">
+                                    Energy independence
+                                    <SolarPanel />
+                                </CardTitle>
+                            </CardHeader>
+                            <CardContent>
+                                Rely less on the grid and insulate yourself from
+                                rate volatility
+                            </CardContent>
+                        </Card>
+                        <Card>
+                            <CardHeader>
+                                <CardTitle className="flex items-center justify-between">
+                                    Grid services
+                                    <UtilityPole />
+                                </CardTitle>
+                            </CardHeader>
+                            <CardContent>
+                                In some areas, your battery can earn credits by
+                                sending power back to the grid
+                            </CardContent>
+                        </Card>
+                        <Card>
+                            <CardHeader>
+                                <CardTitle className="flex items-center justify-between">
+                                    Lower Costs with Rebates
+                                    <HandCoins />
+                                </CardTitle>
+                            </CardHeader>
+                            <CardContent>
+                                We can help you find out how available incentive
+                                programs can make your upgrade more affordable
+                            </CardContent>
+                        </Card>
+                    </div>
+                    <p className="mx-auto max-w-4xl text-center">
+                        Modern commercial battery systems are quiet, compact,
+                        and designed to last. We'll help you figure out whether
+                        batteries make financial sense for your specific
+                        situation - and if they do, how to size them right.
+                    </p>
+                </Container>
+            </section>
             <section id="faq" aria-label="frequently asked questions">
                 <Container>
                     <FAQSection faqs={faqs} />
-                </Container>
-            </section>
-            <section id="process">
-                <Container className="space-y-3">
-                    <h2>Great Lakes Solar's Process</h2>
-                    <p className="text-center text-red-500">
-                        let's get this into a nice easy-to-scan roadmap graphic
-                    </p>
                 </Container>
             </section>
         </div>
