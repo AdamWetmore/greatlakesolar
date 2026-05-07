@@ -87,37 +87,37 @@ export default function Home() {
                         <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
                             <div className="flex items-start gap-3 rounded-lg border p-4 shadow-sm">
                                 <Building2 />
-                                <h3 className="font-semibold">
+                                <h3 className="text-left font-semibold whitespace-nowrap">
                                     Businesses &amp; corporate offices
                                 </h3>
                             </div>
                             <div className="flex items-start gap-3 rounded-lg border p-4 shadow-sm">
                                 <Heart />
-                                <h3 className="font-semibold">
+                                <h3 className="text-left font-semibold whitespace-nowrap">
                                     Non-profits &amp; foundations
                                 </h3>
                             </div>
                             <div className="flex items-start gap-3 rounded-lg border p-4 shadow-sm">
                                 <Church />
-                                <h3 className="font-semibold">
+                                <h3 className="text-left font-semibold whitespace-nowrap">
                                     Churches &amp; religious institutions
                                 </h3>
                             </div>
                             <div className="flex items-start gap-3 rounded-lg border p-4 shadow-sm">
                                 <GraduationCap />
-                                <h3 className="font-semibold">
+                                <h3 className="text-left font-semibold whitespace-nowrap">
                                     Schools &amp; universities
                                 </h3>
                             </div>
                             <div className="flex items-start gap-3 rounded-lg border p-4 shadow-sm">
                                 <Landmark />
-                                <h3 className="font-semibold">
+                                <h3 className="text-left font-semibold whitespace-nowrap">
                                     Cities, counties, &amp; public agencies
                                 </h3>
                             </div>
                             <div className="flex items-start gap-3 rounded-lg border p-4 shadow-sm">
                                 <Factory />
-                                <h3 className="font-semibold">
+                                <h3 className="text-left font-semibold whitespace-nowrap">
                                     Industrial &amp; warehouse facilities
                                 </h3>
                             </div>

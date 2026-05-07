@@ -35,7 +35,11 @@ export default function FAQSection({ faqs }: { faqs: FAQ[] }) {
                             <AccordionContent className="border-l pl-3">
                                 <Accordion
                                     type="multiple"
-                                    defaultValue={[`faq-${categoryIndex}-0`]}
+                                    defaultValue={
+                                        categoryIndex === 0
+                                            ? [`faq-${categoryIndex}-0`]
+                                            : []
+                                    }
                                 >
                                     {faqs.map((faq, faqIndex) => (
                                         <AccordionItem
