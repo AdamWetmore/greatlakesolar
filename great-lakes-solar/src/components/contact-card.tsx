@@ -50,7 +50,7 @@ export default function ContactCard() {
                 </Link>
                 {/* LinkedIn */}
                 <Link
-                    href="https://www.linkedin.com/companygreat-lakes-solar"
+                    href="https://www.linkedin.com/company/great-lakes-solar"
                     target="_blank"
                     className="group block w-full rounded-xl p-2 transition hover:bg-gray-100"
                 >

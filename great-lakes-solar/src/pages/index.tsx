@@ -56,7 +56,7 @@ export default function Home() {
                                 doesn’t know your project.
                             </p>
                         </div>
-                        <div className="bg-primary text-accent border-t-2 border-b-2 p-3">
+                        <div className="bg-primary text-accent border-2 p-3">
                             <h2 className="text-left">Local. Connected.</h2>
                             <p className="pt-1">
                                 We know Minnesota’s utilities, permitting
@@ -93,31 +93,31 @@ export default function Home() {
                                 </h3>
                             </div>
                             <div className="flex items-start gap-3 rounded-lg border p-4 shadow-sm">
-                                <Heart className="text-primary h-6 w-6" />
+                                <Heart />
                                 <h3 className="font-semibold">
                                     Non-profits &amp; foundations
                                 </h3>
                             </div>
                             <div className="flex items-start gap-3 rounded-lg border p-4 shadow-sm">
-                                <Church className="text-primary h-6 w-6" />
+                                <Church />
                                 <h3 className="font-semibold">
                                     Churches &amp; religious institutions
                                 </h3>
                             </div>
                             <div className="flex items-start gap-3 rounded-lg border p-4 shadow-sm">
-                                <GraduationCap className="text-primary h-6 w-6" />
+                                <GraduationCap />
                                 <h3 className="font-semibold">
                                     Schools &amp; universities
                                 </h3>
                             </div>
                             <div className="flex items-start gap-3 rounded-lg border p-4 shadow-sm">
-                                <Landmark className="text-primary h-6 w-6" />
+                                <Landmark />
                                 <h3 className="font-semibold">
                                     Cities, counties, &amp; public agencies
                                 </h3>
                             </div>
                             <div className="flex items-start gap-3 rounded-lg border p-4 shadow-sm">
-                                <Factory className="text-primary h-6 w-6" />
+                                <Factory />
                                 <h3 className="font-semibold">
                                     Industrial &amp; warehouse facilities
                                 </h3>
