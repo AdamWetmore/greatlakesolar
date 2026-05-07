@@ -4,7 +4,6 @@ import { useState } from 'react'
 import { useForm } from 'react-hook-form'
 import { z } from 'zod'
 import { zodResolver } from '@hookform/resolvers/zod'
-
 import {
     Dialog,
     DialogContent,
@@ -20,7 +19,6 @@ import {
     FormControl,
     FormMessage,
 } from '@/components/ui/form'
-
 import { Input } from '@/components/ui/input'
 import { Textarea } from '@/components/ui/textarea'
 import { Button } from '@/components/ui/button'
@@ -64,15 +62,27 @@ export default function IntakeForm() {
         setLoading(true)
 
         try {
-            const res = await fetch('/api/hubspot', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-                body: JSON.stringify(values),
-            })
+            const response = await fetch(
+                `https://api.hsforms.com/submissions/v3/integration/submit/${process.env.NEXT_PUBLIC_HUBSPOT_PORTAL_ID}/${process.env.NEXT_PUBLIC_HUBSPOT_FORM_ID}`,
+                {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({
+                        fields: [
+                            { name: 'firstname', value: values.firstname },
+                            { name: 'lastname', value: values.lastname ?? '' },
+                            { name: 'email', value: values.email },
+                            { name: 'phone', value: values.phone ?? '' },
+                            { name: 'notes', value: values.notes ?? '' },
+                            { name: 'address', value: values.address ?? '' },
+                        ],
+                    }),
+                }
+            )
 
-            if (res.ok) {
+            if (response.ok) {
                 setSuccess(true)
 
                 // auto close after short delay
@@ -82,7 +92,7 @@ export default function IntakeForm() {
                     form.reset()
                 }, 1500)
             } else {
-                console.error(await res.text())
+                console.error(await response.text())
             }
         } catch (err) {
             console.error(err)
