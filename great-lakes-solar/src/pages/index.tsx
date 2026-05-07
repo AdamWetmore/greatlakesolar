@@ -23,9 +23,9 @@ export default function Home() {
                     objectFit="cover"
                     className="absolute inset-0 z-40 object-cover brightness-75"
                 />
-                <div className="relative flex h-full flex-col gap-6 px-4 py-12 md:px-6 md:py-16">
+                <Container className="relative flex h-full flex-col gap-5 py-10">
                     <HeroCard />
-                    <div className="text-accent mt-auto text-center text-sm">
+                    <div className="text-accent text-center text-sm">
                         Photo by{' '}
                         <a
                             className="underline"
@@ -41,7 +41,7 @@ export default function Home() {
                             Unsplash
                         </a>
                     </div>
-                </div>
+                </Container>
             </section>
             <section className="py-10">
                 <Container>

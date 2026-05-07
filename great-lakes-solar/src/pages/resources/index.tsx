@@ -4,7 +4,6 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 import FAQ from '@/models/faq'
 import {
     BatteryPlus,
-    Car,
     ChartNoAxesCombined,
     CircleDollarSign,
     Clock,
@@ -17,6 +16,7 @@ import {
     UtilityPole,
     Zap,
 } from 'lucide-react'
+import Image from 'next/image'
 
 export const getStaticProps = async () => {
     // simulate a half second load time for now
@@ -136,9 +136,19 @@ export const getStaticProps = async () => {
 }
 export default function Resources({ faqs }: { faqs: FAQ[] }) {
     return (
-        <div className="py-10">
-            <section id="how-it-works">
-                <Container className="space-y-3">
+        <div>
+            <section
+                id="how-it-works"
+                className="relative md:h-[70vh] lg:h-[80vh]"
+            >
+                <Image
+                    src="/bernd-dittrich-fu1GHY5kq-g-unsplash.jpg"
+                    alt="Aerial view of solar panels on a roof"
+                    layout="fill"
+                    objectFit="cover"
+                    className="absolute inset-0 z-40 object-cover brightness-75"
+                />
+                <Container className="text-accent relative flex h-full flex-col gap-5 py-10">
                     <Card>
                         <CardHeader>
                             <CardTitle className="text-center">
@@ -210,6 +220,22 @@ export default function Resources({ faqs }: { faqs: FAQ[] }) {
                             </ol>
                         </CardContent>
                     </Card>
+                    <div className="text-accent mt-auto text-center text-sm">
+                        Photo by{' '}
+                        <a
+                            href="https://unsplash.com/@hdbernd?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText"
+                            className="underline"
+                        >
+                            Bernd Dittrich
+                        </a>{' '}
+                        on{' '}
+                        <a
+                            href="https://unsplash.com/photos/two-rows-of-rows-of-blue-and-white-tiles-fu1GHY5kq-g?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText"
+                            className="underline"
+                        >
+                            Unsplash
+                        </a>
+                    </div>
                 </Container>
             </section>
             <section id="why-solar" className="py-10">
@@ -346,7 +372,7 @@ export default function Resources({ faqs }: { faqs: FAQ[] }) {
                             </CardHeader>
                             <CardContent>
                                 Reduce or eliminate expensive demand charges
-                                from your utility
+                                from your utility bill
                             </CardContent>
                         </Card>
                         <Card>
