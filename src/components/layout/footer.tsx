@@ -19,7 +19,7 @@ export default function Footer() {
                     </Link>
                     <div className="flex items-center gap-6">
                         <Link
-                            href="https://www.linkedin.com/companygreat-lakes-solar"
+                            href="https://www.linkedin.com/company/great-lakes-solar"
                             target="_blank"
                         >
                             <Image
