@@ -18,7 +18,14 @@ export default function Sign() {
             </Head>
             <div className="py-24 text-center">
                 <p>
-                    Taking you to our survey. <a href={SURVEY_URL}>Click here</a> if it doesn&apos;t open.
+                    Taking you to our survey.{' '}
+                    <a
+                        href={SURVEY_URL}
+                        className="font-medium underline underline-offset-4 hover:decoration-2 focus-visible:outline-2 focus-visible:outline-offset-4"
+                    >
+                        Click here
+                    </a>{' '}
+                    if it doesn&apos;t open.
                 </p>
             </div>
         </>
