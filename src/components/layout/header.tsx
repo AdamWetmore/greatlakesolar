@@ -17,16 +17,27 @@ export default function Header() {
     return (
         <div className="bg-background border-border sticky top-0 z-60 border-b">
             <Container className="flex items-center justify-between py-3">
-                <Link href="/" className="flex items-center space-x-2">
+                <Link
+                    href="/"
+                    aria-label="Great Lakes Solar home"
+                    className="flex items-center space-x-2"
+                >
                     <Image
                         src="/Bug.svg"
-                        alt="Great Lakes Solar Logo"
+                        alt=""
                         width={100}
                         height={100}
                         priority
                         className="hidden md:block"
                     />
-                    <div>Great Lakes Solar</div>
+                    <span
+                        aria-hidden="true"
+                        className="text-xs whitespace-nowrap"
+                    >
+                        <span className="text-sm">G</span>REAT{' '}
+                        <span className="text-sm">L</span>AKES{' '}
+                        <span className="text-sm">S</span>OLAR
+                    </span>
                 </Link>
                 <div className="hidden md:block">
                     <nav>
