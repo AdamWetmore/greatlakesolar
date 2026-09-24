@@ -11,8 +11,8 @@ export default function About() {
                 <Image
                     src="/andrew-ling--8_P8KwKDlM-unsplash.jpg"
                     alt="Aerial view of solar panels on a roof"
-                    layout="fill"
-                    objectFit="cover"
+                    fill
+                    sizes="100vw"
                     className="absolute inset-0 z-40 object-cover brightness-75"
                 />
                 <div className="relative flex h-full flex-col gap-5 px-4 py-10">
