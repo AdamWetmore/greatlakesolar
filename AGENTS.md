@@ -39,7 +39,7 @@ In no particular order
 1. Add keywords to metadata to improve SEO related to "rooftop solar in Minnesota"
 2. Figure out warnings around hero background images using legacy props
    e.g. [browser] Image with src "/chuttersnap-s_7BE4D2va0-unsplash.jpg" has legacy prop "layout". Did you forget to run the codemod? Read more: https://nextjs.org/docs/messages/next-image-upgrade-to-13
-3. Fix typography in site header: brand standards specify the company name is fully capitalized and GLS are 2 font sizes larger i.e. "G" "L" and "S" are size 14 font and the rest are 12, not XL and M
+3. Implemented on logo-typography (pending review): header wordmark is fully capitalized, with G/L/S at 0.875rem (14px default) and remaining letters at 0.75rem (12px default). Preserve the existing font, colors, and responsive navigation; provide one accessible home-link label.
 4. Move "The GLS Difference" section to the hero section with the hero card, update styling to cohere with the background change
 5. Update sitewide UI so that the main marketing funnel, the hubspot form, is visible on all pages at all scroll heights
    Do this either by
