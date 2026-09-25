@@ -1,242 +1,133 @@
 'use client'
 
-import { useState } from 'react'
-import { useForm } from 'react-hook-form'
-import { z } from 'zod'
-import { zodResolver } from '@hookform/resolvers/zod'
+import { useEffect, useState } from 'react'
+import { ChevronRight } from 'lucide-react'
 import {
     Dialog,
     DialogContent,
     DialogTrigger,
-    DialogHeader,
     DialogTitle,
 } from '@/components/ui/dialog'
-
-import {
-    Form,
-    FormField,
-    FormItem,
-    FormControl,
-    FormMessage,
-} from '@/components/ui/form'
-import { Input } from '@/components/ui/input'
-import { Textarea } from '@/components/ui/textarea'
 import { Button } from '@/components/ui/button'
-import { ChevronRight } from 'lucide-react'
 
-// --- Zod schema ---
-const formSchema = z.object({
-    firstname: z.string().min(1, 'First name is required'),
-    lastname: z.string().min(1, 'Last name is required'),
-    email: z.string().email('Invalid email address'),
-    phone: z
-        .string()
-        .min(7, 'Phone number is too short')
-        .max(20)
-        .regex(/^[+]?[(]?[0-9]{1,4}[)]?[-\s./0-9]*$/, 'Invalid phone number'),
+// Keep field definitions and validation in HubSpot; configure IDs at build time.
+const PORTAL_ID = process.env.NEXT_PUBLIC_HUBSPOT_PORTAL_ID
+const FORM_ID = process.env.NEXT_PUBLIC_HUBSPOT_FORM_ID
+const SCRIPT_ID = 'hubspot-intake-embed'
+const FORM_URL = 'https://41zjvy.share-na2.hsforms.com/2yC6G23nvQQKx2rEWyqrnPg'
 
-    notes: z.string().min(5, 'Please describe your project'),
-    address: z.string().optional(),
-})
+function HubSpotEmbed() {
+    const [status, setStatus] = useState<'loading' | 'ready' | 'error'>(
+        PORTAL_ID && FORM_ID ? 'loading' : 'error'
+    )
 
-type FormValues = z.infer<typeof formSchema>
-
-export default function IntakeForm() {
-    const [loading, setLoading] = useState(false)
-    const [success, setSuccess] = useState(false)
-    const [open, setOpen] = useState(false)
-
-    const form = useForm<FormValues>({
-        resolver: zodResolver(formSchema),
-        defaultValues: {
-            firstname: '',
-            lastname: '',
-            email: '',
-            phone: '',
-            notes: '',
-            address: '',
-        },
-    })
-
-    const onSubmit = async (values: FormValues) => {
-        setLoading(true)
-
-        try {
-            const response = await fetch(
-                `https://api.hsforms.com/submissions/v3/integration/submit/${process.env.NEXT_PUBLIC_HUBSPOT_PORTAL_ID}/${process.env.NEXT_PUBLIC_HUBSPOT_FORM_ID}`,
-                {
-                    method: 'POST',
-                    headers: {
-                        'Content-Type': 'application/json',
-                    },
-                    body: JSON.stringify({
-                        fields: [
-                            { name: 'firstname', value: values.firstname },
-                            { name: 'lastname', value: values.lastname ?? '' },
-                            { name: 'email', value: values.email },
-                            { name: 'phone', value: values.phone ?? '' },
-                            { name: 'notes', value: values.notes ?? '' },
-                            { name: 'address', value: values.address ?? '' },
-                        ],
-                    }),
-                }
-            )
-
-            if (response.ok) {
-                setSuccess(true)
-
-                // auto close after short delay
-                setTimeout(() => {
-                    setOpen(false)
-                    setSuccess(false)
-                    form.reset()
-                }, 1500)
-            } else {
-                console.error(await response.text())
+    useEffect(() => {
+        if (!PORTAL_ID || !FORM_ID) return
+        let ready = false
+        const onReady = (event: Event) => {
+            if (
+                (event as CustomEvent<{ formId: string }>).detail?.formId ===
+                FORM_ID
+            ) {
+                ready = true
+                window.clearTimeout(timeout)
+                setStatus('ready')
             }
-        } catch (err) {
-            console.error(err)
+        }
+        const onError = () => setStatus('error')
+        const timeout = window.setTimeout(() => {
+            if (!ready) setStatus('error')
+        }, 15000)
+
+        // Register before loading the script so a fast response is not missed.
+        window.addEventListener('hs-form-event:on-ready', onReady)
+        let script = document.getElementById(
+            SCRIPT_ID
+        ) as HTMLScriptElement | null
+        if (!script) {
+            script = document.createElement('script')
+            script.id = SCRIPT_ID
+            script.src = `https://js-na2.hsforms.net/forms/embed/${PORTAL_ID}.js`
+            script.async = true
+            script.addEventListener('error', () => script?.remove(), {
+                once: true,
+            })
+            script.addEventListener('error', onError)
+            document.body.appendChild(script)
+        } else {
+            // HubSpot observes newly mounted form containers, including on reopen.
+            script.addEventListener('error', onError)
         }
 
-        setLoading(false)
-    }
+        return () => {
+            window.clearTimeout(timeout)
+            window.removeEventListener('hs-form-event:on-ready', onReady)
+            script?.removeEventListener('error', onError)
+        }
+    }, [])
 
     return (
-        <Dialog open={open} onOpenChange={setOpen}>
+        <>
+            {status === 'loading' && (
+                <p role="status" className="text-muted-foreground text-sm">
+                    Loading your assessment form…
+                </p>
+            )}
+            {status === 'error' && (
+                <p role="alert" className="text-sm">
+                    The form is taking longer than expected. You can retry below
+                    or open it in a new tab.
+                </p>
+            )}
+            {/* HubSpot owns field styling; keep its light form readable in both themes. */}
+            <div
+                className="hs-form-frame bg-white [color-scheme:light]"
+                data-region="na2"
+                data-form-id={FORM_ID}
+                data-portal-id={PORTAL_ID}
+                title="Great Lakes Solar assessment form"
+            />
+        </>
+    )
+}
+
+export default function IntakeForm() {
+    const [attempt, setAttempt] = useState(0)
+
+    return (
+        <Dialog>
             <DialogTrigger asChild>
                 <Button size="lg">
                     Schedule Your<strong>Free</strong>Assessment
                     <ChevronRight />
                 </Button>
             </DialogTrigger>
-
-            <DialogContent className="sm:max-w-lg">
-                {!success ? (
-                    <>
-                        <DialogHeader>
-                            <DialogTitle>Start Your Project</DialogTitle>
-                        </DialogHeader>
-
-                        <Form {...form}>
-                            <form
-                                onSubmit={form.handleSubmit(onSubmit)}
-                                className="mt-4 space-y-4"
-                            >
-                                <FormField
-                                    control={form.control}
-                                    name="firstname"
-                                    render={({ field }) => (
-                                        <FormItem>
-                                            <FormControl>
-                                                <Input
-                                                    placeholder="First Name"
-                                                    {...field}
-                                                />
-                                            </FormControl>
-                                            <FormMessage />
-                                        </FormItem>
-                                    )}
-                                />
-
-                                <FormField
-                                    control={form.control}
-                                    name="lastname"
-                                    render={({ field }) => (
-                                        <FormItem>
-                                            <FormControl>
-                                                <Input
-                                                    placeholder="Last Name"
-                                                    {...field}
-                                                />
-                                            </FormControl>
-                                            <FormMessage />
-                                        </FormItem>
-                                    )}
-                                />
-
-                                <FormField
-                                    control={form.control}
-                                    name="email"
-                                    render={({ field }) => (
-                                        <FormItem>
-                                            <FormControl>
-                                                <Input
-                                                    type="email"
-                                                    placeholder="Email"
-                                                    {...field}
-                                                />
-                                            </FormControl>
-                                            <FormMessage />
-                                        </FormItem>
-                                    )}
-                                />
-
-                                <FormField
-                                    control={form.control}
-                                    name="phone"
-                                    render={({ field }) => (
-                                        <FormItem>
-                                            <FormControl>
-                                                <Input
-                                                    placeholder="Phone"
-                                                    {...field}
-                                                />
-                                            </FormControl>
-                                            <FormMessage />
-                                        </FormItem>
-                                    )}
-                                />
-
-                                <FormField
-                                    control={form.control}
-                                    name="notes"
-                                    render={({ field }) => (
-                                        <FormItem>
-                                            <FormControl>
-                                                <Textarea
-                                                    placeholder="Describe your project"
-                                                    {...field}
-                                                />
-                                            </FormControl>
-                                            <FormMessage />
-                                        </FormItem>
-                                    )}
-                                />
-
-                                <FormField
-                                    control={form.control}
-                                    name="address"
-                                    render={({ field }) => (
-                                        <FormItem>
-                                            <FormControl>
-                                                <Input
-                                                    placeholder="Site Address (optional)"
-                                                    {...field}
-                                                />
-                                            </FormControl>
-                                            <FormMessage />
-                                        </FormItem>
-                                    )}
-                                />
-
-                                <Button
-                                    type="submit"
-                                    className="w-full"
-                                    disabled={loading}
-                                >
-                                    {loading ? 'Submitting...' : 'Submit'}
-                                </Button>
-                            </form>
-                        </Form>
-                    </>
-                ) : (
-                    <div className="py-10 text-center">
-                        <h3 className="text-xl font-semibold">Thanks!</h3>
-                        <p className="text-muted-foreground mt-2">
-                            We’ll be in touch shortly.
-                        </p>
-                    </div>
-                )}
+            <DialogContent
+                aria-describedby={undefined}
+                overlayClassName="z-[100]"
+                className="intake-dialog z-[101] max-h-[95dvh] w-[calc(100%-1rem)] max-w-[calc(100%-1rem)] overflow-y-auto p-0 sm:max-w-2xl"
+            >
+                <DialogTitle className="sr-only">
+                    Start Your Project
+                </DialogTitle>
+                <HubSpotEmbed key={attempt} />
+                <div className="flex flex-wrap items-center justify-between gap-3 px-4 pb-6 text-sm sm:px-6">
+                    <Button
+                        variant="outline"
+                        size="sm"
+                        onClick={() => setAttempt(attempt + 1)}
+                    >
+                        Reload form
+                    </Button>
+                    <a
+                        href={FORM_URL}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="underline underline-offset-4 focus-visible:outline-2 focus-visible:outline-offset-4"
+                    >
+                        Open form in a new tab
+                    </a>
+                </div>
             </DialogContent>
         </Dialog>
     )
