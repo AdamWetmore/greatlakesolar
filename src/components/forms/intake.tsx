@@ -5,9 +5,7 @@ import { ChevronRight } from 'lucide-react'
 import {
     Dialog,
     DialogContent,
-    DialogDescription,
     DialogTrigger,
-    DialogHeader,
     DialogTitle,
 } from '@/components/ui/dialog'
 import { Button } from '@/components/ui/button'
@@ -105,16 +103,13 @@ export default function IntakeForm() {
                 </Button>
             </DialogTrigger>
             <DialogContent
+                aria-describedby={undefined}
                 overlayClassName="z-[100]"
                 className="intake-dialog z-[101] max-h-[95dvh] w-[calc(100%-1rem)] max-w-[calc(100%-1rem)] overflow-y-auto p-0 sm:max-w-2xl"
             >
-                <DialogHeader className="px-4 pt-6 pr-10 sm:px-6 sm:pr-10">
-                    <DialogTitle>Start Your Project</DialogTitle>
-                    <DialogDescription>
-                        Tell us about your project to schedule a free
-                        assessment.
-                    </DialogDescription>
-                </DialogHeader>
+                <DialogTitle className="sr-only">
+                    Start Your Project
+                </DialogTitle>
                 <HubSpotEmbed key={attempt} />
                 <div className="flex flex-wrap items-center justify-between gap-3 px-4 pb-6 text-sm sm:px-6">
                     <Button
