@@ -81,17 +81,14 @@ function HubSpotEmbed() {
                     or open it in a new tab.
                 </p>
             )}
-            {/* HubSpot controls the frame's field styling and responsive height.
-                Use a light surface in both themes for its published light design. */}
-            <div className="min-h-32 rounded-md bg-white p-2 text-slate-900 [color-scheme:light] sm:p-4">
-                <div
-                    className="hs-form-frame"
-                    data-region="na2"
-                    data-form-id={FORM_ID}
-                    data-portal-id={PORTAL_ID}
-                    title="Great Lakes Solar assessment form"
-                />
-            </div>
+            {/* Let HubSpot own the form's spacing, surface, and responsive height. */}
+            <div
+                className="hs-form-frame"
+                data-region="na2"
+                data-form-id={FORM_ID}
+                data-portal-id={PORTAL_ID}
+                title="Great Lakes Solar assessment form"
+            />
         </>
     )
 }
@@ -109,9 +106,9 @@ export default function IntakeForm() {
             </DialogTrigger>
             <DialogContent
                 overlayClassName="z-[100]"
-                className="z-[101] max-h-[90dvh] w-[calc(100%-2rem)] overflow-y-auto sm:max-w-xl"
+                className="z-[101] max-h-[95dvh] w-[calc(100%-1rem)] max-w-[calc(100%-1rem)] overflow-y-auto p-0 sm:max-w-2xl"
             >
-                <DialogHeader>
+                <DialogHeader className="px-4 pt-6 pr-10 sm:px-6 sm:pr-10">
                     <DialogTitle>Start Your Project</DialogTitle>
                     <DialogDescription>
                         Tell us about your project to schedule a free
@@ -119,7 +116,7 @@ export default function IntakeForm() {
                     </DialogDescription>
                 </DialogHeader>
                 <HubSpotEmbed key={attempt} />
-                <div className="flex flex-wrap items-center justify-between gap-3 text-sm">
+                <div className="flex flex-wrap items-center justify-between gap-3 px-4 pb-6 text-sm sm:px-6">
                     <Button
                         variant="outline"
                         size="sm"
