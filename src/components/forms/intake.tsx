@@ -81,9 +81,9 @@ function HubSpotEmbed() {
                     or open it in a new tab.
                 </p>
             )}
-            {/* Let HubSpot own the form's spacing, surface, and responsive height. */}
+            {/* HubSpot owns field styling; keep its light form readable in both themes. */}
             <div
-                className="hs-form-frame"
+                className="hs-form-frame bg-white [color-scheme:light]"
                 data-region="na2"
                 data-form-id={FORM_ID}
                 data-portal-id={PORTAL_ID}
