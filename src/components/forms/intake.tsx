@@ -106,7 +106,7 @@ export default function IntakeForm() {
             </DialogTrigger>
             <DialogContent
                 overlayClassName="z-[100]"
-                className="z-[101] max-h-[95dvh] w-[calc(100%-1rem)] max-w-[calc(100%-1rem)] overflow-y-auto p-0 sm:max-w-2xl"
+                className="intake-dialog z-[101] max-h-[95dvh] w-[calc(100%-1rem)] max-w-[calc(100%-1rem)] overflow-y-auto p-0 sm:max-w-2xl"
             >
                 <DialogHeader className="px-4 pt-6 pr-10 sm:px-6 sm:pr-10">
                     <DialogTitle>Start Your Project</DialogTitle>
