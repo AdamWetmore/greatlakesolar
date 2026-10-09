@@ -81,6 +81,9 @@ export default function Header() {
                                         Residential
                                     </Link>
                                 </DropdownMenuItem>
+                                <DropdownMenuItem asChild>
+                                    <Link href="/resources/blog">Blog</Link>
+                                </DropdownMenuItem>
                             </DropdownMenuContent>
                         </DropdownMenu>
                         <Link
@@ -145,6 +148,13 @@ export default function Header() {
                                 onClick={() => setIsMenuOpen(false)}
                             >
                                 Residential
+                            </Link>
+                            <Link
+                                href="/resources/blog"
+                                className={`${navLinkStyle('/resources/blog')} ml-3`}
+                                onClick={() => setIsMenuOpen(false)}
+                            >
+                                Blog
                             </Link>
                         </div>
                         <Link
