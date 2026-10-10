@@ -18,8 +18,8 @@ export default function Home() {
                 <Image
                     src="/chuttersnap-s_7BE4D2va0-unsplash.jpg"
                     alt="Aerial view of solar panels on a roof"
-                    layout="fill"
-                    objectFit="cover"
+                    fill
+                    sizes="100vw"
                     className="absolute inset-0 z-40 object-cover brightness-75"
                 />
                 <Container className="relative flex h-full flex-col gap-5 py-10">

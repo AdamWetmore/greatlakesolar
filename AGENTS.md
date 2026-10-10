@@ -25,10 +25,14 @@ Do not alter "output: 'export'" in ./next.config.ts, if a requested task require
 
 ### Local Development Environment
 
-Everything should work after clone except the hubspot form which requires two environment variables
-NEXT_PUBLIC_HUBSPOT_PORTAL_ID
-NEXT_PUBLIC_HUBSPOT_FORM_ID
-Talk with Adam to seed your .env.local if needed since it will be .gitignore'd
+The assessment dialog uses the official HubSpot embed. Configure
+`NEXT_PUBLIC_HUBSPOT_PORTAL_ID` and `NEXT_PUBLIC_HUBSPOT_FORM_ID` in ignored
+`.env.local` before building. Never commit their values. Production builds reject
+missing or malformed IDs; these NEXT_PUBLIC values are embedded in the browser bundle.
+Manage questions, validation, field styling, and the inline thank-you message in HubSpot.
+Keep the form's completion action set to an inline thank-you message rather than a redirect.
+Ensure greatlakesolar.com and any preview domains used for submission testing are in
+HubSpot's allowed tracking domains. Test a real submission after deployment and confirm receipt.
 
 ### Next Work Items
 
@@ -36,10 +40,14 @@ Keep this section updated as progress and planning continue
 
 In no particular order
 
-1. Add keywords to metadata to improve SEO related to "rooftop solar in Minnesota"
-2. Figure out warnings around hero background images using legacy props
-   e.g. [browser] Image with src "/chuttersnap-s_7BE4D2va0-unsplash.jpg" has legacy prop "layout". Did you forget to run the codemod? Read more: https://nextjs.org/docs/messages/next-image-upgrade-to-13
-3. Implemented on logo-typography (pending review): header wordmark is fully capitalized, with G/L/S at 0.875rem (14px default) and remaining letters at 0.75rem (12px default). Preserve the existing font, colors, and responsive navigation; provide one accessible home-link label.
+- Implemented on `chore/hubspot-embed`: replace the custom assessment form with the
+  HubSpot embed inside the existing dialog, with loading/retry feedback and a manual
+  fallback link. Before release, verify mobile/dark-mode presentation and confirm a
+  real submission arrives in HubSpot (including the new referral question).
+
+1. Merged in PR #8: page-specific titles and descriptions targeting commercial rooftop solar in Minnesota and the Twin Cities, canonical URLs, and a public sitemap. Google ignores meta keywords, so no keywords tag is used. Keep public/sitemap.xml in sync with indexable routes in src/pages/_app.tsx; projects remains noindex until its placeholder content is replaced.
+2. Merged in PR #9 (Adam reviewed the preview deployment): replace legacy layout/objectFit props on home, about, and resources hero images with fill and sizes="100vw"; retain existing object-cover styling and responsive containers.
+3. Implemented on logo-typography (PR #10 pending review): uppercase header wordmark; experimenting at Adam's request with G/L/S at 1rem (16px default) and remaining letters at 0.875rem (14px default). Preserve the existing font, colors, responsive navigation, and accessible home-link label.
 4. Move "The GLS Difference" section to the hero section with the hero card, update styling to cohere with the background change
 5. Update sitewide UI so that the main marketing funnel, the hubspot form, is visible on all pages at all scroll heights
    Do this either by

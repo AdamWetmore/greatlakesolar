@@ -32,11 +32,11 @@ export default function Header() {
                     />
                     <span
                         aria-hidden="true"
-                        className="text-xs whitespace-nowrap"
+                        className="text-sm whitespace-nowrap"
                     >
-                        <span className="text-sm">G</span>REAT{' '}
-                        <span className="text-sm">L</span>AKES{' '}
-                        <span className="text-sm">S</span>OLAR
+                        <span className="text-base">G</span>REAT{' '}
+                        <span className="text-base">L</span>AKES{' '}
+                        <span className="text-base">S</span>OLAR
                     </span>
                 </Link>
                 <div className="hidden md:block">
