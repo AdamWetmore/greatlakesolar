@@ -46,8 +46,8 @@ In no particular order
   real submission arrives in HubSpot (including the new referral question).
 
 1. Merged in PR #8: page-specific titles and descriptions targeting commercial rooftop solar in Minnesota and the Twin Cities, canonical URLs, and a public sitemap. Google ignores meta keywords, so no keywords tag is used. Keep public/sitemap.xml in sync with indexable routes in src/pages/_app.tsx; projects remains noindex until its placeholder content is replaced.
-2. Implemented on background-images (PR #9 pending merge; Adam reviewed the preview deployment): replace legacy layout/objectFit props on home, about, and resources hero images with fill and sizes="100vw"; retain existing object-cover styling and responsive containers.
-3. Fix typography in site header: brand standards specify the company name is fully capitalized and GLS are 2 font sizes larger i.e. "G" "L" and "S" are size 14 font and the rest are 12, not XL and M
+2. Merged in PR #9 (Adam reviewed the preview deployment): replace legacy layout/objectFit props on home, about, and resources hero images with fill and sizes="100vw"; retain existing object-cover styling and responsive containers.
+3. Implemented on logo-typography (PR #10 pending review): uppercase header wordmark; experimenting at Adam's request with G/L/S at 1rem (16px default) and remaining letters at 0.875rem (14px default). Preserve the existing font, colors, responsive navigation, and accessible home-link label.
 4. Move "The GLS Difference" section to the hero section with the hero card, update styling to cohere with the background change
 5. Update sitewide UI so that the main marketing funnel, the hubspot form, is visible on all pages at all scroll heights
    Do this either by
