@@ -25,10 +25,14 @@ Do not alter "output: 'export'" in ./next.config.ts, if a requested task require
 
 ### Local Development Environment
 
-Everything should work after clone except the hubspot form which requires two environment variables
-NEXT_PUBLIC_HUBSPOT_PORTAL_ID
-NEXT_PUBLIC_HUBSPOT_FORM_ID
-Talk with Adam to seed your .env.local if needed since it will be .gitignore'd
+The assessment dialog uses the official HubSpot embed. Configure
+`NEXT_PUBLIC_HUBSPOT_PORTAL_ID` and `NEXT_PUBLIC_HUBSPOT_FORM_ID` in ignored
+`.env.local` before building. Never commit their values. Production builds reject
+missing or malformed IDs; these NEXT_PUBLIC values are embedded in the browser bundle.
+Manage questions, validation, field styling, and the inline thank-you message in HubSpot.
+Keep the form's completion action set to an inline thank-you message rather than a redirect.
+Ensure greatlakesolar.com and any preview domains used for submission testing are in
+HubSpot's allowed tracking domains. Test a real submission after deployment and confirm receipt.
 
 ### Next Work Items
 
@@ -36,8 +40,13 @@ Keep this section updated as progress and planning continue
 
 In no particular order
 
-1. Add keywords to metadata to improve SEO related to "rooftop solar in Minnesota"
-2. Implemented on background-images (pending PR review): replace legacy layout/objectFit props on home, about, and resources hero images with fill and sizes="100vw"; retain existing object-cover styling and responsive containers.
+- Implemented on `chore/hubspot-embed`: replace the custom assessment form with the
+  HubSpot embed inside the existing dialog, with loading/retry feedback and a manual
+  fallback link. Before release, verify mobile/dark-mode presentation and confirm a
+  real submission arrives in HubSpot (including the new referral question).
+
+1. Merged in PR #8: page-specific titles and descriptions targeting commercial rooftop solar in Minnesota and the Twin Cities, canonical URLs, and a public sitemap. Google ignores meta keywords, so no keywords tag is used. Keep public/sitemap.xml in sync with indexable routes in src/pages/_app.tsx; projects remains noindex until its placeholder content is replaced.
+2. Implemented on background-images (PR #9 pending merge; Adam reviewed the preview deployment): replace legacy layout/objectFit props on home, about, and resources hero images with fill and sizes="100vw"; retain existing object-cover styling and responsive containers.
 3. Fix typography in site header: brand standards specify the company name is fully capitalized and GLS are 2 font sizes larger i.e. "G" "L" and "S" are size 14 font and the rest are 12, not XL and M
 4. Move "The GLS Difference" section to the hero section with the hero card, update styling to cohere with the background change
 5. Update sitewide UI so that the main marketing funnel, the hubspot form, is visible on all pages at all scroll heights

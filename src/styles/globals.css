@@ -130,6 +130,20 @@ body {
     --sidebar-ring: oklch(0.556 0 0);
 }
 
+/* Keep the assessment dialog consistent with HubSpot's light form in either theme. */
+.intake-dialog {
+    color-scheme: light;
+    --background: oklch(1 0 0);
+    --foreground: oklch(0.3704 0.0845 260.06);
+    --muted-foreground: oklch(0.556 0 0);
+    --accent: oklch(0.97 0 0);
+    --accent-foreground: oklch(0.205 0 0);
+    --border: oklch(0.922 0 0);
+    --input: oklch(0.922 0 0);
+    --ring: oklch(0.708 0 0);
+    color: var(--foreground);
+}
+
 @layer base {
     * {
         @apply border-border outline-ring/50 z-50;
