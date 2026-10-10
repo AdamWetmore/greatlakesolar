@@ -14,7 +14,7 @@ export default function Sign() {
         <>
             <Head>
                 <meta httpEquiv="refresh" content={`0; url=${SURVEY_URL}`} />
-                <meta name="robots" content="noindex" />
+                <meta name="robots" content="noindex" key="robots" />
             </Head>
             <div className="py-24 text-center">
                 <p>
