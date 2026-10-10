@@ -14,7 +14,7 @@ export default function Blog() {
                 <title>Blog | Great Lakes Solar</title>
                 <meta name="description" content={description} />
                 <link
-                    rel="canonical"
+                    rel="canonical" key="canonical"
                     href="https://greatlakesolar.com/resources/blog"
                 />
                 <meta property="og:title" content="Blog | Great Lakes Solar" />

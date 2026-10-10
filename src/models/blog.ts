@@ -8,7 +8,8 @@ export interface BlogPost {
     imageAlt: string
 }
 
-// Newest first. Each post also needs a page at src/pages/resources/blog/<slug>.tsx
+// Newest first. Register each article component in pages/resources/blog/[slug].tsx.
+// Keep public/sitemap.xml in sync when adding a post.
 export const blogPosts: BlogPost[] = [
     {
         slug: 'federal-solar-tax-credit',

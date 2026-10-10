@@ -58,7 +58,7 @@ export default function FederalSolarTaxCreditPost() {
             <Head>
                 <title>{`${post.title} | Great Lakes Solar`}</title>
                 <meta name="description" content={post.description} />
-                <link rel="canonical" href={url} />
+                <link rel="canonical" key="canonical" href={url} />
                 <meta property="og:type" content="article" />
                 <meta property="og:url" content={url} />
                 <meta property="og:title" content={post.title} />

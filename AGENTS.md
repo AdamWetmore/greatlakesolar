@@ -57,13 +57,20 @@ In no particular order
 - adding an absolutely positioned button in a corner or at the bottom anytime the user isn't viewing the main hero section which already has a cta
   but not both
 
-6. Implemented locally on `feat/residential-services`: Jacob's residential feedback,
+6. Merged in PR #14 (`feat/residential-services`): Jacob's residential feedback,
    anchored Residential and Commercial sections at `/resources#residential` and
    `/resources#commercial`
    with one shared process and solar-benefits section, anchored commercial and
    residential content, one battery-benefits section, consolidated FAQs, and one
    contact card. FAQ categories are Basics, Battery Storage, Financing & Incentives,
    Commercial Solar, and Residential Solar. Reuses the blog worktree's Shadcn dropdown
-   primitive and Resources menu structure. When merging with `blog-itc-faq`, retain
-   Commercial, Residential, and Blog menu entries and the blog branch's metadata/sitemap
+   primitive and Resources menu structure. The rebased `blog-itc-faq` retains
+   Commercial, Residential, and Blog menu entries and the blog metadata/sitemap
    additions. See `docs/residential-review.md` for feedback validation and review notes.
+
+7. PR #13 (`blog-itc-faq`) rebased onto latest main: Resources uses the Shadcn
+   dropdown with All, Commercial, Residential, and Blog links on desktop and mobile.
+   From the Blog appears immediately after the process section, before Why Go Solar.
+   Articles use `/resources/blog/[slug]` with build-time paths and `fallback: false`;
+   blog index and article URLs remain indexable and included in the sitemap. For new
+   posts, add metadata, register the article component, and update the sitemap.
