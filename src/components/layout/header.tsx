@@ -4,6 +4,7 @@ import { usePathname } from 'next/navigation'
 import { useState } from 'react'
 import { ChevronDown, Menu, X } from 'lucide-react'
 import { Container } from './container'
+import IntakeForm from '@/components/forms/intake'
 import {
     DropdownMenu,
     DropdownMenuTrigger,
@@ -23,7 +24,7 @@ export default function Header() {
 
     return (
         <div className="bg-background border-border sticky top-0 z-60 border-b">
-            <Container className="flex items-center justify-between py-3">
+            <Container className="grid grid-cols-[1fr_auto] items-center gap-3 py-3 sm:flex sm:justify-between">
                 <Link
                     href="/"
                     aria-label="Great Lakes Solar home"
@@ -46,7 +47,7 @@ export default function Header() {
                         <span className="text-base">S</span>OLAR
                     </span>
                 </Link>
-                <div className="hidden md:block">
+                <div className="hidden lg:block">
                     <nav>
                         <Link href="/" className={navLinkStyle('/')}>
                             Home
@@ -94,8 +95,13 @@ export default function Header() {
                         </Link>
                     </nav>
                 </div>
+                <IntakeForm
+                    label="Free Assessment"
+                    triggerClassName="order-last col-span-2 w-full border border-primary-foreground/30 sm:order-none sm:w-auto"
+                />
                 <button
-                    className="block md:hidden"
+                    type="button"
+                    className="flex size-11 items-center justify-center rounded-md focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ring lg:hidden"
                     onClick={() => setIsMenuOpen(!isMenuOpen)}
                     aria-label="Toggle menu"
                     aria-expanded={isMenuOpen}
@@ -104,7 +110,7 @@ export default function Header() {
                 </button>
             </Container>
             {isMenuOpen && (
-                <div className="border-border mt-3 border-t pt-3 md:hidden">
+                <div className="border-border mt-3 border-t pt-3 lg:hidden">
                     <nav className="flex flex-col gap-2">
                         <Link
                             href="/"

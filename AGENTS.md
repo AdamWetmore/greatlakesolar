@@ -49,13 +49,12 @@ In no particular order
 2. Merged in PR #9 (Adam reviewed the preview deployment): replace legacy layout/objectFit props on home, about, and resources hero images with fill and sizes="100vw"; retain existing object-cover styling and responsive containers.
 3. Implemented on logo-typography (PR #10 pending review): uppercase header wordmark; experimenting at Adam's request with G/L/S at 1rem (16px default) and remaining letters at 0.875rem (14px default). Preserve the existing font, colors, responsive navigation, and accessible home-link label.
 4. Move "The GLS Difference" section to the hero section with the hero card, update styling to cohere with the background change
-5. Update sitewide UI so that the main marketing funnel, the hubspot form, is visible on all pages at all scroll heights
-   Do this either by
-
-- adding a cta to the site header
-  or
-- adding an absolutely positioned button in a corner or at the bottom anytime the user isn't viewing the main hero section which already has a cta
-  but not both
+5. Implemented on `feat/header-assessment-cta`: the sticky header includes a
+   Free Assessment button opening the existing HubSpot dialog on every page.
+   The button stays outside the mobile menu, spans a second row on narrow phones,
+   and sits inline from the small breakpoint. Desktop navigation starts at the
+   large breakpoint to leave room for the CTA. Uses existing brand/theme colors;
+   no floating CTA. Pending Adam's PR review and post-deployment submission check.
 
 6. Merged in PR #14 (`feat/residential-services`): Jacob's residential feedback,
    anchored Residential and Commercial sections at `/resources#residential` and
