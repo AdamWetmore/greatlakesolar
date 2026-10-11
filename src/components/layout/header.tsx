@@ -69,6 +69,9 @@ export default function Header() {
                                 className="bg-background text-foreground z-70 min-w-40"
                             >
                                 <DropdownMenuItem asChild>
+                                    <Link href="/resources">Home</Link>
+                                </DropdownMenuItem>
+                                <DropdownMenuItem asChild>
                                     <Link href="/resources#commercial">
                                         Commercial
                                     </Link>
@@ -114,20 +117,36 @@ export default function Header() {
                         >
                             About
                         </Link>
-                        <Link
-                            href="/resources#commercial"
-                            className={navLinkStyle('/resources')}
-                            onClick={() => setIsMenuOpen(false)}
+                        <div
+                            role="group"
+                            aria-label="Resources"
+                            className="flex flex-col gap-2"
                         >
-                            Commercial
-                        </Link>
-                        <Link
-                            href="/resources#residential"
-                            className={navLinkStyle('/resources')}
-                            onClick={() => setIsMenuOpen(false)}
-                        >
-                            Residential
-                        </Link>
+                            <span className="px-3 py-2 text-sm font-semibold">
+                                Resources
+                            </span>
+                            <Link
+                                href="/resources"
+                                className={`${navLinkStyle('/resources')} ml-3`}
+                                onClick={() => setIsMenuOpen(false)}
+                            >
+                                Home
+                            </Link>
+                            <Link
+                                href="/resources#commercial"
+                                className={`${navLinkStyle('/resources')} ml-3`}
+                                onClick={() => setIsMenuOpen(false)}
+                            >
+                                Commercial
+                            </Link>
+                            <Link
+                                href="/resources#residential"
+                                className={`${navLinkStyle('/resources')} ml-3`}
+                                onClick={() => setIsMenuOpen(false)}
+                            >
+                                Residential
+                            </Link>
+                        </div>
                         <Link
                             href="/contact"
                             className={navLinkStyle('/contact')}

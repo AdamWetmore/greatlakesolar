@@ -66,10 +66,10 @@ export default function Footer() {
                             About
                         </Link>
                         <Link
-                            href="/resources#commercial"
+                            href="/resources"
                             className="text-muted-foreground hover:text-foreground text-sm"
                         >
-                            Commercial
+                            Resources
                         </Link>
                         <Link
                             href="/resources#residential"
