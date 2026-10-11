@@ -79,17 +79,17 @@ export default function App({ Component, pageProps }: AppProps) {
                     <meta name="robots" content="noindex" key="robots" />
                 )}
 
-                <meta property="og:type" content="website" />
-                <meta property="og:site_name" content="Great Lakes Solar" />
-                <meta property="og:url" content={canonicalUrl} />
-                <meta property="og:title" content={metadata.title} />
+                <meta property="og:type" key="og:type" content="website" />
+                <meta property="og:site_name" key="og:site_name" content="Great Lakes Solar" />
+                <meta property="og:url" key="og:url" content={canonicalUrl} />
+                <meta property="og:title" key="og:title" content={metadata.title} />
                 <meta
-                    property="og:description"
+                    property="og:description" key="og:description"
                     content={metadata.description}
                 />
-                <meta property="og:image" content={ogImage} />
-                <meta property="og:image:width" content="1200" />
-                <meta property="og:image:height" content="630" />
+                <meta property="og:image" key="og:image" content={ogImage} />
+                <meta property="og:image:width" key="og:image:width" content="1200" />
+                <meta property="og:image:height" key="og:image:height" content="630" />
 
                 <meta name="twitter:card" content="summary_large_image" />
                 <meta name="twitter:title" content={metadata.title} />

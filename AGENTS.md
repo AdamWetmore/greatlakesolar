@@ -74,3 +74,8 @@ In no particular order
    Articles use `/resources/blog/[slug]` with build-time paths and `fallback: false`;
    blog index and article URLs remain indexable and included in the sitemap. For new
    posts, add metadata, register the article component, and update the sitemap.
+   Sharing metadata fix on `fix/blog-sharing-metadata`: shared and page-specific
+   Open Graph tags use matching keys so article values replace site defaults.
+   Preserve those keys when adding or overriding sharing metadata.
+   Jacob approved replacing the equipment-sourcing citation with IRS Notice
+   2026-15 and retaining the existing 30% credit wording.

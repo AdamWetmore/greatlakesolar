@@ -17,8 +17,8 @@ export default function Blog() {
                     rel="canonical" key="canonical"
                     href="https://greatlakesolar.com/resources/blog"
                 />
-                <meta property="og:title" content="Blog | Great Lakes Solar" />
-                <meta property="og:description" content={description} />
+                <meta property="og:title" key="og:title" content="Blog | Great Lakes Solar" />
+                <meta property="og:description" key="og:description" content={description} />
             </Head>
             <section className="py-10 md:py-14">
                 <Container className="space-y-6">

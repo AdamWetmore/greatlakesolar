@@ -59,13 +59,13 @@ export default function FederalSolarTaxCreditPost() {
                 <title>{`${post.title} | Great Lakes Solar`}</title>
                 <meta name="description" content={post.description} />
                 <link rel="canonical" key="canonical" href={url} />
-                <meta property="og:type" content="article" />
-                <meta property="og:url" content={url} />
-                <meta property="og:title" content={post.title} />
-                <meta property="og:description" content={post.description} />
-                <meta property="og:image" content={`${siteUrl}${post.image}`} />
-                <meta property="og:image:width" content="1920" />
-                <meta property="og:image:height" content="1280" />
+                <meta property="og:type" key="og:type" content="article" />
+                <meta property="og:url" key="og:url" content={url} />
+                <meta property="og:title" key="og:title" content={post.title} />
+                <meta property="og:description" key="og:description" content={post.description} />
+                <meta property="og:image" key="og:image" content={`${siteUrl}${post.image}`} />
+                <meta property="og:image:width" key="og:image:width" content="1920" />
+                <meta property="og:image:height" key="og:image:height" content="1280" />
                 <meta name="twitter:title" content={post.title} />
                 <meta name="twitter:description" content={post.description} />
                 <meta
@@ -391,7 +391,7 @@ export default function FederalSolarTaxCreditPost() {
                                 much of their equipment comes from companies
                                 tied to certain foreign governments, often
                                 called{' '}
-                                <ExternalLink href="https://www.energy.gov/cmei/manufacturing/foreign-entity-concern-interpretive-guidance">
+                                <ExternalLink href="https://www.irs.gov/pub/irs-drop/n-26-15.pdf">
                                     the &quot;FEOC&quot; rules
                                 </ExternalLink>
                                 . In practice, this means your developer needs
