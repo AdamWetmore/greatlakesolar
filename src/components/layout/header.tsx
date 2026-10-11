@@ -72,6 +72,9 @@ export default function Header() {
                                     <Link href="/resources">All</Link>
                                 </DropdownMenuItem>
                                 <DropdownMenuItem asChild>
+                                    <Link href="/resources/blog">Blog</Link>
+                                </DropdownMenuItem>
+                                <DropdownMenuItem asChild>
                                     <Link href="/resources#commercial">
                                         Commercial
                                     </Link>
@@ -80,9 +83,6 @@ export default function Header() {
                                     <Link href="/resources#residential">
                                         Residential
                                     </Link>
-                                </DropdownMenuItem>
-                                <DropdownMenuItem asChild>
-                                    <Link href="/resources/blog">Blog</Link>
                                 </DropdownMenuItem>
                             </DropdownMenuContent>
                         </DropdownMenu>
@@ -136,6 +136,13 @@ export default function Header() {
                                 All
                             </Link>
                             <Link
+                                href="/resources/blog"
+                                className={`${navLinkStyle('/resources/blog')} ml-3`}
+                                onClick={() => setIsMenuOpen(false)}
+                            >
+                                Blog
+                            </Link>
+                            <Link
                                 href="/resources#commercial"
                                 className={`${navLinkStyle('/resources')} ml-3`}
                                 onClick={() => setIsMenuOpen(false)}
@@ -148,13 +155,6 @@ export default function Header() {
                                 onClick={() => setIsMenuOpen(false)}
                             >
                                 Residential
-                            </Link>
-                            <Link
-                                href="/resources/blog"
-                                className={`${navLinkStyle('/resources/blog')} ml-3`}
-                                onClick={() => setIsMenuOpen(false)}
-                            >
-                                Blog
                             </Link>
                         </div>
                         <Link

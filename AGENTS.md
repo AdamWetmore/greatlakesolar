@@ -69,7 +69,7 @@ In no particular order
    additions. See `docs/residential-review.md` for feedback validation and review notes.
 
 7. PR #13 (`blog-itc-faq`) rebased onto latest main: Resources uses the Shadcn
-   dropdown with All, Commercial, Residential, and Blog links on desktop and mobile.
+   dropdown with All, Blog, Commercial, and Residential links on desktop and mobile.
    From the Blog appears immediately after the process section, before Why Go Solar.
    Articles use `/resources/blog/[slug]` with build-time paths and `fallback: false`;
    blog index and article URLs remain indexable and included in the sitemap. For new
