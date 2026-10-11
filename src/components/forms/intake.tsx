@@ -91,14 +91,18 @@ function HubSpotEmbed() {
     )
 }
 
-export default function IntakeForm() {
+export default function IntakeForm({ label }: { label?: string }) {
     const [attempt, setAttempt] = useState(0)
 
     return (
         <Dialog>
             <DialogTrigger asChild>
                 <Button size="lg">
-                    Schedule Your<strong>Free</strong>Assessment
+                    {label ?? (
+                        <>
+                            Schedule Your<strong>Free</strong>Assessment
+                        </>
+                    )}
                     <ChevronRight />
                 </Button>
             </DialogTrigger>

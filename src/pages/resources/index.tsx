@@ -1,3 +1,6 @@
+import BlogPostCard from '@/components/blog/blog-post-card'
+import { blogPosts } from '@/models/blog'
+import Link from 'next/link'
 import ResidentialSection from '@/components/resources/residential-section'
 import FAQSection from '@/components/faq/faq-section'
 import { Container } from '@/components/layout/container'
@@ -118,6 +121,24 @@ export default function Resources() {
                             Unsplash
                         </a>
                     </div>
+                </Container>
+            </section>
+            <section id="blog" className="py-10">
+                <Container className="space-y-6">
+                    <h2>From the Blog</h2>
+                    <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
+                        {blogPosts.slice(0, 2).map((post) => (
+                            <BlogPostCard key={post.slug} post={post} />
+                        ))}
+                    </div>
+                    <p className="text-center">
+                        <Link
+                            href="/resources/blog"
+                            className="underline decoration-blue-500 decoration-2 underline-offset-4"
+                        >
+                            See all posts
+                        </Link>
+                    </p>
                 </Container>
             </section>
             <section id="why-solar" className="scroll-mt-36 py-10">

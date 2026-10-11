@@ -3,6 +3,7 @@ import type { AppProps } from 'next/app'
 import Head from 'next/head'
 import { useRouter } from 'next/router'
 import Layout from '@/components/layout/layout'
+import { blogPosts } from '@/models/blog'
 
 const siteUrl = 'https://greatlakesolar.com'
 const title = "Great Lakes Solar | Minnesota's Local Solar Expert"
@@ -27,6 +28,11 @@ const pageMetadata: Record<string, { title: string; description: string }> = {
         description:
             'Explore residential and commercial solar benefits, installation, battery storage, and common questions for Minnesota homeowners and businesses.',
     },
+    '/resources/blog': {
+        title: 'Blog | Great Lakes Solar',
+        description:
+            'Plain-language articles from Great Lakes Solar on solar and battery incentives, tax credits, and planning a commercial solar project in Minnesota and the Midwest.',
+    },
     '/contact': {
         title: 'Contact a Twin Cities Commercial Solar Expert | Great Lakes Solar',
         description:
@@ -46,10 +52,21 @@ const pageMetadata: Record<string, { title: string; description: string }> = {
 
 export default function App({ Component, pageProps }: AppProps) {
     const { pathname } = useRouter()
-    const metadata = pageMetadata[pathname] ?? { title, description }
+    const post =
+        pathname === '/resources/blog/[slug]'
+            ? blogPosts.find(({ slug }) => slug === pageProps.post?.slug)
+            : undefined
+    const metadata = post
+        ? {
+              title: post.title + ' | Great Lakes Solar',
+              description: post.description,
+          }
+        : (pageMetadata[pathname] ?? { title, description })
     const isIndexable =
-        pathname in pageMetadata && !['/projects', '/sign'].includes(pathname)
-    const canonicalUrl = `${siteUrl}${pathname === '/' ? '/' : pathname}`
+        Boolean(post) ||
+        (pathname in pageMetadata && !['/projects', '/sign'].includes(pathname))
+    const canonicalPath = post ? '/resources/blog/' + post.slug : pathname
+    const canonicalUrl = `${siteUrl}${canonicalPath}`
 
     return (
         <>
@@ -57,22 +74,22 @@ export default function App({ Component, pageProps }: AppProps) {
                 <title>{metadata.title}</title>
                 <meta name="description" content={metadata.description} />
                 {isIndexable ? (
-                    <link rel="canonical" href={canonicalUrl} />
+                    <link rel="canonical" key="canonical" href={canonicalUrl} />
                 ) : (
                     <meta name="robots" content="noindex" key="robots" />
                 )}
 
-                <meta property="og:type" content="website" />
-                <meta property="og:site_name" content="Great Lakes Solar" />
-                <meta property="og:url" content={canonicalUrl} />
-                <meta property="og:title" content={metadata.title} />
+                <meta property="og:type" key="og:type" content="website" />
+                <meta property="og:site_name" key="og:site_name" content="Great Lakes Solar" />
+                <meta property="og:url" key="og:url" content={canonicalUrl} />
+                <meta property="og:title" key="og:title" content={metadata.title} />
                 <meta
-                    property="og:description"
+                    property="og:description" key="og:description"
                     content={metadata.description}
                 />
-                <meta property="og:image" content={ogImage} />
-                <meta property="og:image:width" content="1200" />
-                <meta property="og:image:height" content="630" />
+                <meta property="og:image" key="og:image" content={ogImage} />
+                <meta property="og:image:width" key="og:image:width" content="1200" />
+                <meta property="og:image:height" key="og:image:height" content="630" />
 
                 <meta name="twitter:card" content="summary_large_image" />
                 <meta name="twitter:title" content={metadata.title} />
