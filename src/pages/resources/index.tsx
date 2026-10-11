@@ -170,56 +170,7 @@ export default function Resources() {
                         </Card>
                     </div>
                 </Container>
-            </section>
-            <section
-                id="commercial"
-                aria-labelledby="commercial-heading"
-                className="scroll-mt-36 py-10"
-            >
-                <Container className="space-y-3">
-                    <h2 id="commercial-heading" className="text-3xl">
-                        Commercial Solar
-                    </h2>
-                    <p className="mx-auto max-w-4xl text-center">
-                        For businesses running equipment, lighting, HVAC, or
-                        refrigeration, we design around your operations and
-                        energy use. Explore the additional considerations for
-                        commercial properties below.
-                    </p>
-                    <div className="grid grid-cols-1 gap-3 md:grid-cols-2">
-                        <Card>
-                            <CardHeader>
-                                <CardTitle className="flex items-center justify-between">
-                                    Take Advantage of Tax Incentives
-                                    <CircleDollarSign />
-                                </CardTitle>
-                            </CardHeader>
-                            <CardContent>
-                                The federal Investment Tax Credit (ITC)
-                                currently allows businesses to deduct 30% of
-                                their solar system cost directly from their
-                                federal taxes. Combined with accelerated
-                                depreciation (MACRS), the real out-of-pocket
-                                cost is often far less than the sticker price.
-                            </CardContent>
-                        </Card>
-                        <Card>
-                            <CardHeader>
-                                <CardTitle className="flex items-center justify-between">
-                                    Increase Property Value
-                                    <HousePlus />
-                                </CardTitle>
-                            </CardHeader>
-                            <CardContent>
-                                Commercial properties with solar systems
-                                consistently appraise higher and attract more
-                                buyers and tenants. It&apos;s an upgrade that
-                                pays you back in more ways than one.
-                            </CardContent>
-                        </Card>
-                    </div>
-                </Container>
-            </section>
+            </section>{' '}
             <section id="why-battery" className="py-10">
                 <Container className="space-y-3">
                     <h2>Why Add Battery Storage?</h2>
@@ -303,6 +254,55 @@ export default function Resources() {
                         batteries make financial sense for your specific
                         situation - and if they do, how to size them right.
                     </p>
+                </Container>
+            </section>
+            <section
+                id="commercial"
+                aria-labelledby="commercial-heading"
+                className="scroll-mt-36 py-10"
+            >
+                <Container className="space-y-3">
+                    <h2 id="commercial-heading" className="text-3xl">
+                        Commercial Solar
+                    </h2>
+                    <p className="mx-auto max-w-4xl text-center">
+                        For businesses running equipment, lighting, HVAC, or
+                        refrigeration, we design around your operations and
+                        energy use. Explore the additional considerations for
+                        commercial properties below.
+                    </p>
+                    <div className="grid grid-cols-1 gap-3 md:grid-cols-2">
+                        <Card>
+                            <CardHeader>
+                                <CardTitle className="flex items-center justify-between">
+                                    Take Advantage of Tax Incentives
+                                    <CircleDollarSign />
+                                </CardTitle>
+                            </CardHeader>
+                            <CardContent>
+                                The federal Investment Tax Credit (ITC)
+                                currently allows businesses to deduct 30% of
+                                their solar system cost directly from their
+                                federal taxes. Combined with accelerated
+                                depreciation (MACRS), the real out-of-pocket
+                                cost is often far less than the sticker price.
+                            </CardContent>
+                        </Card>
+                        <Card>
+                            <CardHeader>
+                                <CardTitle className="flex items-center justify-between">
+                                    Increase Property Value
+                                    <HousePlus />
+                                </CardTitle>
+                            </CardHeader>
+                            <CardContent>
+                                Commercial properties with solar systems
+                                consistently appraise higher and attract more
+                                buyers and tenants. It&apos;s an upgrade that
+                                pays you back in more ways than one.
+                            </CardContent>
+                        </Card>
+                    </div>
                 </Container>
             </section>
             <ResidentialSection />
