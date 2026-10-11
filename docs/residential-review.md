@@ -18,17 +18,18 @@ The initial pull reported already up to date.
   structure, with Commercial and Residential entries. Blog is not linked until its
   route lands. Combining the branches still requires retaining all three entries;
   sharing the primitive does not guarantee conflict-free header/metadata merges.
-## Copy scope
+## Current content structure
 
-Validation covered whether the reported site issues still existed on current main.
-Jacob's supplied residential copy is retained, including the savings, battery,
-payback, and climate-change wording. Resources now presents one shared process,
-Commercial Solar, battery benefits, Residential Solar and its four reasons,
-consolidated FAQs, and one contact card, in that order. Shared process wording
-covers homes and businesses. The shared outage answer uses "our clients".
-Eight shared FAQs appear under General; eleven commercial and three residential
-answers appear in their respective dropdowns. Audience-specific payback, battery
-runtime, and battery brand answers are retained.
+At Adam's request, the overlapping six commercial reasons and four residential
+reasons are consolidated into one shared solar-benefits section. Commercial keeps
+its property and incentive considerations; Residential focuses on home sizing and
+seasonal usage. Both retain navigation anchors. The process, battery benefits,
+FAQs, and contact card each appear once.
+
+FAQ dropdowns retain Basics, Battery Storage, and Financing & Incentives, plus
+Commercial Solar and Residential Solar for audience-specific answers. Shared
+questions appear once; distinct commercial and residential answers about payback,
+battery runtime, and equipment remain separate. Existing FAQ answer copy is retained.
 
 ## Release review
 

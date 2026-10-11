@@ -5,7 +5,6 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 import resourcesFaqs from '@/data/resources-faqs'
 import ContactCard from '@/components/contact-card'
 import {
-    BatteryPlus,
     ChartNoAxesCombined,
     CircleDollarSign,
     Clock,
@@ -121,74 +120,73 @@ export default function Resources() {
                     </div>
                 </Container>
             </section>
+            <section id="why-solar" className="scroll-mt-36 py-10">
+                <Container className="space-y-3">
+                    <h2>Why Go Solar?</h2>
+                    <p className="text-center">
+                        For homes and businesses alike, solar offers benefits
+                        that start with the energy you use every day.
+                    </p>
+                    <div className="grid grid-cols-1 gap-3 md:grid-cols-3">
+                        <Card>
+                            <CardHeader>
+                                <CardTitle className="flex items-center justify-between gap-3">
+                                    Lower Your Electric Bill
+                                    <HousePlug className="shrink-0" />
+                                </CardTitle>
+                            </CardHeader>
+                            <CardContent>
+                                Generate electricity on your property to reduce
+                                the power you buy from your utility. Excess
+                                generation may earn credits under your
+                                utility&apos;s program.
+                            </CardContent>
+                        </Card>
+                        <Card>
+                            <CardHeader>
+                                <CardTitle className="flex items-center justify-between gap-3">
+                                    Protect Against Rising Rates
+                                    <TrendingUp className="shrink-0" />
+                                </CardTitle>
+                            </CardHeader>
+                            <CardContent>
+                                Producing your own power reduces your exposure
+                                to utility rate increases and helps you plan
+                                your energy budget.
+                            </CardContent>
+                        </Card>
+                        <Card>
+                            <CardHeader>
+                                <CardTitle className="flex items-center justify-between gap-3">
+                                    Reduce Your Carbon Footprint
+                                    <Earth className="shrink-0" />
+                                </CardTitle>
+                            </CardHeader>
+                            <CardContent>
+                                Going solar is a visible, measurable commitment
+                                to reducing your carbon footprint by adding
+                                renewable energy to your home or business.
+                            </CardContent>
+                        </Card>
+                    </div>
+                </Container>
+            </section>
             <section
                 id="commercial"
                 aria-labelledby="commercial-heading"
                 className="scroll-mt-36 py-10"
             >
-                <Container className="space-y-3 text-center">
+                <Container className="space-y-3">
                     <h2 id="commercial-heading" className="text-3xl">
                         Commercial Solar
                     </h2>
-                    <h3 className="text-xl">
-                        Six Reasons Commercial Businesses Are Switching to Solar
-                    </h3>
-                    <p className="mx-auto max-w-4xl">
-                        Whether you own a small retail shop or manage a large
-                        industrial facility, solar and battery systems deliver
-                        real, measurable value. Here&apos;s what our commercial
-                        clients tell us matters most:
+                    <p className="mx-auto max-w-4xl text-center">
+                        For businesses running equipment, lighting, HVAC, or
+                        refrigeration, we design around your operations and
+                        energy use. Explore the additional considerations for
+                        commercial properties below.
                     </p>
-                    <div className="grid grid-cols-1 gap-2 text-left md:grid-cols-2">
-                        <Card>
-                            <CardHeader>
-                                <CardTitle className="flex items-center justify-between">
-                                    Cut Your Energy Bills
-                                    <HousePlug />
-                                </CardTitle>
-                            </CardHeader>
-                            <CardContent>
-                                Solar dramatically reduces what you pay for
-                                electricity — often by 20-30% or more. For
-                                businesses running equipment, lighting, HVAC, or
-                                refrigeration, those savings add up fast. Most
-                                commercial systems pay for themselves within 5-8
-                                years and continue generating free power for 25+
-                                years after that.
-                            </CardContent>
-                        </Card>
-                        <Card>
-                            <CardHeader>
-                                <CardTitle className="flex items-center justify-between">
-                                    Protect Against Rising Rates
-                                    <TrendingUp />
-                                </CardTitle>
-                            </CardHeader>
-                            <CardContent>
-                                Utility rates have increased an average of 2-5%
-                                per year. Once your solar system is installed,
-                                your cost of generation stays flat. You&apos;re
-                                no longer at the mercy of your utility company,
-                                and you can plan your energy budget with
-                                confidence.
-                            </CardContent>
-                        </Card>
-                        <Card>
-                            <CardHeader>
-                                <CardTitle className="flex items-center justify-between">
-                                    Keep the Lights On with Battery Storage
-                                    <BatteryPlus />
-                                </CardTitle>
-                            </CardHeader>
-                            <CardContent>
-                                Add battery storage and your business stays
-                                operational during outages - no lost revenue, no
-                                spoiled inventory, no production downtime.
-                                Batteries also let you store cheap solar energy
-                                and use it during peak-rate hours, which can
-                                mean even bigger savings.
-                            </CardContent>
-                        </Card>
+                    <div className="grid grid-cols-1 gap-3 md:grid-cols-2">
                         <Card>
                             <CardHeader>
                                 <CardTitle className="flex items-center justify-between">
@@ -203,21 +201,6 @@ export default function Resources() {
                                 federal taxes. Combined with accelerated
                                 depreciation (MACRS), the real out-of-pocket
                                 cost is often far less than the sticker price.
-                            </CardContent>
-                        </Card>
-                        <Card>
-                            <CardHeader>
-                                <CardTitle className="flex items-center justify-between">
-                                    Meet Your Sustainability Goals
-                                    <Earth />
-                                </CardTitle>
-                            </CardHeader>
-                            <CardContent>
-                                More customers, employees, and partners care
-                                about environmental responsibility than ever
-                                before. Going solar is a visible, measurable
-                                commitment to reducing your carbon footprint -
-                                and a great story to tell.
                             </CardContent>
                         </Card>
                         <Card>
@@ -315,9 +298,9 @@ export default function Resources() {
                         </Card>
                     </div>
                     <p className="mx-auto max-w-4xl text-center">
-                        Modern commercial battery systems are quiet, compact,
-                        and designed to last. We&apos;ll help you figure out
-                        whether batteries make financial sense for your specific
+                        Modern battery systems are quiet, compact, and designed
+                        to last. We&apos;ll help you figure out whether
+                        batteries make financial sense for your specific
                         situation - and if they do, how to size them right.
                     </p>
                 </Container>
