@@ -59,7 +59,7 @@ const resourcesFaqs: FAQ[] = [
     },
     {
         question: 'Is commercial solar a good investment for my business?',
-        answer: 'For most businesses, yes, especially those with high daytime energy consumption. Commercial solar typically reduces electricity costs by 20-30% or more, and most systems pay for themselves within 5-8 years. After that, you-re generating essentially free electricity for 20+ years. Combined with federal tax credits and accelerated depreciation, the real out-of-pocket cost is often far lower than the sticker price.',
+        answer: 'For most businesses, yes, especially those with high daytime energy consumption. Commercial solar typically reduces electricity costs by 20-30% or more, and most systems pay for themselves within 5-8 years. After that, you’re generating essentially free electricity for 20+ years. Combined with federal tax credits and accelerated depreciation, the real out-of-pocket cost is often far lower than the sticker price.',
         category: 'Commercial Solar',
     },
     {
