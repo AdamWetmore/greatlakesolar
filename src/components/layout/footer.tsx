@@ -58,7 +58,7 @@ export default function Footer() {
                             <Mail className="h-4 w-4" />
                         </Link>
                     </div>
-                    <div className="flex space-x-4">
+                    <div className="flex flex-wrap justify-center gap-4">
                         <Link
                             href="/about"
                             className="text-muted-foreground hover:text-foreground text-sm"
@@ -69,7 +69,13 @@ export default function Footer() {
                             href="/resources"
                             className="text-muted-foreground hover:text-foreground text-sm"
                         >
-                            Resources
+                            Commercial
+                        </Link>
+                        <Link
+                            href="/residential"
+                            className="text-muted-foreground hover:text-foreground text-sm"
+                        >
+                            Residential
                         </Link>
                         <Link
                             href="/contact"

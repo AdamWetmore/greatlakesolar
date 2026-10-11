@@ -5,25 +5,30 @@ import { useRouter } from 'next/router'
 import Layout from '@/components/layout/layout'
 
 const siteUrl = 'https://greatlakesolar.com'
-const title = "Great Lakes Solar | Minnesota's Local Commercial Solar Expert"
+const title = "Great Lakes Solar | Minnesota's Local Solar Expert"
 const description =
-    'Great Lakes Solar helps businesses, non-profits, schools, and institutions across the Midwest install solar and battery systems that cut energy costs, add resiliency, and make a lasting difference.'
+    'Great Lakes Solar helps businesses, non-profits, homeowners, schools, and institutions across the Midwest install solar and battery systems that cut energy costs, add resiliency, and make a lasting difference.'
 const ogImage = `${siteUrl}/og-image.png`
 
 // Keep public, indexable routes in sync with public/sitemap.xml.
 const pageMetadata: Record<string, { title: string; description: string }> = {
     '/': {
-        title: 'Commercial Rooftop Solar Twin Cities | Great Lakes Solar',
+        title: 'Residential & Commercial Solar Twin Cities | Great Lakes Solar',
         description:
-            'Great Lakes Solar helps businesses across Minneapolis, Saint Paul, and the Twin Cities metro install rooftop solar. Explore options for your commercial building.',
+            'Great Lakes Solar helps homeowners and businesses across Minneapolis, Saint Paul, and the Twin Cities metro install rooftop solar. Explore solar for your home or commercial building.',
     },
     '/about': {
         title: 'About Our Minnesota Solar Team | Great Lakes Solar',
         description:
             'Meet Great Lakes Solar and founder Jacob Bechtold. Learn about our experience helping Minnesota businesses and institutions develop commercial solar projects.',
     },
+    '/residential': {
+        title: 'Minnesota Residential Solar | Great Lakes Solar',
+        description:
+            'Explore solar for your Minnesota home, cabin, or lake home. Learn about savings, battery backup, installation, and personal guidance from Great Lakes Solar.',
+    },
     '/resources': {
-        title: 'Minnesota Commercial Solar Resources | Great Lakes Solar',
+        title: 'Minnesota Commercial Solar | Great Lakes Solar',
         description:
             'Explore commercial solar benefits, battery storage, and common questions for Minnesota businesses considering rooftop solar with Great Lakes Solar.',
     },

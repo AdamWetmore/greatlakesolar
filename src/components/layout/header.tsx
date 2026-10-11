@@ -2,8 +2,14 @@ import Link from 'next/link'
 import Image from 'next/image'
 import { usePathname } from 'next/navigation'
 import { useState } from 'react'
-import { Menu, X } from 'lucide-react'
+import { ChevronDown, Menu, X } from 'lucide-react'
 import { Container } from './container'
+import {
+    DropdownMenu,
+    DropdownMenuTrigger,
+    DropdownMenuContent,
+    DropdownMenuItem,
+} from '@/components/ui/dropdown-menu'
 
 export default function Header() {
     const pathname = usePathname()
@@ -13,6 +19,8 @@ export default function Header() {
         `px-3 py-2 text-sm md:text-base transition-colors ${
             pathname === path ? 'text-blue-600' : 'hover:text-blue-600'
         }`
+    const resourcesActive =
+        pathname?.startsWith('/resources') || pathname === '/residential'
 
     return (
         <div className="bg-background border-border sticky top-0 z-60 border-b">
@@ -47,12 +55,28 @@ export default function Header() {
                         <Link href="/about" className={navLinkStyle('/about')}>
                             About
                         </Link>
-                        <Link
-                            href="/resources"
-                            className={navLinkStyle('/resources')}
-                        >
-                            Resources
-                        </Link>
+                        <DropdownMenu>
+                            <DropdownMenuTrigger asChild>
+                                <button
+                                    type="button"
+                                    className={`${navLinkStyle('/resources')} focus-visible:outline-ring inline-flex items-center gap-1 rounded-sm focus-visible:outline-2 focus-visible:outline-offset-2 ${resourcesActive ? 'text-blue-600' : ''}`}
+                                >
+                                    Resources
+                                    <ChevronDown size={16} aria-hidden="true" />
+                                </button>
+                            </DropdownMenuTrigger>
+                            <DropdownMenuContent
+                                align="start"
+                                className="bg-background text-foreground z-70 min-w-40"
+                            >
+                                <DropdownMenuItem asChild>
+                                    <Link href="/resources">Commercial</Link>
+                                </DropdownMenuItem>
+                                <DropdownMenuItem asChild>
+                                    <Link href="/residential">Residential</Link>
+                                </DropdownMenuItem>
+                            </DropdownMenuContent>
+                        </DropdownMenu>
                         <Link
                             href="/contact"
                             className={navLinkStyle('/contact')}
@@ -65,6 +89,7 @@ export default function Header() {
                     className="block md:hidden"
                     onClick={() => setIsMenuOpen(!isMenuOpen)}
                     aria-label="Toggle menu"
+                    aria-expanded={isMenuOpen}
                 >
                     {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
                 </button>
@@ -91,7 +116,14 @@ export default function Header() {
                             className={navLinkStyle('/resources')}
                             onClick={() => setIsMenuOpen(false)}
                         >
-                            Resources
+                            Commercial
+                        </Link>
+                        <Link
+                            href="/residential"
+                            className={navLinkStyle('/residential')}
+                            onClick={() => setIsMenuOpen(false)}
+                        >
+                            Residential
                         </Link>
                         <Link
                             href="/contact"

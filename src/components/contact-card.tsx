@@ -116,7 +116,7 @@ export default function ContactCard() {
                                 Facebook
                             </span>
                             <span className="text-gray-600">
-                                Great Lake Solar
+                                Great Lakes Solar
                             </span>
                         </div>
                         <ChevronRight className="ml-auto opacity-0 group-hover:opacity-100" />

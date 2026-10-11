@@ -22,14 +22,14 @@ export default function HeroCard() {
             />
             <CardHeader className="text-center">
                 <CardTitle className="text-xl">
-                    Minnesota's Local Commercial Solar Expert
+                    Minnesota&apos;s Local Solar Expert
                 </CardTitle>
                 <CardDescription className="text-md">
-                    Great Lakes Solar helps businesses, non-profits, schools,
-                    and institutions across the Midwest install solar and
-                    battery systems that cut energy costs, add resiliency, and
-                    make a lasting difference. You'll work directly with founder
-                    Jacob Bechtold from day one.
+                    Great Lakes Solar helps businesses, non-profits, homeowners,
+                    schools, and institutions across the Midwest install solar
+                    and battery systems that cut energy costs, add resiliency,
+                    and make a lasting difference. You&apos;ll work directly with
+                    founder Jacob Bechtold from day one.
                 </CardDescription>
             </CardHeader>
             <CardContent className="flex flex-col items-center justify-center gap-3 md:flex-row">

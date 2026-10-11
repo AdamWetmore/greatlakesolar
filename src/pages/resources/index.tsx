@@ -26,12 +26,12 @@ export const getStaticProps = async () => {
     const faqs: FAQ[] = [
         new FAQ(
             'How long do solar panels last?',
-            'Most quality solar panels are designed to last 35-40 years, Manufacturers typically offer a 25-year performance warranty, guaranteeing that the panels will produce at least 80% of their original output after 25 years. In practice, most systems continue procuding well beyond that.',
+            'Most quality solar panels are designed to last 35-40 years, Manufacturers typically offer a 25-year performance warranty, guaranteeing that the panels will produce at least 80% of their original output after 25 years. In practice, most systems continue producing well beyond that.',
             'Basics'
         ),
         new FAQ(
             'What is net metering?',
-            'Net metering is a billing arrangement with your utility company that credits you for the excess electricity your solar system sends back to the grid. When your panels produce more than you need (during sunny hours), the surplus flows to the grid and you earn credits. Wehn you need more power than your panels produce (at night or on cloudy days), you draw from the grid and use those credits. Essentially, this equates to the grid acting as a giant battery. All utilities in Minnesota are required to offer net metering.',
+            'Net metering is a billing arrangement with your utility company that credits you for the excess electricity your solar system sends back to the grid. When your panels produce more than you need (during sunny hours), the surplus flows to the grid and you earn credits. When you need more power than your panels produce (at night or on cloudy days), you draw from the grid and use those credits. Essentially, this equates to the grid acting as a giant battery. All utilities in Minnesota are required to offer net metering.',
             'Basics'
         ),
         new FAQ(
@@ -137,10 +137,116 @@ export const getStaticProps = async () => {
 export default function Resources({ faqs }: { faqs: FAQ[] }) {
     return (
         <div>
-            <section
-                id="how-it-works"
-                className="relative md:h-[70vh] lg:h-[80vh]"
-            >
+            <section id="why-solar" className="py-10">
+                <Container className="space-y-3 text-center">
+                    <h1 className="text-3xl">Commercial Solar</h1>
+                    <h3 className="text-xl">
+                        Six Reasons Commercial Businesses Are Switching to Solar
+                    </h3>
+                    <p className="mx-auto max-w-4xl">
+                        Whether you own a small retail shop or manage a large
+                        industrial facility, solar and battery systems deliver
+                        real, measurable value. Here&apos;s what our commercial
+                        clients tell us matters most:
+                    </p>
+                    <div className="grid grid-cols-1 gap-2 text-left md:grid-cols-2">
+                        <Card>
+                            <CardHeader>
+                                <CardTitle className="flex items-center justify-between">
+                                    Cut Your Energy Bills
+                                    <HousePlug />
+                                </CardTitle>
+                            </CardHeader>
+                            <CardContent>
+                                Solar dramatically reduces what you pay for
+                                electricity — often by 20-30% or more. For
+                                businesses running equipment, lighting, HVAC, or
+                                refrigeration, those savings add up fast. Most
+                                commercial systems pay for themselves within 5-8
+                                years and continue generating free power for 25+
+                                years after that.
+                            </CardContent>
+                        </Card>
+                        <Card>
+                            <CardHeader>
+                                <CardTitle className="flex items-center justify-between">
+                                    Protect Against Rising Rates
+                                    <TrendingUp />
+                                </CardTitle>
+                            </CardHeader>
+                            <CardContent>
+                                Utility rates have increased an average of 2-5%
+                                per year. Once your solar system is installed,
+                                your cost of generation stays flat. You&apos;re no
+                                longer at the mercy of your utility company, and
+                                you can plan your energy budget with confidence.
+                            </CardContent>
+                        </Card>
+                        <Card>
+                            <CardHeader>
+                                <CardTitle className="flex items-center justify-between">
+                                    Keep the Lights On with Battery Storage
+                                    <BatteryPlus />
+                                </CardTitle>
+                            </CardHeader>
+                            <CardContent>
+                                Add battery storage and your business stays
+                                operational during outages - no lost revenue, no
+                                spoiled inventory, no production downtime.
+                                Batteries also let you store cheap solar energy
+                                and use it during peak-rate hours, which can
+                                mean even bigger savings.
+                            </CardContent>
+                        </Card>
+                        <Card>
+                            <CardHeader>
+                                <CardTitle className="flex items-center justify-between">
+                                    Take Advantage of Tax Incentives
+                                    <CircleDollarSign />
+                                </CardTitle>
+                            </CardHeader>
+                            <CardContent>
+                                The federal Investment Tax Credit (ITC)
+                                currently allows businesses to deduct 30% of
+                                their solar system cost directly from their
+                                federal taxes. Combined with accelerated
+                                depreciation (MACRS), the real out-of-pocket
+                                cost is often far less than the sticker price.
+                            </CardContent>
+                        </Card>
+                        <Card>
+                            <CardHeader>
+                                <CardTitle className="flex items-center justify-between">
+                                    Meet Your Sustainability Goals
+                                    <Earth />
+                                </CardTitle>
+                            </CardHeader>
+                            <CardContent>
+                                More customers, employees, and partners care
+                                about environmental responsibility than ever
+                                before. Going solar is a visible, measurable
+                                commitment to reducing your carbon footprint -
+                                and a great story to tell.
+                            </CardContent>
+                        </Card>
+                        <Card>
+                            <CardHeader>
+                                <CardTitle className="flex items-center justify-between">
+                                    Increase Property Value
+                                    <HousePlus />
+                                </CardTitle>
+                            </CardHeader>
+                            <CardContent>
+                                Commercial properties with solar systems
+                                consistently appraise higher and attract more
+                                buyers and tenants. It&apos;s an upgrade that pays
+                                you back in more ways than one.
+                            </CardContent>
+                        </Card>
+                    </div>
+                </Container>
+            </section>
+            <section id="how-it-works" className="relative">
                 <Image
                     src="/bernd-dittrich-fu1GHY5kq-g-unsplash.jpg"
                     alt="Aerial view of solar panels on a roof"
@@ -152,14 +258,14 @@ export default function Resources({ faqs }: { faqs: FAQ[] }) {
                     <Card>
                         <CardHeader>
                             <CardTitle className="text-center">
-                                Great Lakes Solar's Process: From First Call to
+                                Great Lakes Solar&apos;s Process: From First Call to
                                 First Kilowatt
                             </CardTitle>
                         </CardHeader>
                         <CardContent>
                             <p className="pb-3 text-center">
                                 Going solar with Great Lakes Solar is
-                                straightforward. Here's what to expect:
+                                straightforward. Here&apos;s what to expect:
                             </p>
                             <ol className="list-decimal space-y-4 pl-3">
                                 <li>
@@ -235,115 +341,6 @@ export default function Resources({ faqs }: { faqs: FAQ[] }) {
                         >
                             Unsplash
                         </a>
-                    </div>
-                </Container>
-            </section>
-            <section id="why-solar" className="py-10">
-                <Container className="space-y-3 text-center">
-                    <h2>Why Solar?</h2>
-                    <h3 className="text-xl">
-                        Six Reasons Commercial Businesses Are Switching to Solar
-                    </h3>
-                    <p className="mx-auto max-w-4xl">
-                        Whether you own a small retail shop or manage a large
-                        industrial facility, solar and battery systems deliver
-                        real, measurable value. Here's what our commercial
-                        clients tell us matters most:
-                    </p>
-                    <div className="grid grid-cols-1 gap-2 text-left md:grid-cols-2">
-                        <Card>
-                            <CardHeader>
-                                <CardTitle className="flex items-center justify-between">
-                                    Cut Your Energy Bills
-                                    <HousePlug />
-                                </CardTitle>
-                            </CardHeader>
-                            <CardContent>
-                                Solar dramatically reduces what you pay for
-                                electricity — often by 20-30% or more. For
-                                businesses running equipment, lighting, HVAC, or
-                                refrigeration, those savings add up fast. Most
-                                commercial systems pay for themselves within 5-8
-                                years and continue generating free power for 25+
-                                years after that.
-                            </CardContent>
-                        </Card>
-                        <Card>
-                            <CardHeader>
-                                <CardTitle className="flex items-center justify-between">
-                                    Protect Against Rising Rates
-                                    <TrendingUp />
-                                </CardTitle>
-                            </CardHeader>
-                            <CardContent>
-                                Utility rates have increased an average of 2-5%
-                                per year. Once your solar system is installed,
-                                your cost of generation stays flat. You're no
-                                longer at the mercy of your utility company, and
-                                you can plan your energy budget with confidence.
-                            </CardContent>
-                        </Card>
-                        <Card>
-                            <CardHeader>
-                                <CardTitle className="flex items-center justify-between">
-                                    Keep the Lights On with Battery Storage
-                                    <BatteryPlus />
-                                </CardTitle>
-                            </CardHeader>
-                            <CardContent>
-                                Add battery storage and your business stays
-                                operational during outages - no lost revenue, no
-                                spoiled inventory, no production downtime.
-                                Batteries also let you store cheap solar energy
-                                and use it during peak-rate hours, which can
-                                mean even bigger savings.
-                            </CardContent>
-                        </Card>
-                        <Card>
-                            <CardHeader>
-                                <CardTitle className="flex items-center justify-between">
-                                    Take Advantage of Tax Incentives
-                                    <CircleDollarSign />
-                                </CardTitle>
-                            </CardHeader>
-                            <CardContent>
-                                The federal Investment Tax Credit (ITC)
-                                currently allows businesses to deduct 30% of
-                                their solar system cost directly from their
-                                federal taxes. Combined with accelerated
-                                depreciation (MACRS), the real out-of-pocket
-                                cost is often far less than the sticker price.
-                            </CardContent>
-                        </Card>
-                        <Card>
-                            <CardHeader>
-                                <CardTitle className="flex items-center justify-between">
-                                    Meet Your Sustainability Goals
-                                    <Earth />
-                                </CardTitle>
-                            </CardHeader>
-                            <CardContent>
-                                More customers, employees, and partners care
-                                about environmental responsibility than ever
-                                before. Going solar is a visible, measurable
-                                commitment to reducing your carbon footprint -
-                                and a great story to tell.
-                            </CardContent>
-                        </Card>
-                        <Card>
-                            <CardHeader>
-                                <CardTitle className="flex items-center justify-between">
-                                    Increase Property Value
-                                    <HousePlus />
-                                </CardTitle>
-                            </CardHeader>
-                            <CardContent>
-                                Commercial properties with solar systems
-                                consistently appraise higher and attract more
-                                buyers and tenants. It's an upgrade that pays
-                                you back in more ways than one.
-                            </CardContent>
-                        </Card>
                     </div>
                 </Container>
             </section>
@@ -426,7 +423,7 @@ export default function Resources({ faqs }: { faqs: FAQ[] }) {
                     </div>
                     <p className="mx-auto max-w-4xl text-center">
                         Modern commercial battery systems are quiet, compact,
-                        and designed to last. We'll help you figure out whether
+                        and designed to last. We&apos;ll help you figure out whether
                         batteries make financial sense for your specific
                         situation - and if they do, how to size them right.
                     </p>

@@ -57,4 +57,9 @@ In no particular order
 - adding an absolutely positioned button in a corner or at the bottom anytime the user isn't viewing the main hero section which already has a cta
   but not both
 
-6. Add section under resources for -residential, Jacob has the copy for this, keep existing content, add shadcn dropdown to resources tab in site nav with residential and commercial links attaching scroll anchors to the respective content
+6. Implemented locally on `feat/residential-services`: Jacob's residential feedback,
+   a dedicated `/residential` page, and Commercial at the existing `/resources` URL
+   with benefits before the process. Reuses the blog worktree's Shadcn dropdown
+   primitive and Resources menu structure. When merging with `blog-itc-faq`, retain
+   Commercial, Residential, and Blog menu entries and both branches' metadata/sitemap
+   additions. See `docs/residential-review.md` for feedback validation and review notes.
