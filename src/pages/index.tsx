@@ -8,6 +8,8 @@ import {
     GraduationCap,
     Landmark,
     Factory,
+    House,
+    Trees,
     Building2,
 } from 'lucide-react'
 
@@ -59,16 +61,16 @@ export default function Home() {
                             <h2 className="text-left">Local. Connected.</h2>
                             <p className="pt-1">
                                 We know Minnesota’s utilities, permitting
-                                agencies, and engineering firms. That local
-                                knowledge means faster timelines and fewer
-                                surprises on your project.
+                                agencies, suppliers, engineers, and installers.
+                                That local knowledge means faster timelines and
+                                fewer surprises on your project.
                             </p>
                         </div>
                         <div className="border-2 p-3">
                             <h2 className="text-left">Proven. End-to-End.</h2>
                             <p className="pt-1">
                                 Jacob has managed over $10 million in C&I solar
-                                projects. Including installations for fortune
+                                projects. Including installations for Fortune
                                 500 companies, public schools, and cities. We
                                 deliver.
                             </p>
@@ -81,51 +83,59 @@ export default function Home() {
                     <div className="space-y-3 text-center">
                         <h2>Who We Serve</h2>
                         <p>
-                            Great Lakes Solar works with commercial building
-                            owners accross the Midwest, including:
+                            Great Lakes Solar works with property owners across
+                            the Midwest, including:
                         </p>
-                        <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
+                        <div className="grid grid-cols-1 gap-6 md:grid-cols-2 xl:grid-cols-4">
                             <div className="flex items-start gap-3 rounded-lg border p-4 shadow-sm">
-                                <Building2 />
-                                <h3 className="text-left font-semibold whitespace-nowrap">
+                                <Building2 className="shrink-0" />
+                                <h3 className="text-left font-semibold">
                                     Businesses &amp; corporate offices
                                 </h3>
                             </div>
                             <div className="flex items-start gap-3 rounded-lg border p-4 shadow-sm">
                                 <Heart />
-                                <h3 className="text-left font-semibold whitespace-nowrap">
+                                <h3 className="text-left font-semibold">
                                     Non-profits &amp; foundations
                                 </h3>
                             </div>
                             <div className="flex items-start gap-3 rounded-lg border p-4 shadow-sm">
                                 <Church />
-                                <h3 className="text-left font-semibold whitespace-nowrap">
+                                <h3 className="text-left font-semibold">
                                     Churches &amp; religious institutions
                                 </h3>
                             </div>
                             <div className="flex items-start gap-3 rounded-lg border p-4 shadow-sm">
                                 <GraduationCap />
-                                <h3 className="text-left font-semibold whitespace-nowrap">
+                                <h3 className="text-left font-semibold">
                                     Schools &amp; universities
                                 </h3>
                             </div>
                             <div className="flex items-start gap-3 rounded-lg border p-4 shadow-sm">
                                 <Landmark />
-                                <h3 className="text-left font-semibold whitespace-nowrap">
+                                <h3 className="text-left font-semibold">
                                     Cities, counties, &amp; public agencies
                                 </h3>
                             </div>
                             <div className="flex items-start gap-3 rounded-lg border p-4 shadow-sm">
                                 <Factory />
-                                <h3 className="text-left font-semibold whitespace-nowrap">
+                                <h3 className="text-left font-semibold">
                                     Industrial &amp; warehouse facilities
                                 </h3>
                             </div>
+                            <div className="flex items-start gap-3 rounded-lg border p-4 shadow-sm">
+                                <House className="shrink-0" />
+                                <h3 className="text-left font-semibold">
+                                    Single-family homes
+                                </h3>
+                            </div>
+                            <div className="flex items-start gap-3 rounded-lg border p-4 shadow-sm">
+                                <Trees className="shrink-0" />
+                                <h3 className="text-left font-semibold">
+                                    Cabins/Lake Homes
+                                </h3>
+                            </div>
                         </div>
-                        <p>
-                            If your building has a commercial roof and an energy
-                            bill, let's talk!
-                        </p>
                     </div>
                 </Container>
             </section>
