@@ -79,3 +79,5 @@ In no particular order
    Preserve those keys when adding or overriding sharing metadata.
    Jacob approved replacing the equipment-sourcing citation with IRS Notice
    2026-15 and retaining the existing 30% credit wording.
+   BlogPostCard now composes the shared Card/CardContent primitives for consistent
+   card colors, spacing, borders, and shadow, with a full-card keyboard-focusable link.
