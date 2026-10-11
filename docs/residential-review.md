@@ -22,8 +22,13 @@ The initial pull reported already up to date.
 
 Validation covered whether the reported site issues still existed on current main.
 Jacob's supplied residential copy is retained, including the savings, battery,
-payback, and climate-change wording. The residential process and FAQs follow the
-requested homeowner substitutions and removals.
+payback, and climate-change wording. Resources now presents one shared process,
+Commercial Solar, battery benefits, Residential Solar and its four reasons,
+consolidated FAQs, and one contact card, in that order. Shared process wording
+covers homes and businesses. The shared outage answer uses "our clients".
+Eight shared FAQs appear under General; eleven commercial and three residential
+answers appear in their respective dropdowns. Audience-specific payback, battery
+runtime, and battery brand answers are retained.
 
 ## Release review
 

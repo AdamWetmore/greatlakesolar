@@ -60,7 +60,10 @@ In no particular order
 6. Implemented locally on `feat/residential-services`: Jacob's residential feedback,
    anchored Residential and Commercial sections at `/resources#residential` and
    `/resources#commercial`
-   with benefits before the process. Reuses the blog worktree's Shadcn dropdown
+   with one shared process first, commercial benefits, battery benefits, residential
+   benefits, consolidated FAQs, and one contact card. FAQs group shared questions
+   under General and unique answers under Commercial Solar and Residential Solar.
+   Reuses the blog worktree's Shadcn dropdown
    primitive and Resources menu structure. When merging with `blog-itc-faq`, retain
    Commercial, Residential, and Blog menu entries and the blog branch's metadata/sitemap
    additions. See `docs/residential-review.md` for feedback validation and review notes.
