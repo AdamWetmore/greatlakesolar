@@ -49,8 +49,8 @@ export default function About() {
                         <Image
                             src="/jacob-bechtold-headshot.jpg"
                             alt="Headshot of Jacob Bechtold, founder of Great Lakes Solar"
-                            width={4016}
-                            height={6016}
+                            width={1200}
+                            height={1798}
                             className="m-auto h-auto w-4/5"
                         />
                         <h2 className="mt-3">Jacob Bechtold | Founder</h2>
