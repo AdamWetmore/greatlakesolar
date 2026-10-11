@@ -11,8 +11,9 @@ The initial pull reported already up to date.
 - Preserved the replacement headshot already present in this worktree and updated
   its intrinsic dimensions. Original replacement is about 12 MB; image optimization
   would improve delivery because this site exports unoptimized images.
-- Kept `/resources` for Commercial to preserve existing URLs. Added `/residential`,
-  metadata, sitemap entry, desktop dropdown entry, mobile entry, and footer link.
+- Combined Commercial and Residential on `/resources`, with `#commercial` and
+  `#residential` navigation anchors and sticky-header scroll clearance. Removed the
+  standalone residential route and sitemap entry; kept all supplied copy.
 - Copied the blog worktree's `dropdown-menu.tsx` exactly. The menu uses the same
   structure, with Commercial and Residential entries. Blog is not linked until its
   route lands. Combining the branches still requires retaining all three entries;

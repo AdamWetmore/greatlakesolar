@@ -64,19 +64,25 @@ const faqs = [
     },
 ]
 
-export default function Residential() {
+export default function ResidentialSection() {
     return (
-        <div>
+        <section
+            id="residential"
+            aria-labelledby="residential-heading"
+            className="scroll-mt-36"
+        >
             <section className="py-10">
                 <Container className="space-y-3 text-center">
-                    <h1 className="text-3xl">Residential Solar</h1>
+                    <h2 id="residential-heading" className="text-3xl">
+                        Residential Solar
+                    </h2>
                     <p>
                         Solar for your home, cabin, or lake home, with personal
                         guidance from first call to first kilowatt.
                     </p>
                 </Container>
             </section>
-            <section id="how-it-works" className="relative">
+            <section id="residential-how-it-works" className="relative">
                 <Image
                     src="/bernd-dittrich-fu1GHY5kq-g-unsplash.jpg"
                     alt="Aerial view of solar panels on a roof"
@@ -172,7 +178,7 @@ export default function Residential() {
                 </Container>
             </section>
 
-            <section id="why-solar" className="py-10">
+            <section id="residential-why-solar" className="py-10">
                 <Container className="space-y-3">
                     <h2>4 Reasons to Go Solar at Home</h2>
                     <div className="grid grid-cols-1 gap-2 md:grid-cols-2">
@@ -201,9 +207,10 @@ export default function Residential() {
                             <CardContent>
                                 Utility rates have increased an average of 2-5%
                                 per year. Once your solar system is installed,
-                                your cost of generation stays flat. You&apos;re no
-                                longer at the mercy of your utility company, and
-                                you can plan your energy budget with confidence.
+                                your cost of generation stays flat. You&apos;re
+                                no longer at the mercy of your utility company,
+                                and you can plan your energy budget with
+                                confidence.
                             </CardContent>
                         </Card>
                         <Card>
@@ -237,7 +244,7 @@ export default function Residential() {
                 </Container>
             </section>
             <section
-                id="faq"
+                id="residential-faq"
                 aria-label="frequently asked questions"
                 className="py-10"
             >
@@ -250,6 +257,6 @@ export default function Residential() {
                     <ContactCard />
                 </Container>
             </section>
-        </div>
+        </section>
     )
 }

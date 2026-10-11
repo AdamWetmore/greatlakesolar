@@ -19,8 +19,7 @@ export default function Header() {
         `px-3 py-2 text-sm md:text-base transition-colors ${
             pathname === path ? 'text-blue-600' : 'hover:text-blue-600'
         }`
-    const resourcesActive =
-        pathname?.startsWith('/resources') || pathname === '/residential'
+    const resourcesActive = pathname?.startsWith('/resources') ?? false
 
     return (
         <div className="bg-background border-border sticky top-0 z-60 border-b">
@@ -70,10 +69,14 @@ export default function Header() {
                                 className="bg-background text-foreground z-70 min-w-40"
                             >
                                 <DropdownMenuItem asChild>
-                                    <Link href="/resources">Commercial</Link>
+                                    <Link href="/resources#commercial">
+                                        Commercial
+                                    </Link>
                                 </DropdownMenuItem>
                                 <DropdownMenuItem asChild>
-                                    <Link href="/residential">Residential</Link>
+                                    <Link href="/resources#residential">
+                                        Residential
+                                    </Link>
                                 </DropdownMenuItem>
                             </DropdownMenuContent>
                         </DropdownMenu>
@@ -112,15 +115,15 @@ export default function Header() {
                             About
                         </Link>
                         <Link
-                            href="/resources"
+                            href="/resources#commercial"
                             className={navLinkStyle('/resources')}
                             onClick={() => setIsMenuOpen(false)}
                         >
                             Commercial
                         </Link>
                         <Link
-                            href="/residential"
-                            className={navLinkStyle('/residential')}
+                            href="/resources#residential"
+                            className={navLinkStyle('/resources')}
                             onClick={() => setIsMenuOpen(false)}
                         >
                             Residential

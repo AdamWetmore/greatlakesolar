@@ -22,15 +22,10 @@ const pageMetadata: Record<string, { title: string; description: string }> = {
         description:
             'Meet Great Lakes Solar and founder Jacob Bechtold. Learn about our experience helping Minnesota businesses and institutions develop commercial solar projects.',
     },
-    '/residential': {
-        title: 'Minnesota Residential Solar | Great Lakes Solar',
-        description:
-            'Explore solar for your Minnesota home, cabin, or lake home. Learn about savings, battery backup, installation, and personal guidance from Great Lakes Solar.',
-    },
     '/resources': {
-        title: 'Minnesota Commercial Solar | Great Lakes Solar',
+        title: 'Minnesota Solar Resources | Great Lakes Solar',
         description:
-            'Explore commercial solar benefits, battery storage, and common questions for Minnesota businesses considering rooftop solar with Great Lakes Solar.',
+            'Explore residential and commercial solar benefits, installation, battery storage, and common questions for Minnesota homeowners and businesses.',
     },
     '/contact': {
         title: 'Contact a Twin Cities Commercial Solar Expert | Great Lakes Solar',
