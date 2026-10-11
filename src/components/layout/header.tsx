@@ -69,7 +69,7 @@ export default function Header() {
                                 className="bg-background text-foreground z-70 min-w-40"
                             >
                                 <DropdownMenuItem asChild>
-                                    <Link href="/resources">Home</Link>
+                                    <Link href="/resources">All</Link>
                                 </DropdownMenuItem>
                                 <DropdownMenuItem asChild>
                                     <Link href="/resources#commercial">
@@ -130,7 +130,7 @@ export default function Header() {
                                 className={`${navLinkStyle('/resources')} ml-3`}
                                 onClick={() => setIsMenuOpen(false)}
                             >
-                                Home
+                                All
                             </Link>
                             <Link
                                 href="/resources#commercial"
