@@ -15,7 +15,7 @@ export default function NewsletterBand() {
             </div>
             <Button asChild size="lg" className="shrink-0">
                 <Link href="/newsletter">
-                    Sign up for our newsletter
+                    Sign up
                     <ChevronRight />
                 </Link>
             </Button>
