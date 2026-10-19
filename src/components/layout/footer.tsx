@@ -78,6 +78,12 @@ export default function Footer() {
                             Residential
                         </Link>
                         <Link
+                            href="/newsletter"
+                            className="text-muted-foreground hover:text-foreground text-sm"
+                        >
+                            Get the newsletter
+                        </Link>
+                        <Link
                             href="/contact"
                             className="text-muted-foreground hover:text-foreground text-sm"
                         >
