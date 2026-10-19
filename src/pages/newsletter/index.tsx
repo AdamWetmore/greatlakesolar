@@ -33,7 +33,7 @@ export default function Newsletter() {
                     <p className="font-semibold">Jacob Bechtold, Founder</p>
                     {latestPost && (
                         <p className="text-sm">
-                            Want a feel for it first? Read our latest post:{' '}
+                            Want a feel for it first? Read our latest blog post:{' '}
                             <Link
                                 href={`/resources/blog/${latestPost.slug}`}
                                 className="underline decoration-blue-500 decoration-2 underline-offset-4 hover:opacity-80"

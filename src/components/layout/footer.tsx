@@ -81,7 +81,7 @@ export default function Footer() {
                             href="/newsletter"
                             className="text-muted-foreground hover:text-foreground text-sm"
                         >
-                            Get the newsletter
+                            Sign up for our newsletter
                         </Link>
                         <Link
                             href="/contact"
