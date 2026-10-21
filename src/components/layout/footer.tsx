@@ -66,10 +66,16 @@ export default function Footer() {
                             About
                         </Link>
                         <Link
-                            href="/resources"
+                            href="/resources/blog"
                             className="text-muted-foreground hover:text-foreground text-sm"
                         >
-                            Resources
+                            Blog
+                        </Link>
+                        <Link
+                            href="/newsletter"
+                            className="text-muted-foreground hover:text-foreground text-sm"
+                        >
+                            Newsletter
                         </Link>
                         <Link
                             href="/resources#residential"
@@ -78,10 +84,10 @@ export default function Footer() {
                             Residential
                         </Link>
                         <Link
-                            href="/newsletter"
+                            href="/resources#commercial"
                             className="text-muted-foreground hover:text-foreground text-sm"
                         >
-                            Sign up for our newsletter
+                            Commercial
                         </Link>
                         <Link
                             href="/contact"

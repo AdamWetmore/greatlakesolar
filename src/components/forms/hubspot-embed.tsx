@@ -15,7 +15,13 @@ interface HubSpotEmbedProps {
     controlsClassName?: string
 }
 
-function HubSpotFrame({ formId, title }: { formId?: string; title: string }) {
+function HubSpotFrame({
+    formId,
+    title,
+    fallbackUrl,
+    controlsClassName,
+    onRetry,
+}: HubSpotEmbedProps & { onRetry: () => void }) {
     const [status, setStatus] = useState<'loading' | 'ready' | 'error'>(
         PORTAL_ID && formId ? 'loading' : 'error'
     )
@@ -89,34 +95,17 @@ function HubSpotFrame({ formId, title }: { formId?: string; title: string }) {
                 data-portal-id={PORTAL_ID}
                 title={title}
             />
-        </>
-    )
-}
-
-export default function HubSpotEmbed({
-    formId,
-    title,
-    fallbackUrl,
-    controlsClassName,
-}: HubSpotEmbedProps) {
-    const [attempt, setAttempt] = useState(0)
-
-    return (
-        <>
-            <HubSpotFrame key={attempt} formId={formId} title={title} />
             <div
                 className={cn(
                     'flex flex-wrap items-center justify-between gap-3 text-sm',
                     controlsClassName
                 )}
             >
-                <Button
-                    variant="outline"
-                    size="sm"
-                    onClick={() => setAttempt(attempt + 1)}
-                >
-                    Reload form
-                </Button>
+                {status === 'error' && (
+                    <Button variant="outline" size="sm" onClick={onRetry}>
+                        Reload form
+                    </Button>
+                )}
                 <a
                     href={fallbackUrl}
                     target="_blank"
@@ -127,5 +116,17 @@ export default function HubSpotEmbed({
                 </a>
             </div>
         </>
+    )
+}
+
+export default function HubSpotEmbed(props: HubSpotEmbedProps) {
+    const [attempt, setAttempt] = useState(0)
+
+    return (
+        <HubSpotFrame
+            key={attempt}
+            {...props}
+            onRetry={() => setAttempt((previous) => previous + 1)}
+        />
     )
 }

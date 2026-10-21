@@ -1,10 +1,11 @@
 import Link from 'next/link'
 import { ChevronRight } from 'lucide-react'
 import { Button } from './ui/button'
+import { Card } from './ui/card'
 
 export default function NewsletterBand() {
     return (
-        <div className="mx-auto flex w-full max-w-3xl flex-col items-center gap-4 rounded-lg border p-6 text-center shadow-sm md:flex-row md:justify-between md:text-left">
+        <Card className="mx-auto w-full max-w-3xl items-center gap-4 px-6 text-center md:flex-row md:justify-between md:text-left">
             <div className="space-y-1">
                 <h2 className="md:text-left">
                     Sign up for our monthly newsletter
@@ -19,6 +20,6 @@ export default function NewsletterBand() {
                     <ChevronRight />
                 </Link>
             </Button>
-        </div>
+        </Card>
     )
 }
