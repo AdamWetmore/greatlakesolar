@@ -19,7 +19,8 @@ export default function Header() {
         `px-3 py-2 text-sm md:text-base transition-colors ${
             pathname === path ? 'text-blue-600' : 'hover:text-blue-600'
         }`
-    const resourcesActive = pathname?.startsWith('/resources') ?? false
+    const resourcesActive =
+        (pathname?.startsWith('/resources') ?? false) || pathname === '/newsletter'
 
     return (
         <div className="bg-background border-border sticky top-0 z-60 border-b">
@@ -73,6 +74,9 @@ export default function Header() {
                                 </DropdownMenuItem>
                                 <DropdownMenuItem asChild>
                                     <Link href="/resources/blog">Blog</Link>
+                                </DropdownMenuItem>
+                                <DropdownMenuItem asChild>
+                                    <Link href="/newsletter">Newsletter</Link>
                                 </DropdownMenuItem>
                                 <DropdownMenuItem asChild>
                                     <Link href="/resources#commercial">
@@ -141,6 +145,13 @@ export default function Header() {
                                 onClick={() => setIsMenuOpen(false)}
                             >
                                 Blog
+                            </Link>
+                            <Link
+                                href="/newsletter"
+                                className={`${navLinkStyle('/newsletter')} ml-3`}
+                                onClick={() => setIsMenuOpen(false)}
+                            >
+                                Newsletter
                             </Link>
                             <Link
                                 href="/resources#commercial"

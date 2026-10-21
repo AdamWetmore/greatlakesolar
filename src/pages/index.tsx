@@ -1,5 +1,6 @@
 import ContactCard from '@/components/contact-card'
 import HeroCard from '@/components/hero-card'
+import NewsletterBand from '@/components/newsletter-band'
 import { Container } from '@/components/layout/container'
 import Image from 'next/image'
 import {
@@ -137,6 +138,11 @@ export default function Home() {
                             </div>
                         </div>
                     </div>
+                </Container>
+            </section>
+            <section className="pt-10">
+                <Container>
+                    <NewsletterBand />
                 </Container>
             </section>
             <section className="py-10">

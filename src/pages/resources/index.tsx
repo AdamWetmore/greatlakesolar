@@ -1,4 +1,5 @@
 import BlogPostCard from '@/components/blog/blog-post-card'
+import NewsletterBand from '@/components/newsletter-band'
 import { blogPosts } from '@/models/blog'
 import Link from 'next/link'
 import ResidentialSection from '@/components/resources/residential-section'
@@ -139,6 +140,11 @@ export default function Resources() {
                             See all posts
                         </Link>
                     </p>
+                </Container>
+            </section>
+            <section>
+                <Container>
+                    <NewsletterBand />
                 </Container>
             </section>
             <section id="why-solar" className="scroll-mt-36 py-10">

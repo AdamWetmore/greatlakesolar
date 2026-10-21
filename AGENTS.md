@@ -25,8 +25,10 @@ Do not alter "output: 'export'" in ./next.config.ts, if a requested task require
 
 ### Local Development Environment
 
-The assessment dialog uses the official HubSpot embed. Configure
-`NEXT_PUBLIC_HUBSPOT_PORTAL_ID` and `NEXT_PUBLIC_HUBSPOT_FORM_ID` in ignored
+The assessment dialog and the /newsletter page use the official HubSpot embed
+(shared `src/components/forms/hubspot-embed.tsx`). Configure
+`NEXT_PUBLIC_HUBSPOT_PORTAL_ID`, `NEXT_PUBLIC_HUBSPOT_FORM_ID` (assessment), and
+`NEXT_PUBLIC_HUBSPOT_NEWSLETTER_FORM_ID` (newsletter signup) in ignored
 `.env.local` before building. Never commit their values. Production builds reject
 missing or malformed IDs; these NEXT_PUBLIC values are embedded in the browser bundle.
 Manage questions, validation, field styling, and the inline thank-you message in HubSpot.
