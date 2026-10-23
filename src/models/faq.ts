@@ -3,6 +3,8 @@ export default class FAQ {
     question: string
     answer: string
     category: string
+    // Optional internal link shown after the answer, e.g. a related blog post
+    link?: { href: string; label: string }
 
     constructor(question: string, answer: string, category: string) {
         this.question = question

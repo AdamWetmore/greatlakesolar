@@ -63,7 +63,7 @@ export default function About() {
                             <i> Great Lakes Solar </i>
                             to ensure that Midwest businesses, non-profits,
                             homeowners, and religious and state institutions
-                            have access to solar and BESS to improve their
+                            have access to solar and battery storage to improve their
                             organization&apos;s operations.
                         </p>
                         <p>
@@ -94,13 +94,13 @@ export default function About() {
                 <Container className="space-y-3">
                     <h2>Great Lakes Solar</h2>
                     <p className="mx-auto max-w-7xl text-center">
-                        Solar and BESS are the most affordable sources of
-                        energy, allowing businesses to combat rising energy
+                        Solar and battery storage are among the most affordable
+                        sources of new energy, helping businesses combat rising energy
                         prices and inflation, while providing backup power for
-                        key loads. GLS&apos; goal is to use solar and BESS
+                        key loads. GLS&apos; goal is to use solar and battery storage
                         systems as a foundational tool to empower its clients to
                         succeed in their mission and grow their impact. Solar
-                        and BESS help combat larger societal issues like energy
+                        and battery storage help combat larger societal issues like energy
                         security, resiliency, climate change, and electrical
                         load growth.
                     </p>
