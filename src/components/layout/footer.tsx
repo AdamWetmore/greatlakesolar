@@ -66,16 +66,28 @@ export default function Footer() {
                             About
                         </Link>
                         <Link
-                            href="/resources"
+                            href="/resources/blog"
                             className="text-muted-foreground hover:text-foreground text-sm"
                         >
-                            Resources
+                            Blog
+                        </Link>
+                        <Link
+                            href="/newsletter"
+                            className="text-muted-foreground hover:text-foreground text-sm"
+                        >
+                            Newsletter
                         </Link>
                         <Link
                             href="/resources#residential"
                             className="text-muted-foreground hover:text-foreground text-sm"
                         >
                             Residential
+                        </Link>
+                        <Link
+                            href="/resources#commercial"
+                            className="text-muted-foreground hover:text-foreground text-sm"
+                        >
+                            Commercial
                         </Link>
                         <Link
                             href="/contact"

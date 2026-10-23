@@ -38,6 +38,11 @@ const pageMetadata: Record<string, { title: string; description: string }> = {
         description:
             'Talk with Great Lakes Solar about commercial rooftop solar and battery storage for your business in Minneapolis, Saint Paul, or the greater Twin Cities metro.',
     },
+    '/newsletter': {
+        title: 'Newsletter | Great Lakes Solar',
+        description:
+            'Get one email a month from Great Lakes Solar: real local solar projects, policy and incentive changes in plain English, and the occasional story. Unsubscribe anytime.',
+    },
     '/projects': {
         title: 'Solar Projects | Great Lakes Solar',
         description:
