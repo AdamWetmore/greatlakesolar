@@ -2,9 +2,10 @@ import Link from 'next/link'
 import Image from 'next/image'
 import { usePathname } from 'next/navigation'
 import { useState } from 'react'
-import { ChevronDown, Menu, X } from 'lucide-react'
+import { ChevronDown, Menu, Phone, X } from 'lucide-react'
 import { Container } from './container'
 import IntakeForm from '@/components/forms/intake'
+import { PHONE_DISPLAY, PHONE_HREF } from '@/lib/contact'
 import {
     DropdownMenu,
     DropdownMenuTrigger,
@@ -21,11 +22,12 @@ export default function Header() {
             pathname === path ? 'text-blue-600' : 'hover:text-blue-600'
         }`
     const resourcesActive =
-        (pathname?.startsWith('/resources') ?? false) || pathname === '/newsletter'
+        (pathname?.startsWith('/resources') ?? false) ||
+        pathname === '/newsletter'
 
     return (
         <div className="bg-background border-border sticky top-0 z-60 border-b">
-            <Container className="grid grid-cols-[1fr_auto] items-center gap-3 py-3 sm:flex sm:justify-between">
+            <Container className="grid grid-cols-[1fr_auto_auto] items-center gap-3 py-3 sm:flex sm:justify-between">
                 <Link
                     href="/"
                     aria-label="Great Lakes Solar home"
@@ -99,13 +101,24 @@ export default function Header() {
                         </Link>
                     </nav>
                 </div>
+                {/* Tap-to-call: icon only on phones, full number from md up. */}
+                <a
+                    href={PHONE_HREF}
+                    aria-label={`Call Great Lakes Solar at ${PHONE_DISPLAY}`}
+                    className="focus-visible:outline-ring flex size-11 items-center justify-center gap-2 rounded-md transition-colors hover:text-blue-600 focus-visible:outline-2 focus-visible:outline-offset-2 sm:ml-auto md:w-auto md:px-2 lg:ml-0 lg:w-11 lg:px-0 xl:w-auto xl:px-2"
+                >
+                    <Phone size={20} aria-hidden="true" />
+                    <span className="hidden text-sm whitespace-nowrap md:inline lg:hidden xl:inline">
+                        {PHONE_DISPLAY}
+                    </span>
+                </a>
                 <IntakeForm
                     label="Free Assessment"
-                    triggerClassName="order-last col-span-2 w-full border border-primary-foreground/30 sm:order-none sm:w-auto"
+                    triggerClassName="order-last col-span-3 w-full border border-primary-foreground/30 sm:order-none sm:w-auto"
                 />
                 <button
                     type="button"
-                    className="flex size-11 items-center justify-center rounded-md focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ring lg:hidden"
+                    className="focus-visible:outline-ring flex size-11 items-center justify-center rounded-md focus-visible:outline-2 focus-visible:outline-offset-2 lg:hidden"
                     onClick={() => setIsMenuOpen(!isMenuOpen)}
                     aria-label="Toggle menu"
                     aria-expanded={isMenuOpen}

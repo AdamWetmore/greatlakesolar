@@ -42,6 +42,18 @@ Keep this section updated as progress and planning continue
 
 In no particular order
 
+- Implemented on `feat/lead-funnel` (includes PRs #15 and #16): HubSpot tracking code
+  site-wide (`src/components/hubspot-tracking.tsx`, reuses `NEXT_PUBLIC_HUBSPOT_PORTAL_ID`,
+  reports client-side route changes), tap-to-call phone in the header (icon only below md
+  and from lg to xl so the nav never wraps), assessment form embedded on /contact,
+  LocalBusiness JSON-LD on / and /contact, phone/email constants in `src/lib/contact.ts`,
+  optional `link` on FAQ entries, and copy/SEO fixes (ITC FAQ, new residential tax credit
+  FAQ, net metering 40 kW, install timing, licensed installation partners, About page
+  wording, /contact title). After deploy: confirm the tracking script loads on
+  greatlakesolar.com and page views show in HubSpot. Separate from code: www.greatlakesolar.com
+  points at ghs.googlehosted.com and fails (http 404, no https certificate); add www as a
+  Firebase custom domain or redirect it to the apex domain.
+
 - Implemented on `chore/hubspot-embed`: replace the custom assessment form with the
   HubSpot embed inside the existing dialog, with loading/retry feedback and a manual
   fallback link. Before release, verify mobile/dark-mode presentation and confirm a

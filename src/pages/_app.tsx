@@ -3,6 +3,8 @@ import type { AppProps } from 'next/app'
 import Head from 'next/head'
 import { useRouter } from 'next/router'
 import Layout from '@/components/layout/layout'
+import HubSpotTracking from '@/components/hubspot-tracking'
+import { EMAIL, PHONE_HREF } from '@/lib/contact'
 import { blogPosts } from '@/models/blog'
 
 const siteUrl = 'https://greatlakesolar.com'
@@ -10,6 +12,41 @@ const title = "Great Lakes Solar | Minnesota's Local Solar Expert"
 const description =
     'Great Lakes Solar helps businesses, non-profits, homeowners, schools, and institutions across the Midwest install solar and battery systems that cut energy costs, add resiliency, and make a lasting difference.'
 const ogImage = `${siteUrl}/og-image.png`
+
+// LocalBusiness structured data so Google can show phone, hours and service
+// area. Service-area business: no street address (matches the Google Business Profile).
+const localBusinessJsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'LocalBusiness',
+    '@id': `${siteUrl}/#business`,
+    name: 'Great Lakes Solar',
+    description,
+    url: siteUrl,
+    logo: `${siteUrl}/og-image.png`,
+    image: ogImage,
+    telephone: PHONE_HREF.replace('tel:', ''),
+    email: EMAIL,
+    founder: { '@type': 'Person', name: 'Jacob Bechtold' },
+    address: {
+        '@type': 'PostalAddress',
+        addressRegion: 'MN',
+        addressCountry: 'US',
+    },
+    areaServed: [
+        { '@type': 'State', name: 'Minnesota' },
+        { '@type': 'State', name: 'Wisconsin' },
+    ],
+    openingHoursSpecification: {
+        '@type': 'OpeningHoursSpecification',
+        dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'],
+        opens: '08:00',
+        closes: '17:00',
+    },
+    sameAs: [
+        'https://www.linkedin.com/company/great-lakes-solar',
+        'https://facebook.com/people/Great-Lake-Solar/61574343611604',
+    ],
+}
 
 // Keep public, indexable routes in sync with public/sitemap.xml.
 const pageMetadata: Record<string, { title: string; description: string }> = {
@@ -34,9 +71,9 @@ const pageMetadata: Record<string, { title: string; description: string }> = {
             'Plain-language articles from Great Lakes Solar on solar and battery incentives, tax credits, and planning a commercial solar project in Minnesota and the Midwest.',
     },
     '/contact': {
-        title: 'Contact a Twin Cities Commercial Solar Expert | Great Lakes Solar',
+        title: 'Contact a Twin Cities Solar Expert | Free Assessment | Great Lakes Solar',
         description:
-            'Talk with Great Lakes Solar about commercial rooftop solar and battery storage for your business in Minneapolis, Saint Paul, or the greater Twin Cities metro.',
+            'Request a free solar assessment or call 952-222-7912. Great Lakes Solar designs and builds solar and battery storage for homes and businesses in Minneapolis, Saint Paul, and across Minnesota and western Wisconsin.',
     },
     '/newsletter': {
         title: 'Newsletter | Great Lakes Solar',
@@ -85,16 +122,33 @@ export default function App({ Component, pageProps }: AppProps) {
                 )}
 
                 <meta property="og:type" key="og:type" content="website" />
-                <meta property="og:site_name" key="og:site_name" content="Great Lakes Solar" />
-                <meta property="og:url" key="og:url" content={canonicalUrl} />
-                <meta property="og:title" key="og:title" content={metadata.title} />
                 <meta
-                    property="og:description" key="og:description"
+                    property="og:site_name"
+                    key="og:site_name"
+                    content="Great Lakes Solar"
+                />
+                <meta property="og:url" key="og:url" content={canonicalUrl} />
+                <meta
+                    property="og:title"
+                    key="og:title"
+                    content={metadata.title}
+                />
+                <meta
+                    property="og:description"
+                    key="og:description"
                     content={metadata.description}
                 />
                 <meta property="og:image" key="og:image" content={ogImage} />
-                <meta property="og:image:width" key="og:image:width" content="1200" />
-                <meta property="og:image:height" key="og:image:height" content="630" />
+                <meta
+                    property="og:image:width"
+                    key="og:image:width"
+                    content="1200"
+                />
+                <meta
+                    property="og:image:height"
+                    key="og:image:height"
+                    content="630"
+                />
 
                 <meta name="twitter:card" content="summary_large_image" />
                 <meta name="twitter:title" content={metadata.title} />
@@ -103,7 +157,17 @@ export default function App({ Component, pageProps }: AppProps) {
                     content={metadata.description}
                 />
                 <meta name="twitter:image" content={ogImage} />
+                {['/', '/contact'].includes(pathname) && (
+                    <script
+                        type="application/ld+json"
+                        key="local-business"
+                        dangerouslySetInnerHTML={{
+                            __html: JSON.stringify(localBusinessJsonLd),
+                        }}
+                    />
+                )}
             </Head>
+            <HubSpotTracking />
             <Layout>
                 <Component {...pageProps} />
             </Layout>
