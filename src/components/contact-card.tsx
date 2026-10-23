@@ -1,3 +1,4 @@
+import { EMAIL, PHONE_DISPLAY, PHONE_HREF } from '@/lib/contact'
 import Link from 'next/link'
 import Image from 'next/image'
 import { Phone, Mail, ChevronRight } from 'lucide-react'
@@ -12,7 +13,7 @@ export default function ContactCard() {
             <CardContent className="space-y-3">
                 {/* Phone */}
                 <Link
-                    href="tel:+19522227912"
+                    href={PHONE_HREF}
                     className="group block w-full rounded-xl p-2 transition hover:bg-gray-100"
                 >
                     <div className="flex items-center gap-5">
@@ -23,14 +24,16 @@ export default function ContactCard() {
                             <span className="font-semibold text-gray-900">
                                 Phone
                             </span>
-                            <span className="text-gray-600">952-222-7912</span>
+                            <span className="text-gray-600">
+                                {PHONE_DISPLAY}
+                            </span>
                         </div>
                         <ChevronRight className="ml-auto opacity-0 group-hover:opacity-100" />
                     </div>
                 </Link>
                 {/* Email */}
                 <Link
-                    href="mailto:info@greatlakesolar.com"
+                    href={`mailto:${EMAIL}`}
                     className="group block w-full rounded-xl p-2 transition hover:bg-gray-100"
                 >
                     <div className="flex items-center gap-5">
@@ -41,9 +44,7 @@ export default function ContactCard() {
                             <span className="font-semibold text-gray-900">
                                 Email
                             </span>
-                            <span className="text-gray-600">
-                                info@greatlakesolar.com
-                            </span>
+                            <span className="text-gray-600">{EMAIL}</span>
                         </div>
                         <ChevronRight className="ml-auto opacity-0 group-hover:opacity-100" />
                     </div>

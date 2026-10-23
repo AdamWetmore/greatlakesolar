@@ -25,8 +25,10 @@ Do not alter "output: 'export'" in ./next.config.ts, if a requested task require
 
 ### Local Development Environment
 
-The assessment dialog uses the official HubSpot embed. Configure
-`NEXT_PUBLIC_HUBSPOT_PORTAL_ID` and `NEXT_PUBLIC_HUBSPOT_FORM_ID` in ignored
+The assessment dialog and the /newsletter page use the official HubSpot embed
+(shared `src/components/forms/hubspot-embed.tsx`). Configure
+`NEXT_PUBLIC_HUBSPOT_PORTAL_ID`, `NEXT_PUBLIC_HUBSPOT_FORM_ID` (assessment), and
+`NEXT_PUBLIC_HUBSPOT_NEWSLETTER_FORM_ID` (newsletter signup) in ignored
 `.env.local` before building. Never commit their values. Production builds reject
 missing or malformed IDs; these NEXT_PUBLIC values are embedded in the browser bundle.
 Manage questions, validation, field styling, and the inline thank-you message in HubSpot.
@@ -40,6 +42,18 @@ Keep this section updated as progress and planning continue
 
 In no particular order
 
+- Implemented on `feat/lead-funnel` (includes PRs #15 and #16): HubSpot tracking code
+  site-wide (`src/components/hubspot-tracking.tsx`, reuses `NEXT_PUBLIC_HUBSPOT_PORTAL_ID`,
+  reports client-side route changes), tap-to-call phone in the header (icon only below md
+  and from lg to xl so the nav never wraps), assessment form embedded on /contact,
+  LocalBusiness JSON-LD on / and /contact, phone/email constants in `src/lib/contact.ts`,
+  optional `link` on FAQ entries, and copy/SEO fixes (ITC FAQ, new residential tax credit
+  FAQ, net metering 40 kW, install timing, licensed installation partners, About page
+  wording, /contact title). After deploy: confirm the tracking script loads on
+  greatlakesolar.com and page views show in HubSpot. Separate from code: www.greatlakesolar.com
+  points at ghs.googlehosted.com and fails (http 404, no https certificate); add www as a
+  Firebase custom domain or redirect it to the apex domain.
+
 - Implemented on `chore/hubspot-embed`: replace the custom assessment form with the
   HubSpot embed inside the existing dialog, with loading/retry feedback and a manual
   fallback link. Before release, verify mobile/dark-mode presentation and confirm a
@@ -49,13 +63,12 @@ In no particular order
 2. Merged in PR #9 (Adam reviewed the preview deployment): replace legacy layout/objectFit props on home, about, and resources hero images with fill and sizes="100vw"; retain existing object-cover styling and responsive containers.
 3. Implemented on logo-typography (PR #10 pending review): uppercase header wordmark; experimenting at Adam's request with G/L/S at 1rem (16px default) and remaining letters at 0.875rem (14px default). Preserve the existing font, colors, responsive navigation, and accessible home-link label.
 4. Move "The GLS Difference" section to the hero section with the hero card, update styling to cohere with the background change
-5. Update sitewide UI so that the main marketing funnel, the hubspot form, is visible on all pages at all scroll heights
-   Do this either by
-
-- adding a cta to the site header
-  or
-- adding an absolutely positioned button in a corner or at the bottom anytime the user isn't viewing the main hero section which already has a cta
-  but not both
+5. Implemented on `feat/header-assessment-cta`: the sticky header includes a
+   Free Assessment button opening the existing HubSpot dialog on every page.
+   The button stays outside the mobile menu, spans a second row on narrow phones,
+   and sits inline from the small breakpoint. Desktop navigation starts at the
+   large breakpoint to leave room for the CTA. Uses existing brand/theme colors;
+   no floating CTA. Pending Adam's PR review and post-deployment submission check.
 
 6. Merged in PR #14 (`feat/residential-services`): Jacob's residential feedback,
    anchored Residential and Commercial sections at `/resources#residential` and

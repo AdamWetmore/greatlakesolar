@@ -130,8 +130,9 @@ body {
     --sidebar-ring: oklch(0.556 0 0);
 }
 
-/* Keep the assessment dialog consistent with HubSpot's light form in either theme. */
-.intake-dialog {
+/* Keep HubSpot form containers consistent with HubSpot's light form in either theme. */
+.intake-dialog,
+.hubspot-card {
     color-scheme: light;
     --background: oklch(1 0 0);
     --foreground: oklch(0.3704 0.0845 260.06);
