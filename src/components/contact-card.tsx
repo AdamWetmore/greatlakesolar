@@ -61,18 +61,18 @@ export default function ContactCard() {
                             <Image
                                 src="/LI-In-Bug.png"
                                 alt="LinkedIn logo"
-                                height={40}
-                                width={40}
-                                className="absolute transition-opacity duration-300 group-hover:opacity-0"
+                                height={540}
+                                width={635}
+                                className="absolute h-auto w-10 transition-opacity duration-300 group-hover:opacity-0"
                             />
 
                             {/* White logo for hover state*/}
                             <Image
                                 src="/InBug-White.png"
                                 alt="LinkedIn logo white"
-                                height={40}
-                                width={40}
-                                className="absolute opacity-0 transition-opacity duration-300 group-hover:opacity-100"
+                                height={779}
+                                width={840}
+                                className="absolute h-auto w-10 opacity-0 transition-opacity duration-300 group-hover:opacity-100"
                             />
                         </div>
                         <div className="flex flex-col text-left">

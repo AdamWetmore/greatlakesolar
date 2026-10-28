@@ -13,8 +13,9 @@ export default function Footer() {
                         <Image
                             src="/SecondaryLogo.svg"
                             alt="Great Lakes Solar Logo"
-                            width={150}
-                            height={150}
+                            width={3301}
+                            height={1840}
+                            className="h-auto w-[150px]"
                             priority
                         />
                     </Link>
@@ -26,8 +27,9 @@ export default function Footer() {
                             <Image
                                 src="/LI-In-Bug.png"
                                 alt="LinkedIn Logo"
-                                width={32}
-                                height={32}
+                                width={635}
+                                height={540}
+                                className="h-auto w-8"
                             />
                         </Link>
 

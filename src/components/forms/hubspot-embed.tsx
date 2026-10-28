@@ -1,6 +1,6 @@
 'use client'
 
-import { useEffect, useState } from 'react'
+import { useEffect, useId, useState } from 'react'
 import { Button } from '@/components/ui/button'
 import { cn } from '@/lib/utils'
 
@@ -22,6 +22,7 @@ function HubSpotFrame({
     controlsClassName,
     onRetry,
 }: HubSpotEmbedProps & { onRetry: () => void }) {
+    const instanceId = useId()
     const [status, setStatus] = useState<'loading' | 'ready' | 'error'>(
         PORTAL_ID && formId ? 'loading' : 'error'
     )
@@ -30,9 +31,12 @@ function HubSpotFrame({
         if (!PORTAL_ID || !formId) return
         let ready = false
         const onReady = (event: Event) => {
+            const detail = (
+                event as CustomEvent<{ formId: string; instanceId: string }>
+            ).detail
             if (
-                (event as CustomEvent<{ formId: string }>).detail?.formId ===
-                formId
+                detail?.formId === formId &&
+                detail.instanceId === instanceId
             ) {
                 ready = true
                 window.clearTimeout(timeout)
@@ -69,7 +73,7 @@ function HubSpotFrame({
             window.removeEventListener('hs-form-event:on-ready', onReady)
             script?.removeEventListener('error', onError)
         }
-    }, [formId])
+    }, [formId, instanceId])
 
     return (
         <>
@@ -92,6 +96,7 @@ function HubSpotFrame({
                 className="hs-form-frame bg-white [color-scheme:light]"
                 data-region="na2"
                 data-form-id={formId}
+                data-instance-id={instanceId}
                 data-portal-id={PORTAL_ID}
                 title={title}
             />

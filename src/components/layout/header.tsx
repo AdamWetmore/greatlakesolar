@@ -36,10 +36,10 @@ export default function Header() {
                     <Image
                         src="/Bug.svg"
                         alt=""
-                        width={100}
-                        height={100}
+                        width={2894}
+                        height={1402}
                         priority
-                        className="hidden md:block"
+                        className="hidden h-auto w-[100px] md:block"
                     />
                     <span
                         aria-hidden="true"
