@@ -1,4 +1,5 @@
 import BlogPostCard from '@/components/blog/blog-post-card'
+import NewsletterBand from '@/components/newsletter-band'
 import { blogPosts } from '@/models/blog'
 import Link from 'next/link'
 import ResidentialSection from '@/components/resources/residential-section'
@@ -85,8 +86,9 @@ export default function Resources() {
                                     </h4>
                                     <p>
                                         We handle the paperwork and coordinate
-                                        with your utility. Our certified
-                                        installers complete installations with
+                                        with your utility. Our licensed
+                                        installation partners complete
+                                        installations with
                                         minimal disruption to your home or
                                         operations.
                                     </p>
@@ -139,6 +141,11 @@ export default function Resources() {
                             See all posts
                         </Link>
                     </p>
+                </Container>
+            </section>
+            <section>
+                <Container>
+                    <NewsletterBand />
                 </Container>
             </section>
             <section id="why-solar" className="scroll-mt-36 py-10">
@@ -301,10 +308,10 @@ export default function Resources() {
                                 </CardTitle>
                             </CardHeader>
                             <CardContent>
-                                The federal Investment Tax Credit (ITC)
-                                currently allows businesses to deduct 30% of
-                                their solar system cost directly from their
-                                federal taxes. Combined with accelerated
+                                The federal Investment Tax Credit (ITC) is a
+                                30% credit against federal taxes for commercial
+                                solar placed in service by the end of 2027.
+                                Combined with accelerated
                                 depreciation (MACRS), the real out-of-pocket
                                 cost is often far less than the sticker price.
                             </CardContent>

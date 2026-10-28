@@ -1,5 +1,7 @@
 import type { GetStaticPaths, GetStaticProps } from 'next'
 import dynamic from 'next/dynamic'
+import { Container } from '@/components/layout/container'
+import NewsletterBand from '@/components/newsletter-band'
 import { blogPosts, type BlogPost } from '@/models/blog'
 
 const articleComponents = {
@@ -27,5 +29,14 @@ export const getStaticProps: GetStaticProps<{ post: BlogPost }> = async ({
 export default function BlogArticle({ post }: { post: BlogPost }) {
     const Article =
         articleComponents[post.slug as keyof typeof articleComponents]
-    return <Article />
+    return (
+        <>
+            <Article />
+            <section className="pb-10 md:pb-14">
+                <Container>
+                    <NewsletterBand />
+                </Container>
+            </section>
+        </>
+    )
 }

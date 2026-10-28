@@ -8,7 +8,7 @@ const resourcesFaqs: FAQ[] = [
     },
     {
         question: 'What is net metering?',
-        answer: 'Net metering is a billing arrangement with your utility company that credits you for the excess electricity your solar system sends back to the grid. When your panels produce more than you need (during sunny hours), the surplus flows to the grid and you earn credits. When you need more power than your panels produce (at night or on cloudy days), you draw from the grid and use those credits. Essentially, this equates to the grid acting as a giant battery. All utilities in Minnesota are required to offer net metering.',
+        answer: 'Net metering is a billing arrangement with your utility company that credits you for the excess electricity your solar system sends back to the grid. When your panels produce more than you need (during sunny hours), the surplus flows to the grid and you earn credits. When you need more power than your panels produce (at night or on cloudy days), you draw from the grid and use those credits. Essentially, this equates to the grid acting as a giant battery. All utilities in Minnesota are required to offer net metering for systems under 40 kW.',
         category: 'Basics',
     },
     {
@@ -48,7 +48,11 @@ const resourcesFaqs: FAQ[] = [
     },
     {
         question: 'What federal incentives are available for commercial solar?',
-        answer: "The federal Investment Tax Credit (ITC) currently allows businesses to deduct 30% of the total cost of a solar installation directly from their federal tax liability. This is a dollar-for-dollar reduction in taxes owed - not just a deduction from income. In addition, commercial solar systems qualify for accelerated depreciation under the Modified Accelerated Cost Recovery System (MACRS), which allows you to depreciate most of the system's value in the first year, generating additional tax savings.",
+        answer: 'The federal Investment Tax Credit (ITC) is a credit of 30% of the cost of a qualifying commercial solar system. A credit is a dollar-for-dollar reduction in the taxes you owe, not just a deduction from income. Under current law, solar projects need to be placed in service by December 31, 2027 to claim it, so timing matters. Nonprofits, churches, schools, and public entities can receive the credit as a direct payment. Commercial systems also qualify for accelerated depreciation (MACRS), which adds more tax savings.',
+        link: {
+            href: '/resources/blog/federal-solar-tax-credit',
+            label: 'Read our federal solar tax credit FAQ.',
+        },
         category: 'Financing & Incentives',
     },
     {
@@ -75,7 +79,7 @@ const resourcesFaqs: FAQ[] = [
     {
         question:
             'Will solar disrupt my business operations during installation?',
-        answer: 'We design our installation process to minimize disruption. Most commercial installations are completed within a few weeks depending on system size. We coordinate timing with you and work efficiently to get your system up and running as quickly as possible.',
+        answer: 'We design our installation process to minimize disruption. On-site installation for most commercial systems takes a few weeks, depending on system size. The whole project, including design, permits, and utility approval, usually takes 6 to 12 months. We coordinate on-site work around your schedule and keep you updated at every step.',
         category: 'Commercial Solar',
     },
     {
@@ -113,6 +117,11 @@ const resourcesFaqs: FAQ[] = [
     {
         question: 'How quickly will my solar system pay for itself?',
         answer: 'Most residential solar systems have a payback period of 9-15 years, depending on system size, energy rates, financing structure, and available incentives. After payback, you continue to benefit from free or near-free electricity for the remaining life of the system — typically 25+ more years.',
+        category: 'Residential Solar',
+    },
+    {
+        question: 'Is there still a federal tax credit for home solar?',
+        answer: 'No. The federal tax credit for homeowners (the 30% Residential Clean Energy Credit) ended for systems installed after December 31, 2025. Home solar can still make sense through lower electric bills, net metering, and Minnesota and utility programs, and we will give you an honest payback estimate without the old credit. Businesses, farms, and nonprofits still have a federal credit for now.',
         category: 'Residential Solar',
     },
 ]

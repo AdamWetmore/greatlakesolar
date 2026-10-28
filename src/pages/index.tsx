@@ -1,5 +1,6 @@
 import ContactCard from '@/components/contact-card'
 import HeroCard from '@/components/hero-card'
+import NewsletterBand from '@/components/newsletter-band'
 import { Container } from '@/components/layout/container'
 import Image from 'next/image'
 import {
@@ -20,6 +21,7 @@ export default function Home() {
                 <Image
                     src="/chuttersnap-s_7BE4D2va0-unsplash.jpg"
                     alt="Aerial view of solar panels on a roof"
+                    loading="eager"
                     fill
                     sizes="100vw"
                     className="absolute inset-0 z-40 object-cover brightness-75"
@@ -137,6 +139,11 @@ export default function Home() {
                             </div>
                         </div>
                     </div>
+                </Container>
+            </section>
+            <section className="pt-10">
+                <Container>
+                    <NewsletterBand />
                 </Container>
             </section>
             <section className="py-10">

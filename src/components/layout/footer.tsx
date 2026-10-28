@@ -1,3 +1,4 @@
+import { EMAIL, PHONE_DISPLAY, PHONE_HREF } from '@/lib/contact'
 import Link from 'next/link'
 import Image from 'next/image'
 import { Container } from './container'
@@ -12,8 +13,9 @@ export default function Footer() {
                         <Image
                             src="/SecondaryLogo.svg"
                             alt="Great Lakes Solar Logo"
-                            width={150}
-                            height={150}
+                            width={3301}
+                            height={1840}
+                            className="h-auto w-[150px]"
                             priority
                         />
                     </Link>
@@ -25,8 +27,9 @@ export default function Footer() {
                             <Image
                                 src="/LI-In-Bug.png"
                                 alt="LinkedIn Logo"
-                                width={32}
-                                height={32}
+                                width={635}
+                                height={540}
+                                className="h-auto w-8"
                             />
                         </Link>
 
@@ -45,16 +48,16 @@ export default function Footer() {
                     <div className="text-muted-foreground flex flex-col items-center justify-center">
                         <Link
                             className="flex items-center gap-2"
-                            href="tel:+19522227912"
+                            href={PHONE_HREF}
                         >
-                            952-222-7912
+                            {PHONE_DISPLAY}
                             <Phone className="h-4 w-4" />
                         </Link>
                         <Link
-                            href="mailto:info@greatlakesolar.com"
+                            href={`mailto:${EMAIL}`}
                             className="flex items-center gap-2"
                         >
-                            info@greatlakesolar.com
+                            {EMAIL}
                             <Mail className="h-4 w-4" />
                         </Link>
                     </div>
@@ -66,16 +69,28 @@ export default function Footer() {
                             About
                         </Link>
                         <Link
-                            href="/resources"
+                            href="/resources/blog"
                             className="text-muted-foreground hover:text-foreground text-sm"
                         >
-                            Resources
+                            Blog
+                        </Link>
+                        <Link
+                            href="/newsletter"
+                            className="text-muted-foreground hover:text-foreground text-sm"
+                        >
+                            Newsletter
                         </Link>
                         <Link
                             href="/resources#residential"
                             className="text-muted-foreground hover:text-foreground text-sm"
                         >
                             Residential
+                        </Link>
+                        <Link
+                            href="/resources#commercial"
+                            className="text-muted-foreground hover:text-foreground text-sm"
+                        >
+                            Commercial
                         </Link>
                         <Link
                             href="/contact"

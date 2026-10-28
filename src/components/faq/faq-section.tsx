@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import FAQ from '@/models/faq'
 import {
     Accordion,
@@ -51,6 +52,17 @@ export default function FAQSection({ faqs }: { faqs: FAQ[] }) {
                                             </AccordionTrigger>
                                             <AccordionContent>
                                                 {faq.answer}
+                                                {faq.link && (
+                                                    <>
+                                                        {' '}
+                                                        <Link
+                                                            href={faq.link.href}
+                                                            className="underline decoration-blue-500 decoration-2 underline-offset-4 hover:opacity-80"
+                                                        >
+                                                            {faq.link.label}
+                                                        </Link>
+                                                    </>
+                                                )}
                                             </AccordionContent>
                                         </AccordionItem>
                                     ))}
