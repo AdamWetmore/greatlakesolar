@@ -113,7 +113,7 @@ export default function Header() {
                     </span>
                 </a>
                 <IntakeForm
-                    label="Free Assessment"
+                    label="Get my savings estimate"
                     triggerClassName="order-last col-span-3 w-full border border-primary-foreground/30 sm:order-none sm:w-auto"
                 />
                 <button
