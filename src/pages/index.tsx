@@ -17,7 +17,7 @@ import {
 export default function Home() {
     return (
         <div>
-            <section className="relative md:h-[70vh] lg:h-[80vh]">
+            <section className="relative md:h-[58vh] md:min-h-[480px]">
                 <Image
                     src="/chuttersnap-s_7BE4D2va0-unsplash.jpg"
                     alt="Aerial view of solar panels on a roof"
@@ -26,7 +26,7 @@ export default function Home() {
                     sizes="100vw"
                     className="absolute inset-0 z-40 object-cover brightness-75"
                 />
-                <Container className="relative flex h-full flex-col gap-5 py-10">
+                <Container className="relative flex h-full flex-col gap-3 py-6">
                     <HeroCard />
                     <div className="text-accent relative mt-auto text-center text-sm">
                         Photo by{' '}

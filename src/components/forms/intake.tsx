@@ -26,7 +26,9 @@ export default function IntakeForm({
                 <Button size="lg" className={triggerClassName}>
                     {label ?? (
                         <>
-                            Schedule Your<strong>Free</strong>Assessment
+                            <span>
+                                Schedule Your <strong>Free</strong> Assessment
+                            </span>
                         </>
                     )}
                     <ChevronRight />
