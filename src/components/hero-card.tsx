@@ -18,7 +18,7 @@ export default function HeroCard() {
                 alt="placeholder for GLS logo"
                 width={1000}
                 height={1000}
-                className="mx-auto w-40 md:w-56 lg:w-64 xl:w-72"
+                className="mx-auto w-32 md:w-40 lg:w-48"
             />
             <CardHeader className="text-center">
                 <CardTitle className="text-xl">
