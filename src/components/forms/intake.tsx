@@ -26,7 +26,7 @@ export default function IntakeForm({
                 <Button size="lg" className={triggerClassName}>
                     {label ?? (
                         <>
-                            <span>See what solar saves you</span>
+                            <span>Request a free estimate</span>
                         </>
                     )}
                     <ChevronRight />
