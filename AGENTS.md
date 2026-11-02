@@ -42,6 +42,10 @@ Keep this section updated as progress and planning continue
 
 In no particular order
 
+- PR #18 (`fix/hero-cta`): Jacob approved matching the header and default
+  assessment CTA wording to "Request a free estimate". Both open the existing
+  HubSpot assessment dialog. Pending Adam's PR review.
+
 - Implemented on `feat/lead-funnel` (includes PRs #15 and #16): HubSpot tracking code
   site-wide (`src/components/hubspot-tracking.tsx`, reuses `NEXT_PUBLIC_HUBSPOT_PORTAL_ID`,
   reports client-side route changes), tap-to-call phone in the header (icon only below md
