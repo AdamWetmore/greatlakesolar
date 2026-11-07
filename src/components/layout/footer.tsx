@@ -44,6 +44,18 @@ export default function Footer() {
                                 height={32}
                             />
                         </Link>
+
+                        <Link
+                            href="https://www.instagram.com/greatlakesolar/"
+                            target="_blank"
+                        >
+                            <Image
+                                src="/Instagram_Glyph.svg"
+                                alt="Instagram Logo"
+                                width={32}
+                                height={32}
+                            />
+                        </Link>
                     </div>
                     <div className="text-muted-foreground flex flex-col items-center justify-center">
                         <Link

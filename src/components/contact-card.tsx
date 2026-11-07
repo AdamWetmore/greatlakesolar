@@ -123,6 +123,33 @@ export default function ContactCard() {
                         <ChevronRight className="ml-auto opacity-0 group-hover:opacity-100" />
                     </div>
                 </Link>
+
+                {/* Instagram */}
+                <Link
+                    href="https://www.instagram.com/greatlakesolar/"
+                    target="_blank"
+                    className="group block w-full rounded-xl p-2 transition hover:bg-gray-100"
+                >
+                    <div className="flex items-center gap-5">
+                        <div className="relative flex h-16 w-16 shrink-0 items-center justify-center rounded-xl bg-gray-100 shadow-sm transition-all duration-300 group-hover:shadow-md">
+                            <Image
+                                src="/Instagram_Glyph.svg"
+                                alt="Instagram logo"
+                                height={40}
+                                width={40}
+                            />
+                        </div>
+                        <div className="flex flex-col text-left">
+                            <span className="font-semibold text-gray-900">
+                                Instagram
+                            </span>
+                            <span className="text-gray-600">
+                                @greatlakesolar
+                            </span>
+                        </div>
+                        <ChevronRight className="ml-auto opacity-0 group-hover:opacity-100" />
+                    </div>
+                </Link>
             </CardContent>
         </Card>
     )
