@@ -1,6 +1,22 @@
 import Head from 'next/head'
+import Image from 'next/image'
+import {
+    ArrowDown,
+    ArrowRight,
+    ChevronRight,
+    Handshake,
+    Sun,
+    UserRound,
+} from 'lucide-react'
 import HubSpotEmbed from '@/components/forms/hubspot-embed'
 import { Container } from '@/components/layout/container'
+import { Button } from '@/components/ui/button'
+import {
+    Accordion,
+    AccordionContent,
+    AccordionItem,
+    AccordionTrigger,
+} from '@/components/ui/accordion'
 import { PHONE_DISPLAY, PHONE_HREF } from '@/lib/contact'
 
 // HubSpot form "Refer a Friend" (created 2026-11-08). Form IDs are public; env var can override.
@@ -12,16 +28,42 @@ const FALLBACK_URL =
 
 const steps = [
     {
-        title: 'Introduce us',
-        body: 'Tell us who to talk to. A neighbor, a friend, a business owner, your church or school: anyone can refer.',
+        icon: UserRound,
+        title: 'You introduce us',
+        body: 'A friend, neighbor, business or church.',
     },
     {
-        title: 'We take it from there',
-        body: 'Jacob reaches out, looks at their bills for free, and tells them honestly whether solar makes sense. We keep you posted.',
+        icon: Handshake,
+        title: 'Jacob reaches out',
+        body: 'A free, honest look at their bills.',
     },
     {
-        title: 'You both get thanked',
-        body: 'If they go solar with us, they get money off their project and your thank-you goes out as soon as they sign.',
+        icon: Sun,
+        title: 'They go solar',
+        body: '$500 off for them. $500 for you.',
+    },
+]
+
+const faqs = [
+    {
+        q: 'When do I get my thank-you?',
+        a: "As soon as your friend's contract is signed, their deposit is in and the 3-day cancellation window has passed. We'll let you know it's on the way.",
+    },
+    {
+        q: 'What if I refer a business?',
+        a: 'Businesses, nonprofits, farms and schools get $1,000 off, and you get $1,000.',
+    },
+    {
+        q: 'Can I donate it instead?',
+        a: "Yes. We'll donate $600 ($1,200 for a business) to the nonprofit, church or school you choose. We ask which you'd like when they sign.",
+    },
+    {
+        q: 'Who can refer?',
+        a: "Anyone: past clients, friends, neighbors, newsletter readers. There's no limit on how many people you refer.",
+    },
+    {
+        q: 'The fine print',
+        a: 'One referrer per project, named before your friend signs. Adding to an existing system later (like a battery) does not earn a second thank-you. Bank and public employees, and staff referring their own organization, receive a donation to the organization instead of cash.',
     },
 ]
 
@@ -35,86 +77,140 @@ export default function Refer() {
                     content="Know someone who should go solar? Introduce them to Great Lakes Solar. They get $500 off, and you get $500 or a donation to a nonprofit you choose."
                 />
             </Head>
-            <Container className="space-y-10 py-6 md:py-10">
-                <div className="mx-auto max-w-2xl space-y-4 text-center">
-                    <h1>Know someone who should go solar?</h1>
-                    <p>
-                        Most of our projects come from people like you
-                        mentioning us to a friend. Here&apos;s how we say thank
-                        you.
+
+            <Container className="grid grid-cols-1 items-center gap-8 py-8 md:grid-cols-2 md:py-12">
+                <div className="space-y-4 text-center md:text-left">
+                    <p className="text-sm font-semibold tracking-wide text-blue-600 uppercase">
+                        Refer a friend
                     </p>
+                    <h1 className="md:text-left">
+                        <span className="whitespace-nowrap">Give $500.</span>{' '}
+                        <span className="whitespace-nowrap">Get $500.</span>
+                    </h1>
+                    <p>
+                        Know someone who should go solar? Introduce us. They get
+                        $500 off, and you get $500 or a $600 donation to a
+                        nonprofit you pick.
+                    </p>
+                    <p className="text-muted-foreground text-sm">
+                        Referring a business? It&apos;s $1,000 each.
+                    </p>
+                    <Button asChild size="lg">
+                        <a href="#refer-form">
+                            Introduce someone <ChevronRight />
+                        </a>
+                    </Button>
                 </div>
+                <figure className="space-y-2">
+                    <Image
+                        src="/blog/jacob-on-nghias-auto-roof.jpg"
+                        alt="Jacob Bechtold on the roof of Nghia's Auto during the solar install"
+                        width={1600}
+                        height={1200}
+                        priority
+                        sizes="(min-width: 768px) 50vw, 100vw"
+                        className="h-auto w-full rounded-lg object-cover shadow-sm"
+                    />
+                    <figcaption className="text-muted-foreground text-center text-xs">
+                        Jacob on the roof at Nghia&apos;s Auto, North
+                        Minneapolis
+                    </figcaption>
+                </figure>
+            </Container>
 
-                <div className="mx-auto grid max-w-4xl grid-cols-1 gap-4 md:grid-cols-3">
-                    <div className="rounded-lg border bg-white p-5 text-center shadow-sm">
-                        <p className="text-muted-foreground text-sm">
-                            Your friend gets
-                        </p>
-                        <p className="text-3xl font-semibold">$500 off</p>
-                        <p className="text-muted-foreground text-sm">
-                            $1,000 off for a business, nonprofit or farm
-                        </p>
-                    </div>
-                    <div className="rounded-lg border bg-white p-5 text-center shadow-sm">
-                        <p className="text-muted-foreground text-sm">You get</p>
-                        <p className="text-3xl font-semibold">$500</p>
-                        <p className="text-muted-foreground text-sm">
-                            $1,000 when you refer a business
-                        </p>
-                    </div>
-                    <div className="rounded-lg border bg-white p-5 text-center shadow-sm">
-                        <p className="text-muted-foreground text-sm">
-                            Or give it forward
-                        </p>
-                        <p className="text-3xl font-semibold">$600</p>
-                        <p className="text-muted-foreground text-sm">
-                            to a nonprofit you choose ($1,200 for a business)
-                        </p>
-                    </div>
-                </div>
-
-                <div className="mx-auto max-w-4xl">
-                    <h2 className="mb-4 text-center">How it works</h2>
-                    <ol className="grid grid-cols-1 gap-4 md:grid-cols-3">
+            <section className="bg-muted/40 border-y py-8">
+                <Container>
+                    <h2 className="sr-only">How it works</h2>
+                    <ol className="mx-auto flex max-w-4xl flex-col items-center gap-2 md:flex-row md:items-start md:gap-0">
                         {steps.map((s, i) => (
-                            <li key={s.title} className="space-y-1">
-                                <p className="font-semibold">
-                                    {i + 1}. {s.title}
-                                </p>
-                                <p className="text-sm">{s.body}</p>
+                            <li
+                                key={s.title}
+                                className="flex flex-col items-center md:flex-1 md:flex-row md:items-start"
+                            >
+                                <div className="flex max-w-56 flex-col items-center space-y-2 text-center md:flex-1">
+                                    <span className="flex size-14 items-center justify-center rounded-full bg-blue-600 text-white">
+                                        <s.icon
+                                            className="size-7"
+                                            aria-hidden
+                                        />
+                                    </span>
+                                    <p className="font-semibold">
+                                        {i + 1}. {s.title}
+                                    </p>
+                                    <p className="text-muted-foreground text-sm">
+                                        {s.body}
+                                    </p>
+                                </div>
+                                {i < steps.length - 1 && (
+                                    <>
+                                        <ArrowRight
+                                            aria-hidden
+                                            className="mt-4 hidden size-6 shrink-0 text-blue-600 md:block"
+                                        />
+                                        <ArrowDown
+                                            aria-hidden
+                                            className="my-1 size-5 text-blue-600 md:hidden"
+                                        />
+                                    </>
+                                )}
                             </li>
                         ))}
                     </ol>
-                </div>
+                </Container>
+            </section>
 
-                <div className="hubspot-card mx-auto w-full max-w-2xl overflow-hidden rounded-lg border bg-white shadow-sm">
-                    <HubSpotEmbed
-                        formId={FORM_ID}
-                        title="Great Lakes Solar refer a friend form"
-                        fallbackUrl={FALLBACK_URL}
-                        controlsClassName="px-4 pb-6 sm:px-6"
-                    />
-                </div>
+            <section id="refer-form" className="scroll-mt-24">
+                <Container className="grid grid-cols-1 items-start gap-8 py-8 md:py-12 lg:grid-cols-[3fr_2fr]">
+                    <div className="hubspot-card w-full min-w-0 overflow-hidden rounded-lg border bg-white shadow-sm">
+                        <HubSpotEmbed
+                            formId={FORM_ID}
+                            title="Great Lakes Solar refer a friend form"
+                            fallbackUrl={FALLBACK_URL}
+                            fallbackLabel="Or email Jacob instead"
+                            controlsClassName="px-4 pb-6 sm:px-6"
+                        />
+                    </div>
+                    <div className="flex items-center gap-4 rounded-lg border bg-white p-5 shadow-sm">
+                        <Image
+                            src="/jacob-bechtold-headshot.jpg"
+                            alt="Jacob Bechtold"
+                            width={1200}
+                            height={1798}
+                            className="size-20 shrink-0 rounded-full object-cover object-top"
+                        />
+                        <div className="space-y-1 text-sm">
+                            <p className="font-semibold">
+                                I&apos;ll reach out personally.
+                            </p>
+                            <p>
+                                And I&apos;ll keep you posted. Rather talk? Call
+                                or text{' '}
+                                <a
+                                    href={PHONE_HREF}
+                                    className="font-semibold whitespace-nowrap underline decoration-blue-500 decoration-2 underline-offset-4 hover:opacity-80"
+                                >
+                                    {PHONE_DISPLAY}
+                                </a>
+                                .
+                            </p>
+                            <p className="text-muted-foreground">
+                                Jacob Bechtold, Founder
+                            </p>
+                        </div>
+                    </div>
+                </Container>
+            </section>
 
-                <div className="text-muted-foreground mx-auto max-w-2xl space-y-2 text-center text-sm">
-                    <p>
-                        Rather talk it through? Call or text Jacob at{' '}
-                        <a
-                            href={PHONE_HREF}
-                            className="font-semibold whitespace-nowrap underline decoration-blue-500 decoration-2 underline-offset-4 hover:opacity-80"
-                        >
-                            {PHONE_DISPLAY}
-                        </a>
-                        .
-                    </p>
-                    <p>
-                        The fine print: the thank-you is paid once your
-                        friend&apos;s contract is signed, their deposit is in
-                        and the 3-day cancellation window has passed. One
-                        referrer per project, named before they sign. No limit
-                        on how many people you refer.
-                    </p>
-                </div>
+            <Container className="max-w-2xl pb-12">
+                <h2 className="mb-2 text-center text-2xl">Questions</h2>
+                <Accordion type="single" collapsible>
+                    {faqs.map((f) => (
+                        <AccordionItem key={f.q} value={f.q}>
+                            <AccordionTrigger>{f.q}</AccordionTrigger>
+                            <AccordionContent>{f.a}</AccordionContent>
+                        </AccordionItem>
+                    ))}
+                </Accordion>
             </Container>
         </>
     )
