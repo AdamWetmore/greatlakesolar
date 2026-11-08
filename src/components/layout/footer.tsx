@@ -98,6 +98,12 @@ export default function Footer() {
                         >
                             Contact
                         </Link>
+                        <Link
+                            href="/refer"
+                            className="text-muted-foreground hover:text-foreground text-sm"
+                        >
+                            Refer a Friend
+                        </Link>
                     </div>
                 </div>
                 <div className="text-muted-foreground mt-4 text-center text-sm">
