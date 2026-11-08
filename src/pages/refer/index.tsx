@@ -1,4 +1,3 @@
-import Head from 'next/head'
 import Image from 'next/image'
 import {
     ArrowDown,
@@ -70,14 +69,6 @@ const faqs = [
 export default function Refer() {
     return (
         <>
-            <Head>
-                <title>Refer a Friend | Great Lakes Solar</title>
-                <meta
-                    name="description"
-                    content="Know someone who should go solar? Introduce them to Great Lakes Solar. They get $500 off their project, and you get $500 as a thank-you."
-                />
-            </Head>
-
             <Container className="grid grid-cols-1 items-center gap-8 py-8 md:grid-cols-2 md:py-12">
                 <div className="space-y-4 text-center md:text-left">
                     <p className="text-sm font-semibold tracking-wide text-blue-600 uppercase">
