@@ -1,0 +1,14 @@
+# Great Lakes Solar
+
+> Great Lakes Solar LLC is a Minnesota solar developer for homes, businesses, nonprofits, churches, schools and farms in the Twin Cities, greater Minnesota and western Wisconsin. We sell, design, finance, permit and manage solar and battery storage projects; field work is done by vetted, licensed and insured installers, and plans are stamped by licensed engineers. Founder: Jacob Bechtold. Phone 952-222-7912, info@greatlakesolar.com.
+
+## Pages
+- [Home](https://greatlakesolar.com/): who we serve and how to get a free estimate
+- [Resources](https://greatlakesolar.com/resources): how a project works, residential and commercial solar, battery storage, FAQs
+- [About](https://greatlakesolar.com/about): the company and its founder
+- [Contact](https://greatlakesolar.com/contact): request a free solar estimate
+- [Newsletter](https://greatlakesolar.com/newsletter): monthly local solar news
+
+## Articles
+- [The Federal Solar Tax Credit: Your Questions, Answered](https://greatlakesolar.com/resources/blog/federal-solar-tax-credit): the 30% commercial credit, the December 31, 2027 deadline, battery credits and bonus adders
+- [Nghia Trinh Receives the First Loon Award](https://greatlakesolar.com/resources/blog/loon-award-2026-nghia-trinh): a North Minneapolis auto shop goes solar
