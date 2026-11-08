@@ -8,7 +8,7 @@ import {
     Sun,
     UserRound,
 } from 'lucide-react'
-import HubSpotEmbed from '@/components/forms/hubspot-embed'
+import HubSpotLegacyForm from '@/components/forms/hubspot-legacy-form'
 import { Container } from '@/components/layout/container'
 import { Button } from '@/components/ui/button'
 import {
@@ -74,7 +74,7 @@ export default function Refer() {
                 <title>Refer a Friend | Great Lakes Solar</title>
                 <meta
                     name="description"
-                    content="Know someone who should go solar? Introduce them to Great Lakes Solar. They get $500 off, and you get $500 or a donation to a nonprofit you choose."
+                    content="Know someone who should go solar? Introduce them to Great Lakes Solar. They get $500 off their project, and you get $500 as a thank-you."
                 />
             </Head>
 
@@ -89,8 +89,7 @@ export default function Refer() {
                     </h1>
                     <p>
                         Know someone who should go solar? Introduce us. They get
-                        $500 off, and you get $500 or a $600 donation to a
-                        nonprofit you pick.
+                        $500 off their project, and you get $500 as a thank-you.
                     </p>
                     <p className="text-muted-foreground text-sm">
                         Referring a business? It&apos;s $1,000 each.
@@ -103,17 +102,17 @@ export default function Refer() {
                 </div>
                 <figure className="space-y-2">
                     <Image
-                        src="/blog/jacob-on-nghias-auto-roof.jpg"
-                        alt="Jacob Bechtold on the roof of Nghia's Auto during the solar install"
-                        width={1600}
-                        height={1200}
+                        src="/refer-jacob-nghia-laughing.jpg"
+                        alt="Jacob Bechtold and Nghia Trinh laughing at the Nghia's Auto solar celebration"
+                        width={953}
+                        height={715}
                         priority
                         sizes="(min-width: 768px) 50vw, 100vw"
                         className="h-auto w-full rounded-lg object-cover shadow-sm"
                     />
                     <figcaption className="text-muted-foreground text-center text-xs">
-                        Jacob on the roof at Nghia&apos;s Auto, North
-                        Minneapolis
+                        Jacob and Nghia Trinh at the Nghia&apos;s Auto solar
+                        celebration, North Minneapolis
                     </figcaption>
                 </figure>
             </Container>
@@ -162,21 +161,19 @@ export default function Refer() {
             <section id="refer-form" className="scroll-mt-24">
                 <Container className="grid grid-cols-1 items-start gap-8 py-8 md:py-12 lg:grid-cols-[3fr_2fr]">
                     <div className="hubspot-card w-full min-w-0 overflow-hidden rounded-lg border bg-white shadow-sm">
-                        <HubSpotEmbed
+                        <HubSpotLegacyForm
                             formId={FORM_ID}
-                            title="Great Lakes Solar refer a friend form"
                             fallbackUrl={FALLBACK_URL}
                             fallbackLabel="Or email Jacob instead"
-                            controlsClassName="px-4 pb-6 sm:px-6"
                         />
                     </div>
                     <div className="flex items-center gap-4 rounded-lg border bg-white p-5 shadow-sm">
                         <Image
-                            src="/jacob-bechtold-headshot.jpg"
+                            src="/jacob-bechtold-headshot-square.jpg"
                             alt="Jacob Bechtold"
-                            width={1200}
-                            height={1798}
-                            className="size-20 shrink-0 rounded-full object-cover object-top"
+                            width={400}
+                            height={400}
+                            className="size-20 shrink-0 rounded-full object-cover"
                         />
                         <div className="space-y-1 text-sm">
                             <p className="font-semibold">
