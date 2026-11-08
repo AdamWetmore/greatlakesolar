@@ -82,6 +82,11 @@ const pageMetadata: Record<string, { title: string; description: string }> = {
         description:
             'One email a month from Great Lakes Solar: real local solar projects, policy and incentive changes, and the occasional story. Unsubscribe anytime.',
     },
+    '/refer': {
+        title: 'Refer a Friend | Great Lakes Solar',
+        description:
+            'Know someone who should go solar? Introduce them to Great Lakes Solar. They get $500 off their project, and you get $500 as a thank-you.',
+    },
     '/projects': {
         title: 'Solar Projects | Great Lakes Solar',
         description:
