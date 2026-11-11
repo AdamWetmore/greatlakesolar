@@ -15,14 +15,16 @@ export default function HeroCard() {
         <Card className="mx-auto w-full max-w-md md:max-w-xl lg:max-w-2xl">
             <Image
                 src="/PrimaryLogo.svg"
-                alt="placeholder for GLS logo"
+                alt="Great Lakes Solar logo"
                 width={1000}
                 height={1000}
                 className="mx-auto w-32 md:w-40 lg:w-48"
             />
             <CardHeader className="text-center">
                 <CardTitle className="text-xl">
-                    Minnesota&apos;s Local Solar Expert
+                    <h1 className="text-xl font-semibold">
+                        Minnesota&apos;s Local Solar Expert
+                    </h1>
                 </CardTitle>
                 <CardDescription className="text-md">
                     Great Lakes Solar helps businesses, non-profits, homeowners,
