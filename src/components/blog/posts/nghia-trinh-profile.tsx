@@ -91,8 +91,8 @@ export default function NghiaTrinhProfilePost() {
                 <meta property="og:title" key="og:title" content={post.title} />
                 <meta property="og:description" key="og:description" content={post.description} />
                 <meta property="og:image" key="og:image" content={`${siteUrl}${post.image}`} />
-                <meta property="og:image:width" key="og:image:width" content="1920" />
-                <meta property="og:image:height" key="og:image:height" content="1080" />
+                <meta property="og:image:width" key="og:image:width" content="1600" />
+                <meta property="og:image:height" key="og:image:height" content="900" />
                 <meta name="twitter:title" content={post.title} />
                 <meta name="twitter:description" content={post.description} />
                 <meta name="twitter:image" content={`${siteUrl}${post.image}`} />
@@ -109,8 +109,8 @@ export default function NghiaTrinhProfilePost() {
                         <Image
                             src={post.image}
                             alt={post.imageAlt}
-                            width={1920}
-                            height={1080}
+                            width={1600}
+                            height={900}
                             priority
                             sizes="(min-width: 896px) 896px, 100vw"
                             className="h-auto max-h-[60vh] w-full rounded-xl object-cover object-[50%_20%]"
@@ -346,10 +346,10 @@ export default function NghiaTrinhProfilePost() {
                             </p>
 
                             <Photo
-                                src="/blog/nghia-profile/nghia-vetaw-ribbon-cutting.jpg"
+                                src="/blog/loon-award/nghia-latrisha-ceremony.jpg"
                                 alt="Nghia Trinh joking with Council Member LaTrisha Vetaw while Jacob Bechtold laughs at the Loon Award ceremony"
-                                width={1920}
-                                height={1282}
+                                width={1600}
+                                height={1068}
                                 caption="Nghia trading jokes with Council Member LaTrisha Vetaw and Jacob at the Loon Award ceremony."
                             />
 
@@ -429,7 +429,7 @@ export default function NghiaTrinhProfilePost() {
                             </p>
 
                             <Photo
-                                src="/blog/nghia-profile/camden-skyline-drone.jpg"
+                                src="/blog/loon-award/camden-drone.jpg"
                                 alt="Aerial view of Nghia's Auto Service and its new solar array in the Camden neighborhood, with the downtown Minneapolis skyline in the distance"
                                 width={1920}
                                 height={1080}

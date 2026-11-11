@@ -42,6 +42,12 @@ Keep this section updated as progress and planning continue
 
 In no particular order
 
+- PR #23 (`feat/nghia-profile-blog`): reuse the Loon Award shop portrait,
+  Camden aerial, and ceremony image in the Nghia profile. Removed the three
+  redundant assets, reducing the static export by 1,128,929 bytes (1.13 MB).
+  Image dimensions and hero sharing metadata match the reused files.
+  Pending Adam's preview review.
+
 - PR #18 (`fix/hero-cta`): Jacob approved matching the header and default
   assessment CTA wording to "Request a free estimate". Both open the existing
   HubSpot assessment dialog. Pending Adam's PR review.

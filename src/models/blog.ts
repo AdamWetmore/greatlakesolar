@@ -18,7 +18,7 @@ export const blogPosts: BlogPost[] = [
             "Meet Nghia Trinh, the North Minneapolis mechanic who fled Vietnam as a refugee at 15 and built a neighborhood shop where customers stay for life.",
         date: '2026-11-10',
         dateLabel: 'November 2026',
-        image: '/blog/nghia-profile/nghia-jacob-shop-header.jpg',
+        image: '/blog/loon-award/jacob-nghia-shop.jpg',
         imageAlt: "Nghia Trinh and Jacob Bechtold smiling inside Nghia's Auto Service in North Minneapolis",
     },
     {
