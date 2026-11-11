@@ -3,6 +3,7 @@ import type { AppProps } from 'next/app'
 import Head from 'next/head'
 import { useRouter } from 'next/router'
 import Layout from '@/components/layout/layout'
+import GoogleTagManager from '@/components/google-tag-manager'
 import HubSpotTracking from '@/components/hubspot-tracking'
 import { EMAIL, PHONE_HREF } from '@/lib/contact'
 import { blogPosts } from '@/models/blog'
@@ -45,6 +46,7 @@ const localBusinessJsonLd = {
     sameAs: [
         'https://www.linkedin.com/company/great-lakes-solar',
         'https://facebook.com/people/Great-Lake-Solar/61574343611604',
+        'https://www.instagram.com/greatlakesolar/',
     ],
 }
 
@@ -53,7 +55,7 @@ const pageMetadata: Record<string, { title: string; description: string }> = {
     '/': {
         title: 'Residential & Commercial Solar Twin Cities | Great Lakes Solar',
         description:
-            'Great Lakes Solar helps homeowners and businesses across Minneapolis, Saint Paul, and the Twin Cities metro install rooftop solar. Explore solar for your home or commercial building.',
+            'Great Lakes Solar helps homes and businesses across Minneapolis, Saint Paul and the Twin Cities go solar and add battery storage, from design to installation.',
     },
     '/about': {
         title: 'About Our Minnesota Solar Team | Great Lakes Solar',
@@ -68,17 +70,17 @@ const pageMetadata: Record<string, { title: string; description: string }> = {
     '/resources/blog': {
         title: 'Blog | Great Lakes Solar',
         description:
-            'Plain-language articles from Great Lakes Solar on solar and battery incentives, tax credits, and planning a commercial solar project in Minnesota and the Midwest.',
+            'Articles from Great Lakes Solar on solar and battery incentives, tax credits and planning a solar project in Minnesota and the Midwest.',
     },
     '/contact': {
-        title: 'Contact a Twin Cities Solar Expert | Free Assessment | Great Lakes Solar',
+        title: 'Contact a Twin Cities Solar Expert | Great Lakes Solar',
         description:
-            'Request a free solar assessment or call 952-222-7912. Great Lakes Solar designs and builds solar and battery storage for homes and businesses in Minneapolis, Saint Paul, and across Minnesota and western Wisconsin.',
+            'Request a free solar estimate or call 952-222-7912. Solar and battery storage for homes and businesses in Minneapolis, Saint Paul, Minnesota and Wisconsin.',
     },
     '/newsletter': {
         title: 'Newsletter | Great Lakes Solar',
         description:
-            'Get one email a month from Great Lakes Solar: real local solar projects, policy and incentive changes in plain English, and the occasional story. Unsubscribe anytime.',
+            'One email a month from Great Lakes Solar: real local solar projects, policy and incentive changes, and the occasional story. Unsubscribe anytime.',
     },
     '/projects': {
         title: 'Solar Projects | Great Lakes Solar',
@@ -168,6 +170,7 @@ export default function App({ Component, pageProps }: AppProps) {
                 )}
             </Head>
             <HubSpotTracking />
+            <GoogleTagManager />
             <Layout>
                 <Component {...pageProps} />
             </Layout>

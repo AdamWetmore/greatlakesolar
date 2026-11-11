@@ -7,6 +7,17 @@ import FAQSection from '@/components/faq/faq-section'
 import { Container } from '@/components/layout/container'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 import resourcesFaqs from '@/data/resources-faqs'
+
+// FAQPage structured data so Google and AI answer engines can read the Q&As.
+const faqJsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: resourcesFaqs.map(({ question, answer }) => ({
+        '@type': 'Question',
+        name: question,
+        acceptedAnswer: { '@type': 'Answer', text: answer },
+    })),
+}
 import ContactCard from '@/components/contact-card'
 import {
     ChartNoAxesCombined,
@@ -22,10 +33,18 @@ import {
     Zap,
 } from 'lucide-react'
 import Image from 'next/image'
+import Head from 'next/head'
 
 export default function Resources() {
     return (
         <div>
+            <Head>
+                <script
+                    type="application/ld+json"
+                    key="faq-page"
+                    dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
+                />
+            </Head>
             <section id="how-it-works" className="relative scroll-mt-36">
                 <Image
                     src="/bernd-dittrich-fu1GHY5kq-g-unsplash.jpg"
@@ -64,7 +83,7 @@ export default function Resources() {
                                     </h4>
                                     <p>
                                         We engineer a solar system sized
-                                        specifically for your home or business —
+                                        specifically for your home or business,
                                         maximizing your savings without
                                         overbuilding.
                                     </p>

@@ -48,6 +48,12 @@ In no particular order
   Image dimensions and hero sharing metadata match the reused files.
   Pending Adam's preview review.
 
+- PR #20 (`feat/social-posts`): replaced the rainbow Instagram drawing with
+  Meta's official monochrome glyph and a shared CSS-mask component. Footer
+  color follows the theme foreground; the contact-card glyph stays navy on
+  its light tile. Asset provenance is in `docs/instagram-asset.md`.
+  Pending Adam's preview review.
+
 - PR #18 (`fix/hero-cta`): Jacob approved matching the header and default
   assessment CTA wording to "Request a free estimate". Both open the existing
   HubSpot assessment dialog. Pending Adam's PR review.

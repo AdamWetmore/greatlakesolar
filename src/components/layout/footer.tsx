@@ -1,4 +1,5 @@
 import { EMAIL, PHONE_DISPLAY, PHONE_HREF } from '@/lib/contact'
+import InstagramIcon from '@/components/instagram-icon'
 import Link from 'next/link'
 import Image from 'next/image'
 import { Container } from './container'
@@ -43,6 +44,15 @@ export default function Footer() {
                                 width={32}
                                 height={32}
                             />
+                        </Link>
+
+                        <Link
+                            href="https://www.instagram.com/greatlakesolar/"
+                            target="_blank"
+                            aria-label="Great Lakes Solar on Instagram"
+                            className="text-foreground"
+                        >
+                            <InstagramIcon className="h-8 w-8" />
                         </Link>
                     </div>
                     <div className="text-muted-foreground flex flex-col items-center justify-center">
