@@ -157,7 +157,14 @@ export default function LoonAward2026Post() {
                                 school and later mechanic school. He became a
                                 Toyota Master Mechanic, bought his current
                                 building, and fixed it up at night after a full
-                                day of work.
+                                day of work.{' '}
+                                <Link
+                                    href="/resources/blog/nghia-trinh-north-minneapolis-mechanic"
+                                    className={linkStyle}
+                                >
+                                    Read Nghia&apos;s full story
+                                </Link>
+                                .
                             </p>
                             <Photo
                                 src="/blog/loon-award/jacob-nghia-shop.jpg"

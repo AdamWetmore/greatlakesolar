@@ -42,6 +42,12 @@ Keep this section updated as progress and planning continue
 
 In no particular order
 
+- PR #23 (`feat/nghia-profile-blog`): reuse the Loon Award shop portrait,
+  Camden aerial, and ceremony image in the Nghia profile. Removed the three
+  redundant assets, reducing the static export by 1,128,929 bytes (1.13 MB).
+  Image dimensions and hero sharing metadata match the reused files.
+  Pending Adam's preview review.
+
 - PR #20 (`feat/social-posts`): replaced the rainbow Instagram drawing with
   Meta's official monochrome glyph and a shared CSS-mask component. Footer
   color follows the theme foreground; the contact-card glyph stays navy on
