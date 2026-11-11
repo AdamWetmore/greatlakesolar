@@ -5,6 +5,9 @@ import NewsletterBand from '@/components/newsletter-band'
 import { blogPosts, type BlogPost } from '@/models/blog'
 
 const articleComponents = {
+    'nghia-trinh-north-minneapolis-mechanic': dynamic(
+        () => import('@/components/blog/posts/nghia-trinh-profile')
+    ),
     'loon-award-2026-nghia-trinh': dynamic(
         () => import('@/components/blog/posts/loon-award-2026-nghia-trinh')
     ),

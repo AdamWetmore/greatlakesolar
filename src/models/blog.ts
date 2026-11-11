@@ -12,6 +12,16 @@ export interface BlogPost {
 // Keep public/sitemap.xml in sync when adding a post.
 export const blogPosts: BlogPost[] = [
     {
+        slug: 'nghia-trinh-north-minneapolis-mechanic',
+        title: "Nghia's Auto Service: The Story Behind Camden's Most Loved Mechanic",
+        description:
+            "Meet Nghia Trinh, the North Minneapolis mechanic who fled Vietnam as a refugee at 15 and built a neighborhood shop where customers stay for life.",
+        date: '2026-11-10',
+        dateLabel: 'November 2026',
+        image: '/blog/nghia-profile/nghia-jacob-shop-header.jpg',
+        imageAlt: "Nghia Trinh and Jacob Bechtold smiling inside Nghia's Auto Service in North Minneapolis",
+    },
+    {
         slug: 'loon-award-2026-nghia-trinh',
         title: 'Nghia Trinh Receives the First Loon Award',
         description:
