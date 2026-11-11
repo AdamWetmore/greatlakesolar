@@ -1,4 +1,5 @@
 import { EMAIL, PHONE_DISPLAY, PHONE_HREF } from '@/lib/contact'
+import InstagramIcon from '@/components/instagram-icon'
 import Link from 'next/link'
 import Image from 'next/image'
 import { Phone, Mail, ChevronRight } from 'lucide-react'
@@ -132,12 +133,7 @@ export default function ContactCard() {
                 >
                     <div className="flex items-center gap-5">
                         <div className="relative flex h-16 w-16 shrink-0 items-center justify-center rounded-xl bg-gray-100 shadow-sm transition-all duration-300 group-hover:shadow-md">
-                            <Image
-                                src="/Instagram_Glyph.svg"
-                                alt="Instagram logo"
-                                height={40}
-                                width={40}
-                            />
+                            <InstagramIcon className="text-primary h-10 w-10" />
                         </div>
                         <div className="flex flex-col text-left">
                             <span className="font-semibold text-gray-900">
