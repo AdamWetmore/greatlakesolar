@@ -13,8 +13,8 @@ export default function Contact() {
                 <h1>Get your free solar assessment</h1>
                 <p>
                     Tell us a little about your home or building and Jacob will
-                    reach out, usually the same business day. Prefer to talk
-                    now? Call{' '}
+                    call you, usually within the hour on business days. Prefer
+                    to talk now? Call{' '}
                     <a
                         href={PHONE_HREF}
                         className="font-semibold whitespace-nowrap underline decoration-blue-500 decoration-2 underline-offset-4 hover:opacity-80"

@@ -50,7 +50,9 @@ In no particular order
   is in the static HTML and matches the FAQPage JSON-LD (the Radix accordion
   only rendered open answers). Same look, light and dark. CTA wording stays
   "Request a free estimate" (Jacob 2026-11-14: hold off on renaming the offer).
-  Pending Jacob's review, then Adam's.
+  The /contact intro now promises a call "usually within the hour on business
+  days", matching the HubSpot form's auto-reply email (Jacob 2026-11-14).
+  Pending Adam's review.
 
 - PR #23 (`feat/nghia-profile-blog`): reuse the Loon Award shop portrait,
   Camden aerial, and ceremony image in the Nghia profile. Removed the three
