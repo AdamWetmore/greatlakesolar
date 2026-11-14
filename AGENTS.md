@@ -42,17 +42,15 @@ Keep this section updated as progress and planning continue
 
 In no particular order
 
-- Branch `claude/darrell-fixes-savings-review-f0473e` (draft PR): Jacob's
-  2026-11-11 offer decision, "Free Savings Review" replaces "free estimate"
-  on the header and hero buttons, the assessment dialog, the /contact H1 and
-  meta description, Resources step 1, one FAQ answer, and `public/llms.txt`.
-  Service area "across the Midwest" becomes "the Twin Cities, greater
-  Minnesota and western Wisconsin" in the hero, the default site description
-  (also the LocalBusiness JSON-LD) and the homepage Who We Serve line. The
-  /resources FAQ now uses native `<details>` so every answer is in the static
-  HTML and matches the FAQPage JSON-LD (the Radix accordion only rendered open
-  answers). Same look, light and dark. The HubSpot form's own wording is
-  edited in HubSpot, not here. Pending Jacob's review, then Adam's.
+- Branch `claude/darrell-fixes-savings-review-f0473e` (draft PR #24): service
+  area "across the Midwest" becomes "across the Twin Cities, greater Minnesota
+  and western Wisconsin" in the hero, the default site description (also the
+  LocalBusiness JSON-LD) and the homepage Who We Serve line (Jacob approved
+  2026-11-14). The /resources FAQ now uses native `<details>` so every answer
+  is in the static HTML and matches the FAQPage JSON-LD (the Radix accordion
+  only rendered open answers). Same look, light and dark. CTA wording stays
+  "Request a free estimate" (Jacob 2026-11-14: hold off on renaming the offer).
+  Pending Jacob's review, then Adam's.
 
 - PR #23 (`feat/nghia-profile-blog`): reuse the Loon Award shop portrait,
   Camden aerial, and ceremony image in the Nghia profile. Removed the three

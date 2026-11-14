@@ -75,7 +75,7 @@ const pageMetadata: Record<string, { title: string; description: string }> = {
     '/contact': {
         title: 'Contact a Twin Cities Solar Expert | Great Lakes Solar',
         description:
-            'Request a Free Savings Review or call 952-222-7912. Solar and battery storage for homes and businesses in Minneapolis, Saint Paul, Minnesota and Wisconsin.',
+            'Request a free solar estimate or call 952-222-7912. Solar and battery storage for homes and businesses in Minneapolis, Saint Paul, Minnesota and Wisconsin.',
     },
     '/newsletter': {
         title: 'Newsletter | Great Lakes Solar',

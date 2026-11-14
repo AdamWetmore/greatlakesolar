@@ -68,7 +68,7 @@ const resourcesFaqs: FAQ[] = [
     },
     {
         question: 'How big of a solar system does my business need?',
-        answer: 'System size depends on your energy consumption, available roof or ground space, and your goals. Commercial systems in the Great Lakes region typically range from 30 kilowatts (kW) to over 1 megawatt (MW). We start every project with a Free Savings Review: we look at your utility bills and propose a system sized specifically for your operation.',
+        answer: "System size depends on your energy consumption, available roof or ground space, and your goals. Commercial systems in the Great Lakes region typically range from 30 kilowatts (kW) to over 1 megawatt (MW). We start every project with a free energy assessment: we'll review your utility bills and propose a system sized specifically for your operation.",
         category: 'Commercial Solar',
     },
     {
