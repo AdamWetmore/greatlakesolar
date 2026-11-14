@@ -10,7 +10,7 @@ export default function Contact() {
     return (
         <Container className="space-y-8 py-6 md:py-10">
             <div className="mx-auto max-w-2xl space-y-3 text-center">
-                <h1>Get your free solar assessment</h1>
+                <h1>Get your Free Savings Review</h1>
                 <p>
                     Tell us a little about your home or building and Jacob will
                     reach out, usually the same business day. Prefer to talk
@@ -28,7 +28,7 @@ export default function Contact() {
                 <div className="hubspot-card w-full min-w-0 overflow-hidden rounded-lg border bg-white shadow-sm">
                     <HubSpotEmbed
                         formId={FORM_ID}
-                        title="Great Lakes Solar assessment form"
+                        title="Great Lakes Solar Free Savings Review form"
                         fallbackUrl={FORM_URL}
                         controlsClassName="px-4 pb-6 sm:px-6"
                     />

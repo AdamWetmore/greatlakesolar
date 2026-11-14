@@ -26,7 +26,7 @@ export default function IntakeForm({
                 <Button size="lg" className={triggerClassName}>
                     {label ?? (
                         <>
-                            <span>Request a free estimate</span>
+                            <span>Get a Free Savings Review</span>
                         </>
                     )}
                     <ChevronRight />
@@ -38,11 +38,11 @@ export default function IntakeForm({
                 className="intake-dialog z-[101] max-h-[95dvh] w-[calc(100%-1rem)] max-w-[calc(100%-1rem)] overflow-y-auto p-0 sm:max-w-2xl"
             >
                 <DialogTitle className="sr-only">
-                    Start Your Project
+                    Get a Free Savings Review
                 </DialogTitle>
                 <HubSpotEmbed
                     formId={FORM_ID}
-                    title="Great Lakes Solar assessment form"
+                    title="Great Lakes Solar Free Savings Review form"
                     fallbackUrl={FORM_URL}
                     controlsClassName="px-4 pb-6 sm:px-6"
                 />

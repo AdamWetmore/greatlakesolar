@@ -28,10 +28,11 @@ export default function HeroCard() {
                 </CardTitle>
                 <CardDescription className="text-md">
                     Great Lakes Solar helps businesses, non-profits, homeowners,
-                    schools, and institutions across the Midwest install solar
-                    and battery systems that cut energy costs, add resiliency,
-                    and make a lasting difference. You&apos;ll work directly with
-                    founder Jacob Bechtold from day one.
+                    schools, and institutions across the Twin Cities, greater
+                    Minnesota and western Wisconsin install solar and battery
+                    systems that cut energy costs, add resiliency, and make a
+                    lasting difference. You&apos;ll work directly with founder
+                    Jacob Bechtold from day one.
                 </CardDescription>
             </CardHeader>
             <CardContent className="flex flex-col items-center justify-center gap-3 md:flex-row">

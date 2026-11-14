@@ -69,7 +69,7 @@ export default function Resources() {
                             <ol className="list-decimal space-y-4 pl-3">
                                 <li>
                                     <h4 className="font-bold">
-                                        Free Energy Assessment
+                                        Free Savings Review
                                     </h4>
                                     <p>
                                         We review your utility bills, your roof
