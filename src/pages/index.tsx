@@ -23,6 +23,7 @@ export default function Home() {
                     src="/chuttersnap-s_7BE4D2va0-unsplash.jpg"
                     alt="Aerial view of solar panels on a roof"
                     loading="eager"
+                    fetchPriority="high"
                     fill
                     sizes="100vw"
                     className="absolute inset-0 z-40 object-cover brightness-75"

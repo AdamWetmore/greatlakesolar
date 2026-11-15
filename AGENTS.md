@@ -42,6 +42,15 @@ Keep this section updated as progress and planning continue
 
 In no particular order
 
+- Branch `fix/hero-photo-size` (draft PR): the three Unsplash hero photos
+  (home, resources, about) were 3.3 to 6.1 MB at 4000 to 6000 px wide; now
+  1600 px wide JPEG, quality 65, metadata stripped (226 to 465 KB, same file
+  names, same crops). The three hero images also get `loading="eager"` and
+  `fetchPriority="high"` so the largest image starts downloading first.
+  Static export means `next/image` cannot resize, so size photos by hand
+  (about 1600 px, under 500 KB) before adding them. Live homepage Lighthouse
+  mobile 2026-11-14: Performance 70, LCP 19.4 s. Pending Adam's review.
+
 - PR #23 (`feat/nghia-profile-blog`): reuse the Loon Award shop portrait,
   Camden aerial, and ceremony image in the Nghia profile. Removed the three
   redundant assets, reducing the static export by 1,128,929 bytes (1.13 MB).
