@@ -133,7 +133,7 @@ export default function ContactCard() {
                 >
                     <div className="flex items-center gap-5">
                         <div className="relative flex h-16 w-16 shrink-0 items-center justify-center rounded-xl bg-gray-100 shadow-sm transition-all duration-300 group-hover:shadow-md">
-                            <InstagramIcon className="text-primary h-10 w-10" />
+                            <InstagramIcon className="h-10 w-10" />
                         </div>
                         <div className="flex flex-col text-left">
                             <span className="font-semibold text-gray-900">
