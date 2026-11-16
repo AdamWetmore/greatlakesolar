@@ -158,7 +158,7 @@ export default function Refer() {
                             fallbackLabel="Or email Jacob instead"
                         />
                     </div>
-                    <div className="flex items-center gap-4 rounded-lg border bg-white p-5 shadow-sm">
+                    <div className="bg-card text-card-foreground flex items-center gap-4 rounded-lg border p-5 shadow-sm">
                         <Image
                             src="/jacob-bechtold-headshot-square.jpg"
                             alt="Jacob Bechtold"
