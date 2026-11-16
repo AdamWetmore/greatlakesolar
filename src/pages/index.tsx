@@ -87,7 +87,8 @@ export default function Home() {
                         <h2>Who We Serve</h2>
                         <p>
                             Great Lakes Solar works with property owners across
-                            the Midwest, including:
+                            the Twin Cities, greater Minnesota and western
+                            Wisconsin, including:
                         </p>
                         <div className="grid grid-cols-1 gap-6 md:grid-cols-2 xl:grid-cols-4">
                             <div className="flex items-start gap-3 rounded-lg border p-4 shadow-sm">

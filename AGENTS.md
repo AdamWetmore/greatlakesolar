@@ -43,6 +43,18 @@ Keep this section updated as progress and planning continue
 
 In no particular order
 
+- Branch `claude/darrell-fixes-savings-review-f0473e` (draft PR #24): service
+  area "across the Midwest" becomes "across the Twin Cities, greater Minnesota
+  and western Wisconsin" in the hero, the default site description (also the
+  LocalBusiness JSON-LD) and the homepage Who We Serve line (Jacob approved
+  2026-11-14). The /resources FAQ now uses native `<details>` so every answer
+  is in the static HTML and matches the FAQPage JSON-LD (the Radix accordion
+  only rendered open answers). Same look, light and dark. CTA wording stays
+  "Request a free estimate" (Jacob 2026-11-14: hold off on renaming the offer).
+  The /contact intro now promises a call "usually within the hour on business
+  days", matching the HubSpot form's auto-reply email (Jacob 2026-11-14).
+  Pending Adam's review.
+
 - PR #23 (`feat/nghia-profile-blog`): reuse the Loon Award shop portrait,
   Camden aerial, and ceremony image in the Nghia profile. Removed the three
   redundant assets, reducing the static export by 1,128,929 bytes (1.13 MB).

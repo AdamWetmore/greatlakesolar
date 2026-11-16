@@ -11,7 +11,7 @@ import { blogPosts } from '@/models/blog'
 const siteUrl = 'https://greatlakesolar.com'
 const title = "Great Lakes Solar | Minnesota's Local Solar Expert"
 const description =
-    'Great Lakes Solar helps businesses, non-profits, homeowners, schools, and institutions across the Midwest install solar and battery systems that cut energy costs, add resiliency, and make a lasting difference.'
+    'Great Lakes Solar helps businesses, non-profits, homeowners, schools, and institutions across the Twin Cities, greater Minnesota and western Wisconsin install solar and battery systems that cut energy costs, add resiliency, and make a lasting difference.'
 const ogImage = `${siteUrl}/og-image.png`
 
 // LocalBusiness structured data so Google can show phone, hours and service
