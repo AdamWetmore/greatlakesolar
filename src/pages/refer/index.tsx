@@ -1,15 +1,9 @@
 import Image from 'next/image'
-import {
-    ArrowDown,
-    ArrowRight,
-    ChevronRight,
-    Handshake,
-    Sun,
-    UserRound,
-} from 'lucide-react'
+import { ChevronRight, Handshake, Sun, UserRound } from 'lucide-react'
 import HubSpotLegacyForm from '@/components/forms/hubspot-legacy-form'
 import { Container } from '@/components/layout/container'
 import { Button } from '@/components/ui/button'
+import { Card, CardContent } from '@/components/ui/card'
 import {
     Accordion,
     AccordionContent,
@@ -68,7 +62,7 @@ export default function Refer() {
         <>
             <Container className="grid grid-cols-1 items-center gap-8 py-8 md:grid-cols-2 md:py-12">
                 <div className="space-y-4 text-center md:text-left">
-                    <p className="text-sm font-semibold tracking-wide text-blue-600 uppercase">
+                    <p className="text-foreground text-sm font-semibold tracking-wide uppercase">
                         Refer a friend
                     </p>
                     <h1 className="md:text-left">
@@ -79,10 +73,14 @@ export default function Refer() {
                         Know someone who should go solar? Introduce us. They get
                         $500 off their project, and you get $500 as a thank-you.
                     </p>
-                    <p className="text-muted-foreground text-sm">
+                    <p className="text-foreground text-sm">
                         Referring a business? It&apos;s $1,000 each.
                     </p>
-                    <Button asChild size="lg">
+                    <Button
+                        asChild
+                        size="lg"
+                        className="border-primary-foreground/30 border"
+                    >
                         <a href="#refer-form">
                             Introduce someone <ChevronRight />
                         </a>
@@ -98,48 +96,33 @@ export default function Refer() {
                         sizes="(min-width: 768px) 50vw, 100vw"
                         className="h-auto w-full rounded-lg object-cover shadow-sm"
                     />
-                    <figcaption className="text-muted-foreground text-center text-xs">
+                    <figcaption className="text-center text-sm opacity-70">
                         Jacob and Nghia Trinh at the Nghia&apos;s Auto solar
                         celebration, North Minneapolis
                     </figcaption>
                 </figure>
             </Container>
 
-            <section className="bg-muted/40 border-y py-8">
+            <section className="py-8" aria-labelledby="referral-steps-heading">
                 <Container>
-                    <h2 className="sr-only">How it works</h2>
-                    <ol className="mx-auto flex max-w-4xl flex-col items-center gap-2 md:flex-row md:items-start md:gap-0">
-                        {steps.map((s, i) => (
-                            <li
-                                key={s.title}
-                                className="flex flex-col items-center md:flex-1 md:flex-row md:items-start"
-                            >
-                                <div className="flex max-w-56 flex-col items-center space-y-2 text-center md:flex-1">
-                                    <span className="flex size-14 items-center justify-center rounded-full bg-blue-600 text-white">
-                                        <s.icon
-                                            className="size-7"
-                                            aria-hidden
+                    <h2 id="referral-steps-heading" className="sr-only">
+                        How it works
+                    </h2>
+                    <ol className="mx-auto grid max-w-4xl grid-cols-1 gap-6 md:grid-cols-3">
+                        {steps.map((step, index) => (
+                            <li key={step.title}>
+                                <Card className="h-full">
+                                    <CardContent className="flex flex-col items-center gap-3 text-center">
+                                        <step.icon
+                                            className="size-8"
+                                            aria-hidden="true"
                                         />
-                                    </span>
-                                    <p className="font-semibold">
-                                        {i + 1}. {s.title}
-                                    </p>
-                                    <p className="text-muted-foreground text-sm">
-                                        {s.body}
-                                    </p>
-                                </div>
-                                {i < steps.length - 1 && (
-                                    <>
-                                        <ArrowRight
-                                            aria-hidden
-                                            className="mt-4 hidden size-6 shrink-0 text-blue-600 md:block"
-                                        />
-                                        <ArrowDown
-                                            aria-hidden
-                                            className="my-1 size-5 text-blue-600 md:hidden"
-                                        />
-                                    </>
-                                )}
+                                        <h3 className="font-semibold">
+                                            {index + 1}. {step.title}
+                                        </h3>
+                                        <p className="text-sm">{step.body}</p>
+                                    </CardContent>
+                                </Card>
                             </li>
                         ))}
                     </ol>

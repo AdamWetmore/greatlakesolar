@@ -12,10 +12,40 @@ The development url is https://greatlakesolar.vercel.app/
 
 ### UI Guidelines
 
-This project uses Tailwindcss and Shadcn for quick and easy style implementation
+This project uses Shadcn UI as its component standard and Tailwind CSS for layout and styling.
+Use the shared Shadcn components in `src/components/ui` before creating custom UI.
+Compose page sections from these components (for example, `Card` / `CardContent`,
+`Button`, and `Accordion`) and follow existing page patterns. Use Tailwind for
+spacing, responsive grids, and alignment; do not invent one-off section backgrounds,
+borders, shadows, or component styles when an existing Shadcn primitive fits.
+If a needed component is missing, prefer adding the corresponding Shadcn primitive
+using the repository's theme tokens. Custom components should compose those primitives;
+explain any necessary departure from this standard in the PR.
 Don't change brand colors or fonts
 Every update to css or html must maintain current mobile responsiveness
 Every update to css or html must maintain dark/light mode styling
+
+#### Theme and component standards
+
+- Use inherited foreground or `text-foreground` for headings, section introductions,
+  important supporting copy, and footer links on the page background. Reserve
+  `text-muted-foreground` for secondary text on surfaces where its contrast is verified.
+- Dark mode currently follows `prefers-color-scheme` for the page background and
+  foreground. The `.dark` class is not applied by the app; do not assume `dark:`
+  utilities or the full `.dark` palette activate with system dark mode. A future
+  theme unification should be a separate reviewed change, including light cards and forms.
+- Reuse `Card` / `CardContent` for grouped content and process steps. Keep their
+  paired `bg-card` / `text-card-foreground` colors. Avoid ad hoc translucent
+  section backgrounds or decorative borders where existing cards fit.
+- Use the shared `Button` for CTAs. A primary CTA directly on the navy page
+  background needs the header CTA's `border border-primary-foreground/30` treatment
+  so its boundary remains visible. Keep keyboard focus and hover states intact.
+- Use normal foreground for noninteractive headings; reserve navigation blue for
+  interactive emphasis. Photo captions can follow the blog's `text-sm opacity-70`
+  treatment, inheriting the surrounding foreground.
+- For UI changes, check both system light and dark mode at phone, tablet, and
+  desktop widths. Inspect text against its actual surface, including captions,
+  footer links, card copy, CTA boundaries, and HubSpot's intentionally light forms.
 
 ### Deployment
 
@@ -42,6 +72,11 @@ HubSpot's allowed tracking domains. Test a real submission after deployment and 
 Keep this section updated as progress and planning continue
 
 In no particular order
+
+- `fix/dark-mode-referral-styles`: restore readable homepage introduction and footer
+  text, align referral heading/details/caption and CTA with existing styles, and use
+  shared cards for referral steps. Reinforce theme/component standards above.
+  Pending Adam's preview and PR review before deployment.
 
 - PR #23 (`feat/nghia-profile-blog`): reuse the Loon Award shop portrait,
   Camden aerial, and ceremony image in the Nghia profile. Removed the three
