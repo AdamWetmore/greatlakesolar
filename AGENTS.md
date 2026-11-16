@@ -73,6 +73,14 @@ Keep this section updated as progress and planning continue
 
 In no particular order
 
+- `fix/footer-social-brand-alignment`: center footer social artwork at 32px,
+  preserve logo proportions/registration marks, add clear space and explicit
+  system-theme assets, and keep the footer stacked through tablet widths.
+  Instagram uses official black/white glyph files rather than a custom tint.
+  Social links and social post cards use LinkedIn, Instagram, Facebook order.
+  Official sources and Instagram's login-gated verification limit are recorded
+  in `docs/social-brand-review.md`. Pending Adam's preview and PR review.
+
 - `fix/dark-mode-referral-styles`: restore readable homepage introduction and footer
   text, align referral heading/details/caption and CTA with existing styles, and use
   shared cards for referral steps. Reinforce theme/component standards above.

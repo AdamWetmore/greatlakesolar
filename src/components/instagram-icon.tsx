@@ -1,15 +1,22 @@
 import { cn } from '@/lib/utils'
 
-/** Official Instagram glyph; the mask preserves its geometry and uses currentColor. */
-export default function InstagramIcon({ className }: { className?: string }) {
+/** Unmodified official glyphs: black on light surfaces, white on dark pages. */
+export default function InstagramIcon({
+    className,
+    followSystemTheme = false,
+}: {
+    className?: string
+    followSystemTheme?: boolean
+}) {
     return (
         <span
             aria-hidden="true"
-            className={cn('inline-block shrink-0 bg-current', className)}
-            style={{
-                mask: 'url("/Instagram_Glyph.svg") center / contain no-repeat',
-                WebkitMask: 'url("/Instagram_Glyph.svg") center / contain no-repeat',
-            }}
+            className={cn(
+                'block shrink-0 bg-[url(/Instagram_Glyph_Black.svg)] bg-contain bg-center bg-no-repeat',
+                followSystemTheme &&
+                    '[@media(prefers-color-scheme:dark)]:bg-[url(/Instagram_Glyph.svg)]',
+                className
+            )}
         />
     )
 }

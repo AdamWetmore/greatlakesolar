@@ -9,7 +9,7 @@ export default function Footer() {
     return (
         <footer className="bg-background border-border border-t py-6">
             <Container>
-                <div className="flex flex-col items-center gap-6 md:flex-row md:items-center md:justify-between">
+                <div className="flex flex-col items-center gap-6 xl:flex-row xl:justify-between">
                     <Link href="/" className="flex items-center space-x-2">
                         <Image
                             src="/SecondaryLogo.svg"
@@ -20,29 +20,26 @@ export default function Footer() {
                             priority
                         />
                     </Link>
-                    <div className="flex items-center gap-6">
+                    <div className="flex shrink-0 items-center">
                         <Link
                             href="https://www.linkedin.com/company/great-lakes-solar"
                             target="_blank"
+                            aria-label="Great Lakes Solar on LinkedIn"
+                            className="focus-visible:ring-ring flex h-16 items-center justify-center p-4 focus-visible:ring-2 focus-visible:outline-none"
                         >
                             <Image
                                 src="/LI-In-Bug.png"
                                 alt="LinkedIn Logo"
                                 width={635}
                                 height={540}
-                                className="h-auto w-8"
+                                className="block h-8 w-auto [@media(prefers-color-scheme:dark)]:hidden"
                             />
-                        </Link>
-
-                        <Link
-                            href="https://facebook.com/people/Great-Lake-Solar/61574343611604"
-                            target="_blank"
-                        >
                             <Image
-                                src="/Facebook_Logo_Primary.png"
-                                alt="Facebook Logo"
-                                width={32}
-                                height={32}
+                                src="/InBug-White.png"
+                                alt=""
+                                width={840}
+                                height={779}
+                                className="hidden h-8 w-auto [@media(prefers-color-scheme:dark)]:block"
                             />
                         </Link>
 
@@ -50,9 +47,34 @@ export default function Footer() {
                             href="https://www.instagram.com/greatlakesolar/"
                             target="_blank"
                             aria-label="Great Lakes Solar on Instagram"
-                            className="text-foreground"
+                            className="focus-visible:ring-ring flex h-16 items-center justify-center p-4 focus-visible:ring-2 focus-visible:outline-none"
                         >
-                            <InstagramIcon className="h-8 w-8" />
+                            <InstagramIcon
+                                className="h-8 w-8"
+                                followSystemTheme
+                            />
+                        </Link>
+
+                        <Link
+                            href="https://facebook.com/people/Great-Lake-Solar/61574343611604"
+                            target="_blank"
+                            aria-label="Great Lakes Solar on Facebook"
+                            className="focus-visible:ring-ring flex h-16 items-center justify-center p-4 focus-visible:ring-2 focus-visible:outline-none"
+                        >
+                            <Image
+                                src="/Facebook_Logo_Primary.png"
+                                alt="Facebook Logo"
+                                width={32}
+                                height={32}
+                                className="block h-8 w-8 [@media(prefers-color-scheme:dark)]:hidden"
+                            />
+                            <Image
+                                src="/Facebook_Logo_Secondary.png"
+                                alt=""
+                                width={32}
+                                height={32}
+                                className="hidden h-8 w-8 [@media(prefers-color-scheme:dark)]:block"
+                            />
                         </Link>
                     </div>
                     <div className="text-foreground flex flex-col items-center justify-center">

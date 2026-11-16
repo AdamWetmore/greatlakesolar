@@ -62,8 +62,8 @@ const SLOTS: {
 }
 
 export const SOCIAL_POSTS: SocialPost[] = [
+    { ...SLOTS.linkedin, platform: 'LinkedIn', cta: 'See it on LinkedIn' },
     { ...SLOTS.instagram, platform: 'Instagram', cta: 'See it on Instagram' },
     { ...SLOTS.facebook, platform: 'Facebook', cta: 'See it on Facebook' },
-    { ...SLOTS.linkedin, platform: 'LinkedIn', cta: 'See it on LinkedIn' },
     { ...SLOTS.blog, platform: 'Blog', cta: 'Read the post' },
 ]

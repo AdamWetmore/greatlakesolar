@@ -87,6 +87,27 @@ export default function ContactCard() {
                         <ChevronRight className="ml-auto opacity-0 group-hover:opacity-100" />
                     </div>
                 </Link>
+                {/* Instagram */}
+                <Link
+                    href="https://www.instagram.com/greatlakesolar/"
+                    target="_blank"
+                    className="group block w-full rounded-xl p-2 transition hover:bg-gray-100"
+                >
+                    <div className="flex items-center gap-5">
+                        <div className="relative flex h-16 w-16 shrink-0 items-center justify-center rounded-xl bg-gray-100 shadow-sm transition-all duration-300 group-hover:shadow-md">
+                            <InstagramIcon className="h-10 w-10" />
+                        </div>
+                        <div className="flex flex-col text-left">
+                            <span className="font-semibold text-gray-900">
+                                Instagram
+                            </span>
+                            <span className="text-gray-600">
+                                @greatlakesolar
+                            </span>
+                        </div>
+                        <ChevronRight className="ml-auto opacity-0 group-hover:opacity-100" />
+                    </div>
+                </Link>
                 {/* Facebook */}
                 <Link
                     href="https://facebook.com/people/Great-Lake-Solar/61574343611604"
@@ -125,27 +146,6 @@ export default function ContactCard() {
                     </div>
                 </Link>
 
-                {/* Instagram */}
-                <Link
-                    href="https://www.instagram.com/greatlakesolar/"
-                    target="_blank"
-                    className="group block w-full rounded-xl p-2 transition hover:bg-gray-100"
-                >
-                    <div className="flex items-center gap-5">
-                        <div className="relative flex h-16 w-16 shrink-0 items-center justify-center rounded-xl bg-gray-100 shadow-sm transition-all duration-300 group-hover:shadow-md">
-                            <InstagramIcon className="text-primary h-10 w-10" />
-                        </div>
-                        <div className="flex flex-col text-left">
-                            <span className="font-semibold text-gray-900">
-                                Instagram
-                            </span>
-                            <span className="text-gray-600">
-                                @greatlakesolar
-                            </span>
-                        </div>
-                        <ChevronRight className="ml-auto opacity-0 group-hover:opacity-100" />
-                    </div>
-                </Link>
                 {/* Referrals */}
                 <Link
                     href="/refer"
