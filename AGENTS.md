@@ -77,6 +77,7 @@ In no particular order
   preserve logo proportions/registration marks, add clear space and explicit
   system-theme assets, and keep the footer stacked through tablet widths.
   Instagram uses official black/white glyph files rather than a custom tint.
+  Social links and social post cards use LinkedIn, Instagram, Facebook order.
   Official sources and Instagram's login-gated verification limit are recorded
   in `docs/social-brand-review.md`. Pending Adam's preview and PR review.
 

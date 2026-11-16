@@ -44,6 +44,18 @@ export default function Footer() {
                         </Link>
 
                         <Link
+                            href="https://www.instagram.com/greatlakesolar/"
+                            target="_blank"
+                            aria-label="Great Lakes Solar on Instagram"
+                            className="focus-visible:ring-ring flex h-16 items-center justify-center p-4 focus-visible:ring-2 focus-visible:outline-none"
+                        >
+                            <InstagramIcon
+                                className="h-8 w-8"
+                                followSystemTheme
+                            />
+                        </Link>
+
+                        <Link
                             href="https://facebook.com/people/Great-Lake-Solar/61574343611604"
                             target="_blank"
                             aria-label="Great Lakes Solar on Facebook"
@@ -62,18 +74,6 @@ export default function Footer() {
                                 width={32}
                                 height={32}
                                 className="hidden h-8 w-8 [@media(prefers-color-scheme:dark)]:block"
-                            />
-                        </Link>
-
-                        <Link
-                            href="https://www.instagram.com/greatlakesolar/"
-                            target="_blank"
-                            aria-label="Great Lakes Solar on Instagram"
-                            className="focus-visible:ring-ring flex h-16 items-center justify-center p-4 focus-visible:ring-2 focus-visible:outline-none"
-                        >
-                            <InstagramIcon
-                                className="h-8 w-8"
-                                followSystemTheme
                             />
                         </Link>
                     </div>
