@@ -55,7 +55,7 @@ export default function Footer() {
                             <InstagramIcon className="h-8 w-8" />
                         </Link>
                     </div>
-                    <div className="text-muted-foreground flex flex-col items-center justify-center">
+                    <div className="text-foreground flex flex-col items-center justify-center">
                         <Link
                             className="flex items-center gap-2"
                             href={PHONE_HREF}
@@ -74,49 +74,49 @@ export default function Footer() {
                     <div className="flex flex-wrap justify-center gap-4">
                         <Link
                             href="/about"
-                            className="text-muted-foreground hover:text-foreground text-sm"
+                            className="text-foreground hover:text-foreground text-sm"
                         >
                             About
                         </Link>
                         <Link
                             href="/resources/blog"
-                            className="text-muted-foreground hover:text-foreground text-sm"
+                            className="text-foreground hover:text-foreground text-sm"
                         >
                             Blog
                         </Link>
                         <Link
                             href="/newsletter"
-                            className="text-muted-foreground hover:text-foreground text-sm"
+                            className="text-foreground hover:text-foreground text-sm"
                         >
                             Newsletter
                         </Link>
                         <Link
                             href="/resources#residential"
-                            className="text-muted-foreground hover:text-foreground text-sm"
+                            className="text-foreground hover:text-foreground text-sm"
                         >
                             Residential
                         </Link>
                         <Link
                             href="/resources#commercial"
-                            className="text-muted-foreground hover:text-foreground text-sm"
+                            className="text-foreground hover:text-foreground text-sm"
                         >
                             Commercial
                         </Link>
                         <Link
                             href="/contact"
-                            className="text-muted-foreground hover:text-foreground text-sm"
+                            className="text-foreground hover:text-foreground text-sm"
                         >
                             Contact
                         </Link>
                         <Link
                             href="/refer"
-                            className="text-muted-foreground hover:text-foreground text-sm"
+                            className="text-foreground hover:text-foreground text-sm"
                         >
                             Refer a Friend
                         </Link>
                     </div>
                 </div>
-                <div className="text-muted-foreground mt-4 text-center text-sm">
+                <div className="text-foreground mt-4 text-center text-sm">
                     &copy; {new Date().getFullYear()} Great Lakes Solar. All
                     rights reserved.
                 </div>

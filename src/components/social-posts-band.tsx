@@ -8,7 +8,7 @@ export default function SocialPostsBand() {
         <div className="space-y-6">
             <div className="space-y-2 text-center">
                 <h2>Latest from Great Lakes Solar</h2>
-                <p className="text-muted-foreground">
+                <p className="text-foreground">
                     Projects, people, and what we&apos;re up to. Follow along on{' '}
                     <Link
                         href={SOCIAL_LINKS.linkedin}
