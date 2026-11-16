@@ -60,6 +60,8 @@ In no particular order
   `NEXT_PUBLIC_HUBSPOT_REFER_FORM_ID`. The referral form uses HubSpot's older
   v2.js embed; assessment/newsletter use the shared newer frame embed.
   Configure the referral ID in local and preview build environments before release.
+  Rebased onto main to include Instagram. The shared contact card links to
+  /refer with Lucide's Gift icon on Home, Resources, and Contact.
 
 - PR #18 (`fix/hero-cta`): Jacob approved matching the header and default
   assessment CTA wording to "Request a free estimate". Both open the existing
