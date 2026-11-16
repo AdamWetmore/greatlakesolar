@@ -12,7 +12,15 @@ The development url is https://greatlakesolar.vercel.app/
 
 ### UI Guidelines
 
-This project uses Tailwindcss and Shadcn for quick and easy style implementation
+This project uses Shadcn UI as its component standard and Tailwind CSS for layout and styling.
+Use the shared Shadcn components in `src/components/ui` before creating custom UI.
+Compose page sections from these components (for example, `Card` / `CardContent`,
+`Button`, and `Accordion`) and follow existing page patterns. Use Tailwind for
+spacing, responsive grids, and alignment; do not invent one-off section backgrounds,
+borders, shadows, or component styles when an existing Shadcn primitive fits.
+If a needed component is missing, prefer adding the corresponding Shadcn primitive
+using the repository's theme tokens. Custom components should compose those primitives;
+explain any necessary departure from this standard in the PR.
 Don't change brand colors or fonts
 Every update to css or html must maintain current mobile responsiveness
 Every update to css or html must maintain dark/light mode styling
