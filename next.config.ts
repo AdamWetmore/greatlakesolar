@@ -19,6 +19,7 @@ export default function config(phase: string): NextConfig {
             NEXT_PUBLIC_HUBSPOT_PORTAL_ID: /^\d+$/,
             NEXT_PUBLIC_HUBSPOT_FORM_ID: FORM_ID_PATTERN,
             NEXT_PUBLIC_HUBSPOT_NEWSLETTER_FORM_ID: FORM_ID_PATTERN,
+            NEXT_PUBLIC_HUBSPOT_REFER_FORM_ID: FORM_ID_PATTERN,
         }
         for (const [name, pattern] of Object.entries(required)) {
             if (!pattern.test(process.env[name] ?? '')) {

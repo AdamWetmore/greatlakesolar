@@ -4,7 +4,7 @@ import { useEffect, useId, useState } from 'react'
 
 // For HubSpot forms created through the API, which are "V3" forms. The V4 frame embed
 // (hubspot-embed.tsx) renders them blank, so these use HubSpot's v2.js script instead.
-const PORTAL_ID = process.env.NEXT_PUBLIC_HUBSPOT_PORTAL_ID ?? '245203054'
+const PORTAL_ID = process.env.NEXT_PUBLIC_HUBSPOT_PORTAL_ID
 const SCRIPT_SRC = 'https://js-na2.hsforms.net/forms/embed/v2.js'
 
 type Hbspt = {
@@ -36,16 +36,17 @@ export default function HubSpotLegacyForm({
     fallbackUrl,
     fallbackLabel,
 }: {
-    formId: string
+    formId?: string
     fallbackUrl: string
     fallbackLabel: string
 }) {
     const targetId = `hs-${useId().replace(/[^a-zA-Z0-9]/g, '')}`
     const [status, setStatus] = useState<'loading' | 'ready' | 'error'>(
-        'loading'
+        PORTAL_ID && formId ? 'loading' : 'error'
     )
 
     useEffect(() => {
+        if (!PORTAL_ID || !formId) return
         let cancelled = false
         const timeout = window.setTimeout(() => {
             if (!cancelled) setStatus((s) => (s === 'ready' ? s : 'error'))

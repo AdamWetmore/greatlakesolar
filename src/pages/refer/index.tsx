@@ -18,10 +18,7 @@ import {
 } from '@/components/ui/accordion'
 import { PHONE_DISPLAY, PHONE_HREF } from '@/lib/contact'
 
-// HubSpot form "Refer a Friend" (created 2026-11-08). Form IDs are public; env var can override.
-const FORM_ID =
-    process.env.NEXT_PUBLIC_HUBSPOT_REFER_FORM_ID ??
-    'b0c74a6b-bc90-4d16-ad14-6d984470e611'
+const FORM_ID = process.env.NEXT_PUBLIC_HUBSPOT_REFER_FORM_ID
 const FALLBACK_URL =
     'mailto:jbechtold@greatlakesolar.com?subject=A%20referral%20for%20Great%20Lakes%20Solar'
 
