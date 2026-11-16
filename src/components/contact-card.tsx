@@ -2,7 +2,7 @@ import { EMAIL, PHONE_DISPLAY, PHONE_HREF } from '@/lib/contact'
 import InstagramIcon from '@/components/instagram-icon'
 import Link from 'next/link'
 import Image from 'next/image'
-import { Phone, Mail, ChevronRight } from 'lucide-react'
+import { Phone, Mail, ChevronRight, Gift } from 'lucide-react'
 import { Card, CardContent, CardHeader, CardTitle } from './ui/card'
 
 export default function ContactCard() {
@@ -144,6 +144,29 @@ export default function ContactCard() {
                             </span>
                         </div>
                         <ChevronRight className="ml-auto opacity-0 group-hover:opacity-100" />
+                    </div>
+                </Link>
+                {/* Referrals */}
+                <Link
+                    href="/refer"
+                    className="group hover:bg-accent hover:text-accent-foreground focus-visible:ring-ring block w-full rounded-xl p-2 transition focus-visible:ring-2 focus-visible:outline-none"
+                >
+                    <div className="flex items-center gap-5">
+                        <div className="flex h-16 w-16 shrink-0 items-center justify-center rounded-xl bg-gray-100 shadow-sm transition-all duration-300 group-hover:bg-blue-600 group-hover:shadow-md">
+                            <Gift
+                                aria-hidden="true"
+                                className="h-10 w-10 text-gray-700 transition-colors duration-300 group-hover:text-white"
+                            />
+                        </div>
+                        <div className="min-w-0 flex-1 text-left">
+                            <span className="font-semibold text-gray-900">
+                                Refer a Friend
+                            </span>
+                        </div>
+                        <ChevronRight
+                            aria-hidden="true"
+                            className="ml-auto shrink-0 opacity-0 group-hover:opacity-100 group-focus-visible:opacity-100"
+                        />
                     </div>
                 </Link>
             </CardContent>

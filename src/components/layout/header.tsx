@@ -23,7 +23,8 @@ export default function Header() {
         }`
     const resourcesActive =
         (pathname?.startsWith('/resources') ?? false) ||
-        pathname === '/newsletter'
+        pathname === '/newsletter' ||
+        pathname === '/refer'
 
     return (
         <div className="bg-background border-border sticky top-0 z-60 border-b">
@@ -80,6 +81,9 @@ export default function Header() {
                                 </DropdownMenuItem>
                                 <DropdownMenuItem asChild>
                                     <Link href="/newsletter">Newsletter</Link>
+                                </DropdownMenuItem>
+                                <DropdownMenuItem asChild>
+                                    <Link href="/refer">Refer a Friend</Link>
                                 </DropdownMenuItem>
                                 <DropdownMenuItem asChild>
                                     <Link href="/resources#commercial">
@@ -171,6 +175,13 @@ export default function Header() {
                                 onClick={() => setIsMenuOpen(false)}
                             >
                                 Newsletter
+                            </Link>
+                            <Link
+                                href="/refer"
+                                className={`${navLinkStyle('/refer')} ml-3`}
+                                onClick={() => setIsMenuOpen(false)}
+                            >
+                                Refer a Friend
                             </Link>
                             <Link
                                 href="/resources#commercial"

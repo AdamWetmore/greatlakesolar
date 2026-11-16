@@ -12,6 +12,7 @@ interface HubSpotEmbedProps {
     formId?: string
     title: string
     fallbackUrl: string
+    fallbackLabel?: string
     controlsClassName?: string
 }
 
@@ -19,6 +20,7 @@ function HubSpotFrame({
     formId,
     title,
     fallbackUrl,
+    fallbackLabel = 'Open form in a new tab',
     controlsClassName,
     onRetry,
 }: HubSpotEmbedProps & { onRetry: () => void }) {
@@ -34,10 +36,7 @@ function HubSpotFrame({
             const detail = (
                 event as CustomEvent<{ formId: string; instanceId: string }>
             ).detail
-            if (
-                detail?.formId === formId &&
-                detail.instanceId === instanceId
-            ) {
+            if (detail?.formId === formId && detail.instanceId === instanceId) {
                 ready = true
                 window.clearTimeout(timeout)
                 setStatus('ready')
@@ -117,7 +116,7 @@ function HubSpotFrame({
                     rel="noopener noreferrer"
                     className="underline underline-offset-4 focus-visible:outline-2 focus-visible:outline-offset-4"
                 >
-                    Open form in a new tab
+                    {fallbackLabel}
                 </a>
             </div>
         </>
